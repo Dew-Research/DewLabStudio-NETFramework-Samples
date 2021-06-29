@@ -3,7 +3,6 @@
 </a>  
 
 # Dew Lab Studio .NET for .NET Framework samples
-==============================================================
   
 Sample programs showing how to use Dew Lab Studio for .NET Framework (v2.0-4.8)
 
