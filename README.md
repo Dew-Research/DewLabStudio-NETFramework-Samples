@@ -11,6 +11,6 @@ Dew Lab Studio for .NET Framework contains several products. For each product th
 
 You'll need Dew Lab Studio for .NET evaluation or registered version to run the samples on this repository. Fully functional evaluation versions can be obtained from the public NuGet repository as "Dew Lab Studio". Dew Lab Studio is available in three editions:
 
-* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows), (32bit and 64bit)
+* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
 * Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50), (32bit and 64bit)
 * Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50) (64bit)
