@@ -16,3 +16,12 @@ You'll need Dew Lab Studio for .NET evaluation or registered version to run the 
 * Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50) (64bit)
 
 VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
+
+IMPORTANT:
+When using .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
+
+.\packages\Dew.Math.6.0.4\runtimes
+
+And copy x86 content (dlls) to Windows\SysWO64\ and x64 content to Windows\System32\
+
+When using .NET Core, these dlls are referenced in a different way. 
