@@ -595,6 +595,7 @@
       <DependentUpon>SparseTest.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="Dew.Math.targets" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
