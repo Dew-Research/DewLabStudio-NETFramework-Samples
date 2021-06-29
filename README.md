@@ -18,6 +18,7 @@ You'll need Dew Lab Studio for .NET evaluation or registered version to run the 
 VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
 
 IMPORTANT:
+
 When using .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
 
 .\packages\Dew.Math.6.0.4\runtimes
