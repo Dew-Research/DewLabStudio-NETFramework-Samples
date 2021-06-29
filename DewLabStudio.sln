@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtxVecDemoVS2019", "Math.CSharp\MtxVecDemoVS2019.csproj", "{907176B5-1472-4178-A9E4-0359D808B749}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtxVecDemo", "Math.CSharp\MtxVecDemo.csproj", "{907176B5-1472-4178-A9E4-0359D808B749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSP Demo 2019", "Signal.CSharp\DSP Demo 2019.csproj", "{3B41FF6D-C46F-4850-B7BE-6ABA30B34E9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSP Demo", "Signal.CSharp\DSP Demo.csproj", "{3B41FF6D-C46F-4850-B7BE-6ABA30B34E9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsMasterDemoVS2019", "Stat.CSharp\StatsMasterDemoVS2019.csproj", "{509C5BCD-71FA-4EDA-BCCF-15628B776036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsMasterDemo", "Stat.CSharp\StatsMasterDemo.csproj", "{509C5BCD-71FA-4EDA-BCCF-15628B776036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
