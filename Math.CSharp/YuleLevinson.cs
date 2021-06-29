@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Math.Tee;
+using static Dew.Math.Tee.TeeChart;
 
 namespace MtxVecDemo
 {
@@ -812,9 +813,9 @@ namespace MtxVecDemo
                     Vector downY = new Vector(0);
 					downY.PixelDownSample(tChart1.Width, spec,null,null,TEquidistantSample.eqsXEquidistant); 
 					double step = ((double)spec.Length / (double)downY.Length);
-                    TeeChart.DrawValues(downY, series1, 0, step, false);
+                    DrawValues(downY, series1, 0, step, false);
 				} else {
-                    TeeChart.DrawValues(spec, series1, 0, 1, false);
+                    DrawValues(spec, series1, 0, 1, false);
 				}
 
                 Math387.StartTimer();
@@ -833,9 +834,9 @@ namespace MtxVecDemo
                     Vector downY = new Vector(0);
     				downY.PixelDownSample(tChart1.Width, spec,null,null,TEquidistantSample.eqsXEquidistant); 
 					double step = ((double)spec.Length / (double)downY.Length);
-                    TeeChart.DrawValues(downY, series2, 0, step, false);
+                    DrawValues(downY, series2, 0, step, false);
 				} else {
-                    TeeChart.DrawValues(spec, series2, 0, 1, false); // Default parameter values doesn"t work...
+                    DrawValues(spec, series2, 0, 1, false); // Default parameter values doesn"t work...
 				}
 				tChart1.Refresh();
 			} finally {

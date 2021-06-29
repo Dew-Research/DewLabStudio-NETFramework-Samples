@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Math.Tee;
+using static Dew.Math.Tee.TeeChart;
 
 namespace MtxVecDemo
 {
@@ -74,7 +75,7 @@ namespace MtxVecDemo
 			else if (radioButton2.Checked) mode = TPixelDownSample.pdsPeak;
 			else if (radioButton3.Checked) mode = TPixelDownSample.pdsAverage;
             sparseA.PixelDownSample(a,200,mode);
-            TeeChart.DrawValues(a, gridSeries);
+            DrawValues(a, gridSeries);
 		}
 
 		/// <summary>
@@ -1131,7 +1132,7 @@ namespace MtxVecDemo
         {
             splitContainer1.Panel2Collapsed = !checkBox3.Checked;
             splitContainer1.Panel1.Refresh();
-            TeeChart.DrawValues(a, gridSeries);
+            DrawValues(a, gridSeries);
         }
 
 		private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e) 
@@ -1200,7 +1201,7 @@ namespace MtxVecDemo
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             gridSeries.PixelResample = checkBox3.Checked;
-            gridSeries.ShowInLegend = !checkBox3.Checked;
+            gridSeries.Legend.Visible = !checkBox3.Checked;
             UpdateCharts();
         }
 

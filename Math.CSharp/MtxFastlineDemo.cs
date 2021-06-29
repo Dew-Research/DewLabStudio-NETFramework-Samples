@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Math.Tee;
+using static Dew.Math.Tee.TeeChart;
 
 namespace MtxVecDemo
 {
@@ -983,12 +984,12 @@ namespace MtxVecDemo
             tChart2.Zoom.Animated = true;
 
             Math387.StartTimer();
-            TeeChart.DrawValues(data, tChart1.Series[0], 0, 1, false);
+            DrawValues(data, tChart1.Series[0], 0, 1, false);
             double timeElapsed = Math387.StopTimer()*1000;
             tChart1.Header.Text = "MtxFastLine\nDrawing " + data.Length.ToString() + " points:" + timeElapsed.ToString("0.0") + " ms\n";
 
             Math387.StartTimer();
-            TeeChart.DrawValues(data, tChart2.Series[0], 0, 1, false);
+            DrawValues(data, tChart2.Series[0], 0, 1, false);
             timeElapsed = Math387.StopTimer() * 1000;
             tChart2.Header.Text = "FastLine\nDrawing " + data.Length.ToString() + " points:" + timeElapsed.ToString("0.0") + " ms\n";
         }

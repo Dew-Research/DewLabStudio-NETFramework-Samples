@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Math.Tee;
+using static Dew.Math.Tee.TeeChart;
 
 
 namespace MtxVecDemo
@@ -730,7 +731,7 @@ namespace MtxVecDemo
                     labelResult.Text += "Ratio: " + Math387.SampleToStr((double)tcs / (double)tcv, 4, 4);
 
                     tChart1.Header.Text = "y = " + textBoxFormula.Text;
-                    TeeChart.DrawValues(x, yResult, tChart1[0], checkBoxDownsample.Checked);
+                    DrawValues(x, yResult, tChart1[0], checkBoxDownsample.Checked);
 
                 }
                 finally

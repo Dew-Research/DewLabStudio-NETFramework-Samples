@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Tee;
+using static Dew.Math.Tee.TeeChart;
 
 namespace MtxVecDemo
 {
@@ -1101,7 +1102,7 @@ namespace MtxVecDemo
                 tChart1.Axes.Bottom.Automatic = false;
 				tChart1.Axes.Bottom.SetMinMax(0, testVec.Length - 1);
                 tChart1[0].Clear();
-                TeeChart.DrawValues(testVec, tChart1[0], 0, 1.0, false);
+                DrawValues(testVec, tChart1[0], 0, 1.0, false);
                 Application.DoEvents();
 
                 labelNormalTime.Text = (Environment.TickCount - timeCheck).ToString() + " ms";
@@ -1121,7 +1122,7 @@ namespace MtxVecDemo
                 tChart2.Axes.Bottom.Automatic = false;
 				tChart2.Axes.Bottom.SetMinMax( 0, testVec.Length - 1);
                 tChart2[0].Clear();
-                TeeChart.DrawValues(testVec, tChart2[0], 0, 1.0, true);
+                DrawValues(testVec, tChart2[0], 0, 1.0, true);
                 Application.DoEvents();
                 labelOptimizedTime.Text = (Environment.TickCount - timeCheck).ToString() + " ms";
             } 

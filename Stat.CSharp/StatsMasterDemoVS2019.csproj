@@ -607,7 +607,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>mkdir $(TargetDir)Data\
+copy $(ProjectDir)Data\*.* $(TargetDir)Data\</PostBuildEvent>
   </PropertyGroup>
 </Project>
