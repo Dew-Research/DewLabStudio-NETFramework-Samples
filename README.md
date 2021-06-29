@@ -23,6 +23,6 @@ When using .NET Framework, inside of the solution folder there will be a "Packag
 
 .\packages\Dew.Math.6.0.4\runtimes
 
-And copy x86 content (dlls) to Windows\SysWO64\ and x64 content to Windows\System32\
+And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows\System32\
 
 When using .NET Core, these dlls are referenced in a different way and copying is not needed.
