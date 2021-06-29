@@ -2,8 +2,8 @@
 <img align="right" src="https://www.dewresearch.com/templates/yootheme/cache/mtxvex-icon-ef5151c5.png">
 </a>  
 
-# Dew Lab Studio VCL for .NET Framework samples.
-==========================================================================
+# Dew Lab Studio VCL for .NET Framework samples
+=====================================================================
   
 Sample programs showing how to use Dew Lab Studio for .NET Framework (v2.0-4.8)
 
