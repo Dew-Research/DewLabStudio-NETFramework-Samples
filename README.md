@@ -24,4 +24,4 @@ When using .NET Framework, inside of the solution folder there will be a "Packag
 
 And copy x86 content (dlls) to Windows\SysWO64\ and x64 content to Windows\System32\
 
-When using .NET Core, these dlls are referenced in a different way. 
+When using .NET Core, these dlls are referenced in a different way and copying is not needed.
