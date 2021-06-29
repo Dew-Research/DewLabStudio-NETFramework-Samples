@@ -495,7 +495,14 @@ namespace MtxVecDemo
 
 		private void checkBoxDownsample_CheckedChanged(object sender, System.EventArgs e) {
 			downSize = (sender as CheckBox).Checked;
-			tChart1.Zoom.Allow = !downSize;
+            if (downSize)
+            {
+                tChart1.Zoom.Direction = Steema.TeeChart.ZoomDirections.None;
+            }
+            else
+            {
+                tChart1.Zoom.Direction = Steema.TeeChart.ZoomDirections.Both;
+            }
 		}
 	}
 }

@@ -14,3 +14,5 @@ You'll need Dew Lab Studio for .NET evaluation or registered version to run the 
 * Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
 * Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50), (32bit and 64bit)
 * Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50) (64bit)
+
+VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
