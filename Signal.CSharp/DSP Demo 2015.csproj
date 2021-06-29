@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B41FF6D-C46F-4850-B7BE-6ABA30B34E9D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>FFTProp5.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DSP Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DSPDemo</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>DSPDemo.MainForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Common Files\CodeGear Shared\RAD Studio\Shared Assemblies\5.0\Borland.Delphi.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Math, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Math.Controls, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Math.TeePro, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.TeePro.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Signal, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Signal.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Signal.Audio, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Signal.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Signal.Editors, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Signal.Editors.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Signal.Tee, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Signal.Tee.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TeeChart, Version=4.2020.11.25, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\Steema.TeeChart.NET.4.2020.11.25\lib\net20\TeeChart.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmpltRatiosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsioPlaybackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsioPlaybackForm.Designer.cs">
+      <DependentUpon>AsioPlaybackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsioRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsioRecordForm.Designer.cs">
+      <DependentUpon>AsioRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoRegressDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BicoherenceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BiSpectrumGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BispectrumSurface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BispectrumTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseDemoForm.Designer.cs">
+      <DependentUpon>BrowseDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CepstrumDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CircularBufferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CircularBufferForm.Designer.cs">
+      <DependentUpon>CircularBufferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoherenceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZTDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemodulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DifferentiatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscreteSeriesDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvelopeDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrequencyBandsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratorDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IIRFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IIRGroupDelayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IIRZerosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterpolateDecimateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroAsioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroComponentsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroFunctionListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroHigherSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroKalmanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroPeakSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroPerformanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroPlaybackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroSignalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroSignalRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroSignalRateForm.Designer.cs">
+      <DependentUpon>IntroSignalRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntroSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KalmanBasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KalmanBasicForm.Designer.cs">
+      <DependentUpon>KalmanBasicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KalmanExtExampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KalmanExtExampleForm.Designer.cs">
+      <DependentUpon>KalmanExtExampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KalmanStdExampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KalmanStdExampleForm.Designer.cs">
+      <DependentUpon>KalmanStdExampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LissajousScopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LissajousScopeForm.Designer.cs">
+      <DependentUpon>LissajousScopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedianDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModulatorForm.Designer.cs">
+      <DependentUpon>ModulatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitorDemoForm.Designer.cs">
+      <DependentUpon>MonitorDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NarrowBandpassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NarrowBandpassForm.Designer.cs">
+      <DependentUpon>NarrowBandpassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineBicoherenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineBicoherenceForm.Designer.cs">
+      <DependentUpon>OnlineBicoherenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineCoherenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineCoherenceForm.Designer.cs">
+      <DependentUpon>OnlineCoherenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimalFiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderTrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeakFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeakInterpolateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeakMarkingBasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeakMarkingFormattingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhaseDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhaseScopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhaseScopeForm.Designer.cs">
+      <DependentUpon>PhaseScopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhaseShifterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaybackDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaybackDemoForm.Designer.cs">
+      <DependentUpon>PlaybackDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RateConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateConvertForm.Designer.cs">
+      <DependentUpon>RateConvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterSignalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavGolayDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignalAnalysisDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpectrogramDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpectrogramDemoForm.Designer.cs">
+      <DependentUpon>SpectrogramDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TriggerDemoForm.Designer.cs">
+      <DependentUpon>TriggerDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="WhatIsNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowFiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AmpltRatiosForm.resx">
+      <DependentUpon>AmpltRatiosForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsioPlaybackForm.resx">
+      <DependentUpon>AsioPlaybackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsioRecordForm.resx">
+      <DependentUpon>AsioRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoRegressDemoForm.resx">
+      <DependentUpon>AutoRegressDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForm3.resx">
+      <DependentUpon>BasicForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BicoherenceTestForm.resx">
+      <DependentUpon>BicoherenceTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiSpectrumGridForm.resx">
+      <DependentUpon>BiSpectrumGridForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BispectrumSurface.resx">
+      <DependentUpon>BispectrumSurface.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BispectrumTestForm.resx">
+      <DependentUpon>BispectrumTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseDemoForm.resx">
+      <DependentUpon>BrowseDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CepstrumDemoForm.resx">
+      <DependentUpon>CepstrumDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularBufferForm.resx">
+      <DependentUpon>CircularBufferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoherenceTestForm.resx">
+      <DependentUpon>CoherenceTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZTDemoForm.resx">
+      <DependentUpon>CZTDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemodulatorForm.resx">
+      <DependentUpon>DemodulatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DifferentiatorForm.resx">
+      <DependentUpon>DifferentiatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscreteSeriesDemoForm.resx">
+      <DependentUpon>DiscreteSeriesDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvelopeDemoForm.resx">
+      <DependentUpon>EnvelopeDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterEditorForm.resx">
+      <DependentUpon>FilterEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrequencyBandsForm.resx">
+      <DependentUpon>FrequencyBandsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratorDemoForm.resx">
+      <DependentUpon>GeneratorDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IIRFilteringForm.resx">
+      <DependentUpon>IIRFilteringForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IIRGroupDelayForm.resx">
+      <DependentUpon>IIRGroupDelayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IIRZerosForm.resx">
+      <DependentUpon>IIRZerosForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterpolateDecimateForm.resx">
+      <DependentUpon>InterpolateDecimateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroApplicationForm.resx">
+      <DependentUpon>IntroApplicationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroAsioForm.resx">
+      <DependentUpon>IntroAsioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroComponentsListForm.resx">
+      <DependentUpon>IntroComponentsListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroDesignForm.resx">
+      <DependentUpon>IntroDesignForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroFunctionListForm.resx">
+      <DependentUpon>IntroFunctionListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroHigherSpectralForm.resx">
+      <DependentUpon>IntroHigherSpectralForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroPeakSpectralForm.resx">
+      <DependentUpon>IntroPeakSpectralForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroPerformanceForm.resx">
+      <DependentUpon>IntroPerformanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroPlaybackForm.resx">
+      <DependentUpon>IntroPlaybackForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroSignalForm.resx">
+      <DependentUpon>IntroSignalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroSpectralForm.resx">
+      <DependentUpon>IntroSpectralForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KalmanBasicForm.resx">
+      <DependentUpon>KalmanBasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KalmanExtExampleForm.resx">
+      <DependentUpon>KalmanExtExampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KalmanStdExampleForm.resx">
+      <DependentUpon>KalmanStdExampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LissajousScopeForm.resx">
+      <DependentUpon>LissajousScopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedianDemoForm.resx">
+      <DependentUpon>MedianDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulatorForm.resx">
+      <DependentUpon>ModulatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorDemoForm.resx">
+      <DependentUpon>MonitorDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NarrowBandpassForm.resx">
+      <DependentUpon>NarrowBandpassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineBicoherenceForm.resx">
+      <DependentUpon>OnlineBicoherenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineCoherenceForm.resx">
+      <DependentUpon>OnlineCoherenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimalFiltersForm.resx">
+      <DependentUpon>OptimalFiltersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderTrackingForm.resx">
+      <DependentUpon>OrderTrackingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeakFilteringForm.resx">
+      <DependentUpon>PeakFilteringForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeakInterpolateForm.resx">
+      <DependentUpon>PeakInterpolateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeakMarkingBasicForm.resx">
+      <DependentUpon>PeakMarkingBasicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeakMarkingFormattingForm.resx">
+      <DependentUpon>PeakMarkingFormattingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhaseDemoForm.resx">
+      <DependentUpon>PhaseDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhaseScopeForm.resx">
+      <DependentUpon>PhaseScopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhaseShifterForm.resx">
+      <DependentUpon>PhaseShifterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaybackDemoForm.resx">
+      <DependentUpon>PlaybackDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RateConvertForm.resx">
+      <DependentUpon>RateConvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterSignalForm.resx">
+      <DependentUpon>RegisterSignalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SavGolayDemoForm.resx">
+      <DependentUpon>SavGolayDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignalAnalysisDemoForm.resx">
+      <DependentUpon>SignalAnalysisDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpectrogramDemoForm.resx">
+      <DependentUpon>SpectrogramDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TriggerDemoForm.resx">
+      <DependentUpon>TriggerDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhatIsNewForm.resx">
+      <DependentUpon>WhatIsNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFiltersForm.resx">
+      <DependentUpon>WindowFiltersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsDemoForm.resx">
+      <DependentUpon>WindowsDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Data\BZ.SFS">
+    </None>
+    <None Include="Data\Components.rtf">
+    </None>
+    <None Include="Data\RegisterSignal.rtf">
+    </None>
+    <None Include="Data\Routines.rtf">
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FFTProp5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

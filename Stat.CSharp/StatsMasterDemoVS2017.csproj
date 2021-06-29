@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{509C5BCD-71FA-4EDA-BCCF-15628B776036}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>StatsMasterDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StatsMasterDemo</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>StatsMasterDemo.MainForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;VS2005</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WorkDirectory\Builds\Assemblies\NETv2\Borland.Delphi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Dew.Math, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Math.Controls, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Math.Tee, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.Tee.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Stats, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Dew.Stats.Tee, Version=5.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Stats.Tee.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TeeChart.Lite, Version=2.0.2263.29186, Culture=neutral, PublicKeyToken=9c8126276c77bdb7">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\TeeChart.Lite.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <None Include="app.config" />
+    <None Include="Data\List_Functions.txt" />
+    <Compile Include="ARMAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseStatWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BinaryTestWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DecForecastWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DotPlotDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GOFChi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GOFKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrowthModelWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="H2Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypTestWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogistReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDSWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MulRegWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NISTANOVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NISTIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NISTNonLinear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParetoDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCRWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCCAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCCEWMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCCPChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCCVariable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCLevey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QQPlotDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RModels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowARMAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBTWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDecForWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowGMWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowH2Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowHTWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMDSWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPCAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPCRWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRegWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Steema_BiPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Steema_BoxPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeeChartIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSACF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSARAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSARIMASim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSExpSmooth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="WhatsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ARMAWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARMAWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseStatWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseStatWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForm1.resx">
+      <DependentUpon>BasicForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForm2.resx">
+      <DependentUpon>BasicForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicForm3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BasicForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BinaryTestWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BinaryTestWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DecForecastWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DecForecastWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DotPlotDemo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DotPlotDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionList.resx">
+      <DependentUpon>FunctionList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GOFChi2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GOFChi2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GOFKS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GOFKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrowthModelWizard.resx">
+      <DependentUpon>GrowthModelWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="H2Wizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>H2Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypTestWizard.resx">
+      <DependentUpon>HypTestWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemAnalysis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ItemAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogistReg.resx">
+      <DependentUpon>LogistReg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introduction.resx">
+      <DependentUpon>Introduction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDSWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDSWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MulRegWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MulRegWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NISTANOVA.resx">
+      <DependentUpon>NISTANOVA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NISTIntro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NISTIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NISTNonLinear.resx">
+      <DependentUpon>NISTNonLinear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParetoDemo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParetoDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCAWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PCAWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCRWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PCRWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCCAttribute.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QCCAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCCEWMA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QCCEWMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCCPChart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QCCPChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCCVariable.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QCCVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCLevey.resx">
+      <DependentUpon>QCLevey.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QQPlotDemo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QQPlotDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickStart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuickStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandGen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RandGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RModels.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowARMAWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowARMAWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowBTWizard.resx">
+      <DependentUpon>ShowBTWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDecForWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowDecForWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowGMWizard.resx">
+      <DependentUpon>ShowGMWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowH2Wizard.resx">
+      <DependentUpon>ShowH2Wizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowHTWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowHTWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMDSWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowMDSWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPCAWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPCAWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPCRWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPCRWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRegWizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowRegWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Steema_BiPlot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Steema_BiPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Steema_BoxPlot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Steema_BoxPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeeChartIntro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TeeChartIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSACF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TSACF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSARAR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TSARAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSARIMASim.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TSARIMASim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSExpSmooth.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TSExpSmooth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhatsNew.resx">
+      <DependentUpon>WhatsNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\airpass.vec">
+    </None>
+    <None Include="Data\beam_deflection.VEC">
+    </None>
+    <None Include="Data\deaths.vec">
+    </None>
+    <None Include="Data\dowjones.vec">
+    </None>
+    <None Include="Data\ewma_data.MTX">
+    </None>
+    <None Include="Data\FisherIris.mtx">
+    </None>
+    <None Include="Data\FIT_X.VEC">
+    </None>
+    <None Include="Data\FIT_Y.vec">
+    </None>
+    <None Include="Data\MulLinReg_A.mtx">
+    </None>
+    <None Include="Data\MulLinReg_Y.vec">
+    </None>
+    <None Include="Data\PCA_Data.mtx">
+    </None>
+    <None Include="Data\QC_XR.mtx">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
