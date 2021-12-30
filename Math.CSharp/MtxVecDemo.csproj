@@ -145,16 +145,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.4\lib\net2.0\Borland.Delphi.dll</HintPath>
+      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Borland.Delphi.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math, Version=6.0.4.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.4\lib\net2.0\Dew.Math.dll</HintPath>
+    <Reference Include="Dew.Math, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.Controls, Version=6.0.4.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.4\lib\net2.0\Dew.Math.Controls.dll</HintPath>
+    <Reference Include="Dew.Math.Controls, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.TeePro, Version=6.0.4.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.4\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
+    <Reference Include="Dew.Math.TeePro, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -171,14 +171,14 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2020.11.25, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2020.11.25\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2020.11.25, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2020.11.25\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2020.11.25, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2020.11.25\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
