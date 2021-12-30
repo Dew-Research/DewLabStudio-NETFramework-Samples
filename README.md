@@ -20,7 +20,7 @@ VS.NET 2015 and newer should be able to automatically restore missing NuGet pack
 
 When targeting .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
 
-.\packages\Dew.Math.6.0.4\runtimes
+.\packages\Dew.Math.6.0.6\runtimes
 
 And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows\System32\
 
