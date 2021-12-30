@@ -26,4 +26,4 @@ And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows
 
 When targeting .NET Core, these dlls are referenced in a different way and copying is not needed.
 
-To correctly checkout/pull a CRLF must be enabled for your GIT!!
+To correctly checkout/pull a CRLF must be enabled for your GIT!! Although not used by the source files, some sample data files could be affected.
