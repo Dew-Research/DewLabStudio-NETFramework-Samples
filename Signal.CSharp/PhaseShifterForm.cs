@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using Dew.Signal;
 using Dew.Math;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 using Dew.Signal.Tee;
 using Dew.Math.Controls;
 using Dew.Signal.Units;

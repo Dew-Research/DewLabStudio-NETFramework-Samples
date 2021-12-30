@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Steema.TeeChart.Styles;
 using Dew.Math.Units;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 using Dew.Math.Controls;
 using Dew.Signal.Units;
 using Dew.Signal.Tee;

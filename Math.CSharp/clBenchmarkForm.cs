@@ -75,7 +75,7 @@ namespace MtxVecDemo
 
             this.Cursor = Cursors.WaitCursor;
             //    clPlatform.SaveDefaultToRes("C:\CommonObjects\Dew MtxVec.NET\");
-            clPlatforms.LoadProgramsForDevices(true, true, true, true, false);
+            clPlatforms.LoadProgramsForDevices(false, false, true, false, false);
             this.Cursor = Cursors.Default;
             functionBox.SelectedIndex = 0;
 

@@ -741,6 +741,7 @@ namespace MtxVecDemo {
                            for (int j = 0; j <= 9 * factor; j++) c.Mul(a, b);
                     }
                     else c.Mul(a, b);
+
                     MtxLine.Add(i, Math387.StopTimer()*1000);
                    
 					if (i<50) i+=2; else i+=25;

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Stats.Units;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace StatsMasterDemo
 {

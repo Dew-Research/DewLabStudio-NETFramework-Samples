@@ -12,7 +12,7 @@ using Dew.Math.Units;
 using Dew.Stats;
 using Dew.Math.Editors;
 using Dew.Stats.Tee;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace StatsMasterDemo
 {

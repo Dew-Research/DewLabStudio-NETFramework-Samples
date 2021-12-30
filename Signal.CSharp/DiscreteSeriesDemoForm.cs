@@ -7,7 +7,7 @@ using Dew.Signal.Tee;
 using Dew.Signal.Units;
 using Dew.Math;
 using Dew.Math.Units;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 using Steema.TeeChart.Styles;
 using Dew.Math.Controls;
 

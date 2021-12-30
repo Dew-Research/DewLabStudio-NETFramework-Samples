@@ -10,7 +10,7 @@ using Dew.Math;
 using Dew.Math.Units;
 using Dew.Stats.Units;
 using Dew.Stats.Tee;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace StatsMasterDemo
 {
@@ -669,7 +669,7 @@ namespace StatsMasterDemo
                     bplot.Title = "Column " + i.ToString();
                     bplot.PlotStyle = Dew.Stats.Tee.BoxPlotStyle.bpDiamond;
                     tmpV.SortAscend();
-                    Dew.Math.Tee.TeeChart.DrawValues(tmpV, bplot, 0, 1, false);
+                    Dew.Math.Tee.MtxVecTee.DrawValues(tmpV, bplot, 0, 1, false);
                 }
             }
 

@@ -10,7 +10,7 @@ using Dew.Math.Units;
 using Steema.TeeChart.Styles;
 using Dew.Signal.Tee;
 using Dew.Math.Controls;
-using static Dew.Math.Tee.TeeChart;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace DSPDemo
 {

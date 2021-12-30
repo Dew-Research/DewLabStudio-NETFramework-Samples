@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Math.Tee;
-using static Dew.Math.Tee.TeeChart;
 
 namespace MtxVecDemo
 {
@@ -699,7 +698,7 @@ namespace MtxVecDemo
 				series.YStep = ystep;
 				series.GetVertAxis.Increment = (ymax-ymin)*0.01;
 				series.GetHorizAxis.Increment = (xmax-xmin)*0.01;
-                DrawValues(data, series);
+                MtxVecTee.DrawValues(data, series);
 			} finally {
 				this.Cursor = Cursors.Default;
 			}
