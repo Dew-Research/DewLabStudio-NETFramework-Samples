@@ -25,3 +25,5 @@ When targeting .NET Framework, inside of the solution folder there will be a "Pa
 And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows\System32\
 
 When targeting .NET Core, these dlls are referenced in a different way and copying is not needed.
+
+To correctly checkout/pull a CRLF must be enabled for your GIT!!
