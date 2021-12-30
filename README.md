@@ -10,9 +10,9 @@ Dew Lab Studio for .NET Framework contains several products. For each product th
 
 You'll need Dew Lab Studio for .NET evaluation or registered version to run the samples on this repository. Fully functional evaluation versions can be obtained from the public NuGet repository as "Dew Lab Studio". Dew Lab Studio is available in three editions:
 
-* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
-* Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50), (32bit and 64bit)
-* Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50) (64bit)
+* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows, net60, net60-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
+* Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50, net60), (32bit and 64bit)
+* Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50, net60) (64bit)
 
 VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
 
@@ -20,7 +20,7 @@ VS.NET 2015 and newer should be able to automatically restore missing NuGet pack
 
 When targeting .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
 
-.\packages\Dew.Math.6.0.4\runtimes
+.\packages\Dew.Math.6.0.6\runtimes
 
 And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows\System32\
 
