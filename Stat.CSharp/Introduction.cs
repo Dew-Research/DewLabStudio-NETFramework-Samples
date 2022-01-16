@@ -63,7 +63,7 @@ namespace StatsMasterDemo
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(488, 64);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Stats Master 5";
+            this.label1.Text = "Welcome to Stats Master v6";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
@@ -95,7 +95,7 @@ namespace StatsMasterDemo
 			richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily,11,FontStyle.Bold);
 			richTextBox1.SelectionColor = Color.FromArgb(51,104,195);
 
-            richTextBox1.SelectedText = "Welcome to Stats Master for Delphi and .NET platforms\n";
+            richTextBox1.SelectedText = "Welcome to Stats Master for .NET platforms\n";
 			richTextBox1.SelectedText = "\n";
             richTextBox1.SelectedText = "Stats Master is a (c) Dew Math Add-On library with many statistical and mathematical routines. It comes with:\n";
             richTextBox1.SelectedText = "\n";

@@ -98,22 +98,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Borland.Delphi.dll</HintPath>
+      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Borland.Delphi.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.dll</HintPath>
+    <Reference Include="Dew.Math, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.Controls, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.Controls.dll</HintPath>
+    <Reference Include="Dew.Math.Controls, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.TeePro, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.6\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
+    <Reference Include="Dew.Math.TeePro, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Stats, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Stats.6.0.6\lib\net2.0\Dew.Stats.dll</HintPath>
+    <Reference Include="Dew.Stats, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Stats.6.0.8\Lib\net2.0\Dew.Stats.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Stats.TeePro, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Stats.6.0.6\lib\net2.0\Dew.Stats.TeePro.dll</HintPath>
+    <Reference Include="Dew.Stats.TeePro, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Stats.6.0.8\Lib\net2.0\Dew.Stats.TeePro.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
