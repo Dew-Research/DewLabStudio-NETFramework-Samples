@@ -20,9 +20,23 @@ VS.NET 2015 and newer should be able to automatically restore missing NuGet pack
 
 When targeting .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
 
-.\packages\Dew.Math.6.0.6\runtimes
+.\packages\Dew.Math.X.0.Y\runtimes
 
-And copy x86 content (dlls) to C:\Windows\SysWO64\ and x64 content to C:\Windows\System32\
+And copy x86 content (dlls) to 
+
+C:\Windows\SysWO64\ 
+
+and x64 content to 
+
+C:\Windows\System32\
+
+Failure to do so, will give an error when trying to run the application:
+
+*The type initializer for 'Dew.Math.Units.MtxVec' threw an exception.*
+
+or in German:
+
+*Der Typeinitialisierer für "Dew.Math.Units.MtxVec" hat eine Ausnahme Verursacht.*
 
 When targeting .NET Core, these dlls are referenced in a different way and copying is not needed.
 
