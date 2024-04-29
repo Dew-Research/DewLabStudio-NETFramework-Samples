@@ -23,14 +23,14 @@ namespace StatsMasterDemo
         private Vector residuals;
         private Vector forecasts;
         private Vector forecastsd;
-        private Vector phi;
-        private Vector theta;
+        private Vector phi, phiInit;
+        private Vector theta, thetaInit;
         private int p = 0;
         private int q = 0;
         private int d = 0;
         private int forper = 10;
-        private int acflag = -1;
-        private double dmean;
+        private int maxLag = -1;
+        private double dMean;
         private double chartlcl, chartucl;
         private OpenFileDialog openFileDialog1;
         private Dew.Math.Controls.WizardPage wizardPageForecasts;
@@ -97,6 +97,9 @@ namespace StatsMasterDemo
             phi = new Vector(0);
             theta = new Vector(0);
 
+            phiInit = new Vector(0);
+            thetaInit = new Vector(0);
+
             openFileDialog1.Filter = "vectors (*.vec)|*.vec";
 
             // Reposition ARMA wizard pages
@@ -114,6 +117,22 @@ namespace StatsMasterDemo
             richTextBox.SuspendLayout();
             wizard.NextEnabled = false;
             wizard.BackEnabled = false;
+
+            TransformTimeSeries();
+
+            if (armainit == TcfInitMethod.cfInitFixed)
+            {
+                phi.Copy(phiInit);
+                theta.Copy(thetaInit);
+            }
+            else
+            {
+                phi.Size(p);
+                phi.SetZero();
+
+                theta.Size(q);
+                theta.SetZero();
+            }
 
             this.Cursor = Cursors.WaitCursor;
             try
@@ -197,8 +216,19 @@ namespace StatsMasterDemo
 
         private void InitEstimateReport()
         {
+            int innoLag;
+
             richTextBox.SelectionFont = new Font(richTextBox.SelectionFont.FontFamily, 10, FontStyle.Underline);
             richTextBox.SelectedText = "Preliminary estimates for coefficients\n\n";
+
+            if (maxLag < 0)
+            {
+                innoLag = (int)Math387.Ceil(10 * Math.Log10(data.Length));
+            }
+            else
+            {
+                innoLag = maxLag;
+            }
 
             Vector d1 = new Vector(0);
             Vector d2 = new Vector(0);
@@ -225,14 +255,19 @@ namespace StatsMasterDemo
                     }; break;
                 case TcfInitMethod.cfInitBurg:
                     {
-                        StatTimeSerAnalysis.ARBurgFit(data, phi, out estvar, d1);
+                        StatTimeSerAnalysis.ARBurgFit(data, phi, out estvar, d1); 
                         richTextBox.SelectedText = "Method used: Burg\n";
                     }; break;
                 case TcfInitMethod.cfInitInno:
                     {
-                        if (p == 0) StatTimeSerAnalysis.ARMAInnovationsFit(data, theta, out estvar, d2, acflag);
-                        else StatTimeSerAnalysis.ARMAInnovationsFit(data, phi, theta, out estvar, d1, d2, acflag);
-                        richTextBox.SelectedText = "Method used: Innovations with " + InnoLag(acflag).ToString() + " lags\n";
+                        if (p == 0) StatTimeSerAnalysis.ARMAInnovationsFit(data, theta, out estvar, d2, innoLag);
+                        else StatTimeSerAnalysis.ARMAInnovationsFit(data, phi, theta, out estvar, d1, d2, innoLag);
+                        richTextBox.SelectedText = "Method used: Innovations with " + innoLag.ToString() + " lags\n";
+                    }; break;
+                case TcfInitMethod.cfInitHannah:
+                    {
+                        StatTimeSerAnalysis.ARMAHannahFit(data, phi, theta, out estvar);
+                        richTextBox.SelectedText = "Method used: Hannah\n";
                     }; break;
             }
             if (armainit != TcfInitMethod.cfInitFixed)
@@ -258,8 +293,8 @@ namespace StatsMasterDemo
             double mle = 0.0;
             string st = "";
 
-            // estimate by using initial value from InitEstimateReport() routine
-            int iters = StatTimeSerAnalysis.ARMAMLE(data, phi, theta, residuals, out mle);
+            // estimate by using initial value from InitEstimateReport() routine 
+            int iters = StatTimeSerAnalysis.ARMAMLE(data, phi, theta, residuals, out mle, out dMean);
 
             st = "Number of iterations needed: " + iters.ToString() + "\n";
             st += "-2log(likelihood): " + Math387.FormatSample(FmtString, mle) + "\n";
@@ -284,10 +319,7 @@ namespace StatsMasterDemo
             string st = "";
             try
             {
-                StatTimeSerAnalysis.ARMAForecast(data, phi, theta, forper, forecasts, forecastsd);
-
-                // add mean, if required
-                if ((checkBoxRemoveMean.Checked) && (checkBoxAddMean.Checked)) forecasts.Add(dmean);
+                StatTimeSerAnalysis.ARMAForecast(data, phi, theta, residuals, forper, dMean, forecasts, forecastsd);
 
                 // integrate, if required
                 if ((d > 0) && (checkBoxIntegrate.Checked))
@@ -335,9 +367,7 @@ namespace StatsMasterDemo
                 Chart.Series[3].Color = Color.Black;
                 Chart.Series[3].Legend.Visible = false;
                 v1.Copy(data);
-                // add mean, if required 
-                if ((checkBoxRemoveMean.Checked) && (checkBoxAddMean.Checked))
-                    v1 += dmean;
+
                 // integrate, if required
                 if ((d > 0) && (checkBoxIntegrate.Checked))
                 {
@@ -1166,18 +1196,17 @@ namespace StatsMasterDemo
 			// 
 			// comboBox3
 			// 
-			this.comboBox3.Items.AddRange(new object[] {
-														   "Innovations",
-														   "User supplied"});
-			this.comboBox3.Location = new System.Drawing.Point(6, 19);
+			this.comboBox3.Items.AddRange(new object[] { "User supplied", "Yule-Walker", "Burg", "Innovations", "Hannah-Rissanen" });
+            this.comboBox3.Location = new System.Drawing.Point(6, 19);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(152, 21);
 			this.comboBox3.TabIndex = 0;
 			this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-			// 
-			// groupBox10
-			// 
-			this.groupBox10.Controls.Add(this.label10);
+            this.comboBox3.SelectedIndex = 1;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label10);
 			this.groupBox10.Controls.Add(this.button1);
 			this.groupBox10.Controls.Add(this.button2);
 			this.groupBox10.Location = new System.Drawing.Point(422, 78);
@@ -1234,10 +1263,11 @@ namespace StatsMasterDemo
 			this.checkBoxMLE.Size = new System.Drawing.Size(151, 17);
 			this.checkBoxMLE.TabIndex = 0;
 			this.checkBoxMLE.Text = "Do MLE estimation";
-			// 
-			// groupBox12
-			// 
-			this.groupBox12.Controls.Add(this.numericUpDown1);
+			this.checkBoxMLE.Checked = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.numericUpDown1);
 			this.groupBox12.Controls.Add(this.label11);
 			this.groupBox12.Controls.Add(this.numericUpDown2);
 			this.groupBox12.Controls.Add(this.label12);
@@ -1255,10 +1285,11 @@ namespace StatsMasterDemo
 			this.numericUpDown1.Size = new System.Drawing.Size(58, 20);
 			this.numericUpDown1.TabIndex = 3;
 			this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
+			this.numericUpDown1.Value = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
 			this.label11.Location = new System.Drawing.Point(6, 52);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(51, 16);
@@ -1272,10 +1303,11 @@ namespace StatsMasterDemo
 			this.numericUpDown2.Size = new System.Drawing.Size(58, 20);
 			this.numericUpDown2.TabIndex = 1;
 			this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
+            this.numericUpDown2.Value = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
 			this.label12.Location = new System.Drawing.Point(6, 26);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(49, 16);
@@ -1650,9 +1682,9 @@ namespace StatsMasterDemo
             // differenciate, if needed
             if (d > 0)
                 for (int i = 1; i <= d; i++) data.Difference(1);
-            dmean = data.Mean();
+            dMean = data.Mean();
             // remove mean, if specified
-            if (checkBoxRemoveMean.Checked) data -= dmean;
+            //if (checkBoxRemoveMean.Checked) data -= dMean;
         }
 
         #endregion
@@ -1767,6 +1799,11 @@ namespace StatsMasterDemo
         {
             p = (int)numericUpDown2.Value;
             phi.Length = p;
+            phi.SetZero();
+
+            phiInit.Size(phi);
+            phiInit.SetZero();
+
             RefreshModelControls();
             RefreshWizardControls();
         }
@@ -1775,6 +1812,10 @@ namespace StatsMasterDemo
         {
             q = (int)numericUpDown1.Value;
             theta.Length = q;
+
+            thetaInit.Size(theta);
+            thetaInit.SetZero();
+
             RefreshModelControls();
             RefreshWizardControls();
         }
@@ -1783,8 +1824,16 @@ namespace StatsMasterDemo
         {
             switch (comboBox3.SelectedIndex)
             {
-                case 0: // Innovations
+                case 0:
+                    armainit = TcfInitMethod.cfInitFixed; break;
+                case 1:
+                    armainit = TcfInitMethod.cfInitYW; break;
+                case 2:
+                    armainit = TcfInitMethod.cfInitBurg; break;
+                case 3: // Innovations
                     armainit = TcfInitMethod.cfInitInno; break;
+                case 4:
+                    armainit = TcfInitMethod.cfInitHannah; break;
                 default: // user supplied
                     armainit = TcfInitMethod.cfInitFixed; break;
             }
@@ -1793,13 +1842,13 @@ namespace StatsMasterDemo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MtxVecEdit.ViewValues(phi, "AR coefficients", true, false, true);
+            MtxVecEdit.ViewValues(phiInit, "AR coefficients", true, false, true);
             RefreshModelControls();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MtxVecEdit.ViewValues(theta, "MA coefficients", true, false, true);
+            MtxVecEdit.ViewValues(thetaInit, "MA coefficients", true, false, true);
             RefreshModelControls();
         }
 
@@ -1824,7 +1873,7 @@ namespace StatsMasterDemo
 
         private void numericUpDownACFLag_ValueChanged(object sender, EventArgs e)
         {
-            acflag = (int)numericUpDownACFLag.Value;
+            maxLag = (int)numericUpDownACFLag.Value;
         }
     }
 }

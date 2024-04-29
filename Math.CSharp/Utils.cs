@@ -170,7 +170,7 @@ namespace MtxVecDemo
 
         public static string SourcePath()
         {
-            const string ProjectName = "MtxVecDemoVS2010.csproj";
+            const string ProjectName = "MtxVecDemo.csproj";
             string result = "";
 
             RegistryKey key = Registry.CurrentUser.CreateSubKey(DemoRegKey);
@@ -186,17 +186,22 @@ namespace MtxVecDemo
                 result = Path.GetDirectoryName(result) + @"\";
             }
 
-            FileInfo fi = new FileInfo(result + ProjectName);
-            if (!fi.Exists)
-            {
-                fi = new FileInfo(result + @"..\" + ProjectName);
-                if (fi.Exists) result = result + @"..\";
-                else
-                {
-                    fi = new FileInfo(result + @"..\..\" + ProjectName);
-                    if (fi.Exists) result = result + @"..\..\";
-                }
-            }
+			FileInfo fi = new FileInfo(result + ProjectName);
+			if (!fi.Exists)
+			{
+				fi = new FileInfo(result + @"..\..\..\" + ProjectName);
+				if (fi.Exists) result = result + @"..\..\..\";
+				else
+				{
+					fi = new FileInfo(result + @"..\..\" + ProjectName);
+					if (fi.Exists) result = result + @"..\..\";
+					else
+					{
+						fi = new FileInfo(result + @"..\" + ProjectName);
+						if (fi.Exists) result = result + @"..\";
+					}
+				}
+			}
 
             return result;            
         }

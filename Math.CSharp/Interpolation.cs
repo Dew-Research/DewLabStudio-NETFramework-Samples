@@ -736,7 +736,7 @@ namespace MtxVecDemo
 				}
 				MtxVecTee.DrawValues(y,series1,0,1, DownSize);
 				int timeCheck = Environment.TickCount;
-				pX.Size(dataPoints * factor);
+				pX.Size((dataPoints - 1) * factor);
 				pX.Ramp(0, 1.0 /(double) factor);
 				Polynoms.Interpolate(y,pX,pY,intType,true);
 				int timeElapsed = Environment.TickCount - timeCheck;

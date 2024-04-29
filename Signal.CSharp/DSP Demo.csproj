@@ -27,7 +27,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -99,28 +99,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Borland.Delphi.dll</HintPath>
+      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Borland.Delphi.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.dll</HintPath>
+    <Reference Include="Dew.Math, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.Controls, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.Controls.dll</HintPath>
+    <Reference Include="Dew.Math.Controls, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.TeePro, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.0.8\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
+    <Reference Include="Dew.Math.TeePro, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Signal, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Signal.6.0.8\lib\net2.0\Dew.Signal.dll</HintPath>
+    <Reference Include="Dew.Signal, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Signal.6.2.2\lib\net2.0\Dew.Signal.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Signal.Audio, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Signal.6.0.8\lib\net2.0\Dew.Signal.Audio.dll</HintPath>
+    <Reference Include="Dew.Signal.Audio, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Signal.6.2.2\lib\net2.0\Dew.Signal.Audio.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Signal.Editors, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Signal.6.0.8\lib\net2.0\Dew.Signal.Editors.dll</HintPath>
+    <Reference Include="Dew.Signal.Editors, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Signal.6.2.2\lib\net2.0\Dew.Signal.Editors.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Signal.Tee, Version=6.0.8.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Signal.6.0.8\lib\net2.0\Dew.Signal.Tee.dll</HintPath>
+    <Reference Include="Dew.Signal.Tee, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dew.Signal.6.2.2\lib\net2.0\Dew.Signal.Tee.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -139,14 +145,14 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2021.11.23, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2021.11.23\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

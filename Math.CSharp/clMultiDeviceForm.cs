@@ -35,7 +35,7 @@ namespace MtxVecDemo
                                       + "Then you can observe how long it takes before the specified Job Count is computed."
                                       + "Select various functions and see how they perform on different platforms. \n ";
 
-            int i;
+            int i, k, kernelSum;
             i = (int)(sizeof(double) * 8);
 
             floatPrecisionBox.SelectedIndex = 0;
@@ -59,13 +59,24 @@ namespace MtxVecDemo
             deviceListBox.SelectedIndex = 0;
             maximumJobCountEdit.Text = "2";
 
-            MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code."
-                          + "This may take a minute or longer. If you have Intel Open CL drivers installed they "
-                          + "add 20s delay regardless, if the program is precompiled.");
+            clPlatforms.IgnoreIntel = true;
+            kernelSum = 0;
 
-            this.Cursor = Cursors.WaitCursor;
-            clPlatforms.LoadProgramsForDevices(true, true, true, true, false);
-            this.Cursor = Cursors.Default;
+            for (i = 0; i <= clPlatforms.Count - 1; i++)
+            {
+                for (k = 0; k <= clPlatforms[i].Count - 1; k++)
+                {
+                    kernelSum = kernelSum + clPlatforms[i][k].Kernels.Count;
+                }
+            }
+            if (kernelSum == 0)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code." + "This may take a minute or longer. If you have Intel Open CL drivers installed they " + "add 20s delay regardless, if the program is precompiled. Similar for AMD. The NVidia " + "compiled code load times are much faster, but GPU has limits (2s) on maximum kernel " + "execution time for gaming GPUs.");
+                clPlatforms.LoadProgramsForDevices(false, false, true, false, false);
+                this.Cursor = Cursors.Default;
+            }
+
             functionBox.SelectedIndex = 0;
 
             VectorLen = (int) Math.Round(Math387.Exp2(19));
@@ -89,6 +100,7 @@ namespace MtxVecDemo
             for (i = 0; i < deviceListBox.Items.Count; i++)  //assign events to command queue threads
             {
                 aDevice = clPlatforms[platformListBox.SelectedIndex][i];
+                aDevice.CommandQueue[0].JobThread.OnExecute -= DoOnExecute;
                 aDevice.CommandQueue[0].JobThread.OnExecute += DoOnExecute;
                 aDevice.Cache.SetCacheSize(12, CacheLength, 12, 12, 12);
             }
@@ -136,13 +148,26 @@ namespace MtxVecDemo
 
             clMtxVec.CreateIt(out clA, out clB,out clC, out clD);
             try
-            {
+            {               
+                switch (functionSelected)
+                {
+                    case 0:
+                        IterCount = 8192;
+                        break;
+                    case 1:
+                        IterCount = 8192;
+                        break;
+                    case 2:
+                        IterCount = 8192;
+                        break;
+                    default: IterCount = 8192;
+                        break;
+                }
+
                 clB.Size(VectorLen, (TclFloatPrecision) floatPrecisionSelected, complexData);
                 clB.SetVal(ScalarB);
                 clC.Size(clB);
-                clC.SetVal(1);   
-             
-                IterCount = 8192;
+                clC.SetVal(1);               
 
                 for (i = 0; i < IterCount; i++)
                 {

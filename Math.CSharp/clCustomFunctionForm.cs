@@ -36,7 +36,10 @@ namespace MtxVecDemo
               for (i = 0; i < DeviceList.Count; i++)      {
                    deviceListBox.Items.Add(DeviceList[i]);
               }
-              deviceListBox.SelectedIndex = 0;
+              if (DeviceList.Count > 0)
+              {
+                   deviceListBox.SelectedIndex = 0;
+              }
         }
 
         private void CreateCustom() //compile custom function
@@ -83,32 +86,39 @@ namespace MtxVecDemo
 
         private void DoCompute()
         {
-                Vector A = new Vector(VectorLen);
-                Vector B = new Vector(VectorLen);               
-                Vector R = new Vector();
-                Vector C; 
-                TOpenCLVector clB, clC, clA;
+            Vector A = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
+            Vector B = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
+            Vector R = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
+            Vector C;
+            TOpenCLVector clB, clC, clA;
 
-                clMtxVec.CreateIt(out clB,out clC);
-                clMtxVec.CreateIt(out clA);
-                try
-                {                    
-                    clA.Copy(A);
-                    clB.Copy(B);
-                    vec_sin_f(clA, clB, clC);  //call custom function here
-                    C = MtxExpr.Sin(A) + B;
+            A.SetVal(0.5);
+            B.SetVal(0);
 
-                    clC.CopyTo(R);
-                    if (!C.IsEqual(R, 1E-4, TCompare.cmpAbsolute)) throw new Exception("Not equal");
-                                                                   else MessageBox.Show("Function works!");
-                }
-                finally
+
+            clMtxVec.CreateIt(out clB, out clC);
+            clMtxVec.CreateIt(out clA);
+            try
+            {
+                clA.Copy(A);
+                clB.Copy(B);
+                vec_sin_f(clA, clB, clC);  //call custom function here
+                C = MtxExpr.Sin(A) + B;
+
+                clC.CopyTo(R);
+                if (!C.IsEqual(R, 1E-4, TCompare.cmpAbsolute))
                 {
-                    clMtxVec.FreeIt(ref clA, ref clB);
-                    clMtxVec.FreeIt(ref clC);
-                    this.Cursor = Cursors.Default;
+                    throw new Exception("Not equal");
                 }
-         }
+                else MessageBox.Show("Function works!");
+            }
+            finally
+            {
+                clMtxVec.FreeIt(ref clA, ref clB);
+                clMtxVec.FreeIt(ref clC);
+                this.Cursor = Cursors.Default;
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -183,7 +193,8 @@ namespace MtxVecDemo
             //{
             //    clMtxVec.clPlatform.Free();
 
-            int i;
+            int i, k, kernelSum;
+
             i = (int)(sizeof(double) * 8);
 
             for (i = 0; i < clPlatforms.Count; i++)
@@ -202,13 +213,24 @@ namespace MtxVecDemo
 
             deviceListBox.SelectedIndex = 0;
 
-            MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code."
+            clPlatforms.IgnoreIntel = true;
+            kernelSum = 0;
+            for (i = 0; i <= clPlatforms.Count - 1; i++)
+            {
+                for (k = 0; k <= clPlatforms[i].Count - 1; k++)
+                {
+                    kernelSum = kernelSum + clPlatforms[i][k].Kernels.Count;
+                }
+            }
+            if (kernelSum == 0)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code."
                       + "This may take a minute or longer. If you have Intel Open CL drivers installed they "
                       + "add 20s delay regardless, if the program is precompiled.");
-
-            this.Cursor = Cursors.WaitCursor;
-            clPlatforms.LoadProgramsForDevices(true, true, true, true, false);
-            this.Cursor = Cursors.Default;
+                clPlatforms.LoadProgramsForDevices(false, false, true, false, false);
+                this.Cursor = Cursors.Default;
+            }
 
             VectorLen = (int)Math.Round(Math387.Exp2(19));
             vectorLengthBox.Text = VectorLen.ToString();
