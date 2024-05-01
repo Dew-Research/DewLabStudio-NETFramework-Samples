@@ -625,7 +625,7 @@ namespace MtxVecDemo
         // 
         // 
         // 
-        this.tChart1.Legend.CheckBoxes = true;
+        this.tChart1.Legend.ActiveStyle = Steema.TeeChart.LegendActiveStyles.CheckBox;;
         // 
         // 
         // 

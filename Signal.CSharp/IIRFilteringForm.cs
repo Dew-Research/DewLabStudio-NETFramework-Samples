@@ -279,7 +279,7 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.CheckBoxes = true;
+            this.SpectrumChart1.Legend.ActiveStyle = Steema.TeeChart.LegendActiveStyles.CheckBox;
             this.SpectrumChart1.Location = new System.Drawing.Point(0, 80);
             this.SpectrumChart1.Name = "SpectrumChart1";
             // 

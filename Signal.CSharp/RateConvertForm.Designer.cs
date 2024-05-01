@@ -1718,7 +1718,7 @@
             this.signalChart.Legend.Brush.Color = System.Drawing.Color.White;
             this.signalChart.Legend.Brush.Solid = true;
             this.signalChart.Legend.Brush.Visible = true;
-            this.signalChart.Legend.CheckBoxes = true;
+            this.signalChart.Legend.ActiveStyle = Steema.TeeChart.LegendActiveStyles.CheckBox;
             // 
             // 
             // 
@@ -2923,7 +2923,7 @@
             this.spectrumChart.Legend.Brush.Color = System.Drawing.Color.White;
             this.spectrumChart.Legend.Brush.Solid = true;
             this.spectrumChart.Legend.Brush.Visible = true;
-            this.spectrumChart.Legend.CheckBoxes = true;
+            this.spectrumChart.Legend.ActiveStyle = Steema.TeeChart.LegendActiveStyles.CheckBox;
             // 
             // 
             // 

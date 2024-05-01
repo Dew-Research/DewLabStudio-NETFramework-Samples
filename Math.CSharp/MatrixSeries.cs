@@ -1200,7 +1200,7 @@ namespace MtxVecDemo
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             gridSeries.PixelResample = checkBox3.Checked;
-            gridSeries.ShowInLegend = !checkBox3.Checked;
+            gridSeries.Legend.Visible = !checkBox3.Checked;
             UpdateCharts();
         }
 
