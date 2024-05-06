@@ -434,7 +434,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>PCRWizard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="QCCAttribute.resx">
       <SubType>Designer</SubType>
       <DependentUpon>QCCAttribute.cs</DependentUpon>
@@ -606,7 +605,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
