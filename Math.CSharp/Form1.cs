@@ -22,12 +22,10 @@ namespace MtxVecDemo
 		private System.Windows.Forms.TabPage tabPageSource;
 		private System.Windows.Forms.Label labelCurrent;
 		private System.Windows.Forms.RichTextBox richTextBox1;
-        private PictureBox pictureBox1;
-
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.Container components = null;
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.Container components = null;
 
 		public MainForm()
 		{
@@ -70,31 +68,28 @@ namespace MtxVecDemo
             this.tabPageExample = new System.Windows.Forms.TabPage();
             this.tabPageSource = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageSource.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.labelCurrent);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2098, 79);
+            this.panel1.Size = new System.Drawing.Size(728, 79);
             this.panel1.TabIndex = 0;
             // 
             // labelCurrent
             // 
             this.labelCurrent.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrent.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCurrent.Location = new System.Drawing.Point(185, 36);
+            this.labelCurrent.Location = new System.Drawing.Point(190, 36);
             this.labelCurrent.Name = "labelCurrent";
-            this.labelCurrent.Size = new System.Drawing.Size(525, 26);
+            this.labelCurrent.Size = new System.Drawing.Size(516, 26);
             this.labelCurrent.TabIndex = 0;
             this.labelCurrent.Text = "label1";
             this.labelCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,9 +98,9 @@ namespace MtxVecDemo
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 521);
+            this.panel2.Location = new System.Drawing.Point(0, 367);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2098, 30);
+            this.panel2.Size = new System.Drawing.Size(728, 30);
             this.panel2.TabIndex = 1;
             // 
             // treeView1
@@ -113,7 +108,7 @@ namespace MtxVecDemo
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Location = new System.Drawing.Point(0, 79);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(168, 442);
+            this.treeView1.Size = new System.Drawing.Size(168, 288);
             this.treeView1.TabIndex = 2;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -126,7 +121,7 @@ namespace MtxVecDemo
             this.tabControl1.Location = new System.Drawing.Point(168, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1930, 442);
+            this.tabControl1.Size = new System.Drawing.Size(560, 288);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -134,7 +129,7 @@ namespace MtxVecDemo
             // 
             this.tabPageExample.Location = new System.Drawing.Point(4, 4);
             this.tabPageExample.Name = "tabPageExample";
-            this.tabPageExample.Size = new System.Drawing.Size(1922, 416);
+            this.tabPageExample.Size = new System.Drawing.Size(552, 262);
             this.tabPageExample.TabIndex = 0;
             this.tabPageExample.Text = "Example";
             // 
@@ -143,7 +138,7 @@ namespace MtxVecDemo
             this.tabPageSource.Controls.Add(this.richTextBox1);
             this.tabPageSource.Location = new System.Drawing.Point(4, 4);
             this.tabPageSource.Name = "tabPageSource";
-            this.tabPageSource.Size = new System.Drawing.Size(642, 325);
+            this.tabPageSource.Size = new System.Drawing.Size(552, 262);
             this.tabPageSource.TabIndex = 1;
             this.tabPageSource.Text = "Source";
             // 
@@ -153,27 +148,15 @@ namespace MtxVecDemo
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(642, 325);
+            this.richTextBox1.Size = new System.Drawing.Size(552, 262);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2098, 79);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(2098, 551);
+            this.ClientSize = new System.Drawing.Size(728, 397);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panel2);
@@ -186,7 +169,6 @@ namespace MtxVecDemo
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPageSource.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -218,6 +200,7 @@ namespace MtxVecDemo
             treeView1.Nodes.Add(new Utils.DemoTreeNode("What's new", null, "MtxVecDemo.WhatsNewForm"));
             node1 = new Utils.DemoTreeNode("Matrix operations", null, "MtxVecDemo.IntroMatricesForm");
             node1.Nodes.Add(new Utils.DemoTreeNode("Multiplying large matrices", "Multiply1.cs", "MtxVecDemo.Multiply1Form"));
+            node1.Nodes.Add(new Utils.DemoTreeNode("Multiplying small matrices", "SmallMatrixMul.cs", "MtxVecDemo.SmallMatrixForm"));
             node1.Nodes.Add(new Utils.DemoTreeNode("Copy and transpose operation", "CopyCompare.cs", "MtxVecDemo.CopyCompareForm"));
             node1.Nodes.Add(new Utils.DemoTreeNode("Calculating the inverse of squared matrix", "InverseMtx.cs", "MtxVecDemo.InverseMtxForm"));
             node1.Nodes.Add(new Utils.DemoTreeNode("Calculating squared root of matrix", "CalcSqrtMtx.cs", "MtxVecDemo.CalcSqrtMtxForm"));
@@ -235,6 +218,9 @@ namespace MtxVecDemo
 			node1.Nodes.Add(new Utils.DemoTreeNode("Benchmarks","BenchmarkX.cs","MtxVecDemo.BenchmarkXForm"));
             node1.Nodes.Add(new Utils.DemoTreeNode("Numerical integration (1D)", "NumInt1D.cs", "MtxVecDemo.NumInt1D"));
             node1.Nodes.Add(new Utils.DemoTreeNode("Optimized fast drawing", "MtxFastlineDemo.cs", "MtxVecDemo.MtxFastlineDemo"));
+            node1.Nodes.Add(new Utils.DemoTreeNode("Efficient multi-threading", "MtxVecThreading.cs", "MtxVecDemo.MtxVecThreadingForm"));
+            node1.Nodes.Add(new Utils.DemoTreeNode("If clause multi-threading", "IfThenForm.cs", "MtxVecDemo.IfThenForm"));
+            node1.Nodes.Add(new Utils.DemoTreeNode("Compound expressions", "CompoundExpressions.cs", "MtxVecDemo.CompoundExpressionsForm"));
             treeView1.Nodes.Add(node1);
 
 			node1 = new Utils.DemoTreeNode("Exporting/Importing",null,"MtxVecDemo.IntroExportForm");

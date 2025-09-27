@@ -27,7 +27,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -97,29 +97,29 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Borland.Delphi.dll</HintPath>
+    <Reference Include="Dew.Math, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.dll</HintPath>
+    <Reference Include="Dew.Math.Controls, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.Controls, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.Controls.dll</HintPath>
+    <Reference Include="Dew.Math.TeePro, Version=6.0.6.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.TeePro.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.TeePro, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
+    <Reference Include="Dew.Stats">
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Stats.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Stats, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Stats.6.2.2\Lib\net2.0\Dew.Stats.dll</HintPath>
-    </Reference>
-    <Reference Include="Dew.Stats.TeePro, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Stats.6.2.2\Lib\net2.0\Dew.Stats.TeePro.dll</HintPath>
+    <Reference Include="Dew.Stats.TeePro">
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Stats.TeePro.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -140,18 +140,19 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>..\..\Dew MtxVec.NET\Examples.VS\packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <None Include="app.config" />
     <None Include="Data\List_Functions.txt" />
     <Compile Include="ARMAWizard.cs">
       <SubType>Form</SubType>
@@ -612,7 +613,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>mkdir "$(TargetDir)Data\"
-copy "$(ProjectDir)Data\*.*" "$(TargetDir)Data\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

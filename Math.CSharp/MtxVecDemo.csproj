@@ -28,7 +28,7 @@
     <TargetZone>LocalIntranet</TargetZone>
     <GenerateManifests>false</GenerateManifests>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -148,23 +148,20 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Borland.Delphi, Version=11.0.5000.9245, Culture=neutral, PublicKeyToken=91d62ebb5b0d1b1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Borland.Delphi.dll</HintPath>
+    <Reference Include="Dew.Math">
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.dll</HintPath>
+    <Reference Include="Dew.Math.Controls">
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Dew.Math.Controls, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Dew.Math.TeePro, Version=6.2.0.0, Culture=neutral, PublicKeyToken=41d4dd75228c4ccb, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dew.Math.6.2.2\lib\net2.0\Dew.Math.TeePro.dll</HintPath>
+    <Reference Include="Dew.Math.TeePro">
+      <HintPath>..\..\..\Users\Public\Documents\RAD Studio\5.0\Bpl\Dew.Math.TeePro.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -181,14 +178,14 @@
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
-    <Reference Include="TeeChart, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.dll</HintPath>
+    <Reference Include="TeeChart, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.WPF.dll</HintPath>
+    <Reference Include="TeeChart.WPF, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=98e8c3f289a4e286, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="TeeChart.Xaml.WPF, Version=4.2024.3.15, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
-      <HintPath>..\packages\Steema.TeeChart.NET.4.2024.3.15\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
+    <Reference Include="TeeChart.Xaml.WPF, Version=4.2025.5.7, Culture=neutral, PublicKeyToken=9406d226170aa089, processorArchitecture=MSIL">
+      <HintPath>packages\Steema.TeeChart.NET.4.2025.5.7\lib\net40\TeeChart.Xaml.WPF.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -237,11 +234,23 @@
     <Compile Include="clMultiDeviceForm.Designer.cs">
       <DependentUpon>clMultiDeviceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompoundExpressions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompoundExpressions.Designer.cs">
+      <DependentUpon>CompoundExpressions.cs</DependentUpon>
+    </Compile>
     <Compile Include="CopyCompare.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSetDemo.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IfThenThreading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IfThenThreading.Designer.cs">
+      <DependentUpon>IfThenThreading.cs</DependentUpon>
     </Compile>
     <Compile Include="IntroOpenCL.cs">
       <SubType>Form</SubType>
@@ -322,6 +331,9 @@
     <Compile Include="MtxOptim.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MtxVecThreading.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Multiply1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +378,12 @@
     <Compile Include="Scripting.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SmallMatrixMul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallMatrixMul.Designer.cs">
+      <DependentUpon>SmallMatrixMul.cs</DependentUpon>
+    </Compile>
     <Compile Include="SparseTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -408,6 +426,9 @@
     <EmbeddedResource Include="clMultiDeviceForm.resx">
       <DependentUpon>clMultiDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CompoundExpressions.resx">
+      <DependentUpon>CompoundExpressions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CopyCompare.resx">
       <DependentUpon>CopyCompare.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -431,6 +452,9 @@
     <EmbeddedResource Include="FunctionList.resx">
       <DependentUpon>FunctionList.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IfThenThreading.resx">
+      <DependentUpon>IfThenThreading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interpolation.resx">
       <DependentUpon>Interpolation.cs</DependentUpon>
@@ -484,6 +508,10 @@
       <DependentUpon>MemoryCompare.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MtxVecThreading.resx">
+      <DependentUpon>MtxVecThreading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Multiply1.resx">
       <DependentUpon>Multiply1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -500,6 +528,7 @@
       <DependentUpon>ProbCalculator.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="QRPoly.resx">
       <DependentUpon>QRPoly.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -512,9 +541,8 @@
       <DependentUpon>RegisterMtxVec.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SavingLoading.resx">
-      <DependentUpon>SavingLoading.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="SmallMatrixMul.resx">
+      <DependentUpon>SmallMatrixMul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysLinear.resx">
       <DependentUpon>SysLinear.cs</DependentUpon>
@@ -652,7 +680,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>mkdir "$(TargetDir)Data\"
-copy "$(ProjectDir)Data\*.*" "$(TargetDir)Data\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

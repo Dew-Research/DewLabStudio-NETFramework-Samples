@@ -13,7 +13,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dew Research")]
 [assembly: AssemblyProduct("Dew Stats Master")]
-[assembly: AssemblyCopyright("Copyright (c) 1999-2024 Dew Research")]
+[assembly: AssemblyCopyright("Copyright (c) 1999-2025 Dew Research")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -28,7 +28,7 @@ using System.Resources;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("6.2.2")]
+[assembly: AssemblyVersion("6.3.0")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
@@ -59,5 +59,5 @@ using System.Resources;
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
 [assembly: ComVisibleAttribute(false)]
-[assembly: AssemblyFileVersion("6.2.2")]
+[assembly: AssemblyFileVersion("6.3.0")]
 [assembly: NeutralResourcesLanguageAttribute("")]

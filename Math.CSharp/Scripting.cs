@@ -295,32 +295,32 @@ namespace MtxVecDemo
                 case vtBoolValue: richTextBoxResult.Text += aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = " + a.BoolValue.ToString(); break;
                 case vtVectorValue:
                     {
-                        a.VectorValue.ValuesToStrings(valList, TFixedTextAlign.ftaRightAlign, "0.0000", "+0.0000i;-0.0000i", true);
+                        a.VectorValue.ValuesToStrings( valList, TFixedTextAlign.ftaRightAlign, "0.0000", "+0.0000i;-0.0000i", true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
                 case vtMatrixValue:
                     {
-                        a.MatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, "0.0000", "+0.0000i;-0.0000i", true);
+                        a.MatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, "0.0000", "+0.0000i;-0.0000i", true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
                 case vtIntVectorValue:
                     {
-                        a.IntVectorValue.ValuesToStrings(valList, TFixedTextAlign.ftaNone, true);
+                        a.IntVectorValue.ValuesToStrings(valList, TFixedTextAlign.ftaNone, true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
                 case vtIntMatrixValue:
                     {
-                        a.IntMatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, true);
+                        a.IntMatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
                 case vtBoolVectorValue:
                     {
-                        a.BoolVectorValue.ValuesToStrings(valList, TFixedTextAlign.ftaRightAlign, true);
+                        a.BoolVectorValue.ValuesToStrings(valList, TFixedTextAlign.ftaRightAlign, true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
                 case vtBoolMatrixValue:
                     {
-                        a.BoolMatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, true);
+                        a.BoolMatrixValue.ValuesToStrings(valList, "\t", TFixedTextAlign.ftaRightAlign, true, -1);
                         richTextBoxResult.AppendText(aName + "(" + MtxParseClass.ValTypeAsStr[(int)a.ValueType] + ") = \n\n" + valList.Text);
                     } break;
             }

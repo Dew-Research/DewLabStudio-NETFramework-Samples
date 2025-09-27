@@ -58,6 +58,7 @@ namespace MtxVecDemo {
             this.richTextBox1.Size = new System.Drawing.Size(292, 273);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // WhatsNewForm
             // 
@@ -77,7 +78,112 @@ namespace MtxVecDemo {
 
 		private void WhatsNewForm_Load(object sender, System.EventArgs e) {
             richTextBox1.Clear();
-			
+
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
+
+            richTextBox1.SelectionIndent = 10;
+            Add("Changes for MtxVec v6.3.6 (July 2025):");
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Core product");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Updated for Intel OneAPI v2025.0.New version of libiomp5md.dll is required.There will be an error about missing procedure entry point __kmpc_masked, if not provided.Make sure that the new version dll overwrites the old one.Additionally the new libomp5md.dll requires Visual C++ runtime libraries to be installed(v14).These libraries are present already when Rad Studio is being installed, but it affects deployment of the applications made with MtxVec. If absent, the error 0xc000007b will be reporting when attempting to start the application.");
+            Add("Added.NET Core v9 assemblies to the packages and removed.NET Core v7");
+            Add("Intel AVX instruction code path has been removed from oneAPI, but of course AVX2 and AVX512 code paths remain.MtxVec will still work on any CPU with at least SSE3 support. The size of 64bit dlls is now less due to this." +
+                "Since the end of 2023 only the 64bit libraries continue receiving performance and feature updates from Intel for oneAPI.");
+            Add("Some issues related to execution on AMD CPUs have been addressed according to Intel release notes for oneAPI 2025.0.");
+            Add("Both Lapack and FFT Threading are now disabled globally and becomes enabled only on users request.There were too many cases of performance degradation, when threading was enabled too soon for too short data.");
+            Add("Added TMtx.MulArray overload to multiply an array of matrices form left to right.");
+            Add("New small - matrix multiply features are implemented in MtxVec.TSmallMatrixMultiply class. Performance improvement ranges from 100x at matrix size 2x2 and is still 1.3x at matrix size 50x50.");
+            Add("Fixed MtxVec.Controller.CPUCores to work correctly also for AMD CPUs.");
+            Add("Added ColumnWidth parameter to TVec/TMtx/TVecInt/TMtxInt method ValuesToStrings.Usefull for fixed font width text table formating.");
+            Add("Added support for saving and loading the header row to the TVec / TMtx Caption property when saving / loading.csv files with LoadFromFile / SaveToFile method.");
+            Add("Added TVec.Mask overload");
+            Add("Added TMtx.MulSmallInit and TMtx.MulSmall methods to surface the JIT - ted small - matrix multiply.");
+            Add("Added JIT - ed matrix multiply to TMtx.Mul method.Kernels for sizes for square matrices up to 32x32 will be cached.");
+            Add("Added MtxVec.Controller.BlasThreadCount property for controlling threading count within MKL Blas.");
+            Add("Added extended CPU info(thread, core and instruction support) used by MtxVec.Controller that works across Intel and AMD CPUs.Check the Intro page of this demo for an example how to access and display this information.");
+            Add("Added a dedicated set of performance dlls targeting AMD Zen architecture(from Zen 1) for AVX2 and AVX512 instruction set.Although not comprehensive, they do improve some algorithms considerably and are a first step towards more comprehensive support also for AMD.These libraries are a separate download for registered customers.");
+            Add("Verified to run correctly on a multi - socket high - thread count AMD platform.");
+            Add("Added TVec.CumProduct method.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Compound Expressions");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Added new set of \"compound expression\" functions to TVec / TMtx / Vector / Matrix to speed up computation of basic +/ -*math.Over 160 new overloads have been added to Vector and the same amount to the Matrix type.");
+            Add("Added compound expressions for saturated integer math for Integer(32bit), SmallInt(16bit) and byte precision(8bit).This feature adds over 160 new overloads to TVecInt and TMtxInt(VectorInt and MatrixInt)");
+            Add("Added compound expressions for complex number math.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Math387");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Added SqrAbs combined function to Math387 for complex number TCplx and TSCplx types.");
+            Add("Added Exp2Int to Math387 for integer based exponentials(up to 32bit range)");
+            Add("Added Exp2Int64 to Math387 for integer based exponentials(up to 64bit range)");
+            Add("Added Log2Int to Math387 for integer based exponentials(up to 32bit range)");
+            Add("Added Log2Int64 to Math387 for integer based exponentials(up to 64bit range)");
+            Add("Bug Fix for complex Math387.ArcSin, when the argument was 0.This affected(complex number) Math387.ArcCos, Math387.ArcSinh, Math387.ArcCosh, Math387.ArcCsc and Math387.ArcCsch, Math387.ArcSec and Math387.ArcSech, which all call this function.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Special functions");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Expanded Bessel functions with computations on array with integer step between consecutive elements.");
+            Add("Added Exponential Integral functions E1, Ei and ExpEi to the SpecialFuncs.pas unit.By passing Log(x) as argument, this will also compute Logarithmic integrals.");
+            Add("Bug fix for Bessel J function from SpecialFuncs.pas unit.Introduced due to upgraded compiler.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Polynoms");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Bug fix for Spline1D, which did not work correctly for X other than 0, 1, 2, 3..");
+            Add("Bug fix for TPiecePoly.Evaluate(X, Y), which did not work for scalar overload, if vectorized overload was not called before.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Optimization");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Catastrophic cancellation mitigation for numerical GradHess routine for cases, where gradient is near zero. The routine is used by the Optimization methods.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Probabilities");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Added three new NormalPDF, NormalCDF, NormalCDFTwoTail vectorized overloads to probabilities.pas");
+            Add("Faster vectorized TriangularCDF, TriangularCDFInv, TriangularPDF");
+            Add("Faster vectorized InverseGaussianPDF and InverseGaussianCDF");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Sparse matrices");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Added TSparseMtx.SvdSymLargest, find user specified number of largest SVD values of sparse symmetric matrices");
+            Add("Added TSparseMtx.SvdSymSmallest, find user specified number of smallest SVD values of sparse symmetric matrices");
+            Add("Added TSparseMtx.EigSymLargest, TSparseMtx.EigSymGenLargest for user specified number of largest(generalized) eigen - values of sparse symmetric matrices");
+            Add("Added TSparseMtx.EigSymSmallest, TSparseMtx.EigSymGenSmallest for user specified number of largest(generalized) eigen - values of sparse symmetric matrices" +
+                "Optionally, TSparseMtx.TripletsToSparse can either use or drop zeros on the main diagonal.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Scripting");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Added TStringList type support to TMtxExpression script.You can now call: list(i), list(2:3), or assign with list(i) = \"2\" or concatenate lists of strings with[list(2:3); list(14:15)]");
+            Add("Added support to define externally owned TValueRec object as a variable in TMtxExpression script.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
             richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
 
@@ -623,5 +729,10 @@ namespace MtxVecDemo {
 			richTextBox1.SelectionIndent = 0;
 
 		}
-	}
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
