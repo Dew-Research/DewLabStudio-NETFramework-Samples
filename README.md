@@ -2,81 +2,77 @@
 <img align="right" src="https://www.dewresearch.com/images/Dew.png" width="128">
 </a>
 
-# Dew Lab Studio .NET — Sample Projects (Windows, Core, Linux)
+# Dew Lab Studio .NET — Sample Projects (WinForms, Windows / Core / Linux Variants)
 
-This repository provides sample applications and reference code demonstrating how to use Dew Lab Studio for scientific computing, numerical analysis, DSP, statistical modeling, and high-performance data visualization.
+This repository provides sample applications and reference code demonstrating how to use Dew Lab Studio for numerical analysis, scientific computing, DSP, statistical modeling, and high-performance data visualization.
 
-Each sample set corresponds to one or more of the following core libraries:
+**All samples in this repository are WinForms applications.**  
+The visualization libraries (Dew.Math.TeePro, Dew.Signal.Tee, Dew.Stats.Tee) are built on top of TeeChart and require WinForms.  
+Therefore, these samples must target Windows desktop-enabled frameworks such as:
 
-- Dew.Math — vectorized numerical computing, dense & sparse linear algebra, optimization, special functions, probability distributions, Monte-Carlo, expression evaluation.
-- Dew.Signal — real-time DSP pipelines, FFT-based spectral analysis, filtering, multirate processing, streaming capture & playback, time-frequency transforms.
-- Dew.Stats — statistical modeling, regression methods, inference, distributions, hypothesis testing, stochastic simulation.
+- `net48`
+- `net8.0-windows7.0`
+- `net9.0-windows7.0`
 
-Visualization examples also use:
+The **core computation libraries** (Dew.Math, Dew.Signal, Dew.Stats) do *not* depend on WinForms and can be used from other UI frameworks (WPF, Avalonia, custom rendering engines, services, console applications, etc.) on Windows.  
+However, the **visualization samples** shown here specifically demonstrate WinForms-based visualization workflows.
 
-- Dew.Math.TeePro
-- Dew.Signal.Tee
-- Dew.Stats.Tee
-
-These extend TeeChart for high-performance plotting of large numerical datasets, spectrograms, matrices, histograms, streaming signals, and model outputs.
-The visualization components internally rely on WinForms, but do not require your application to be WinForms-based; they can be used from WinForms, WPF, Avalonia, or custom UI frameworks when targeting Windows (net8.0-windows, net9.0-windows).
+A **different repository / folder** contains WinForms sample projects for **.NET Core / .NET 5+** targets.  
+This separation is required because **TeeChart serialization formats differ between .NET Framework and .NET (Core)**.
 
 ---
 
 ## Editions and Platform Model
 
-Dew Lab Studio is available in three variants, with the same API surface:
+Dew Lab Studio is available in three variants, all sharing the same namespace and API model:
 
-| Edition | Hardware Acceleration | OS / Platforms | Use Case |
-|--------|-----------------------|----------------|----------|
-| Dew Lab Studio (Windows) | Yes (native AVX/AVX2/AVX-512 acceleration) | Windows x64 | Maximum performance for engineering, scientific, financial, DSP, and real-time visualization workloads |
-| Dew Lab Studio Core | No native acceleration (managed-only) | Windows, Linux, macOS, containers | Portable code, cloud & CI/CD builds, cross-platform analytics |
-| Dew Lab Studio Linux | Yes (native-accelerated Linux runtime) | Linux x64 | HPC clusters, compute nodes, server pipelines, batch processing |
+| Edition | Hardware Acceleration | Platforms | Use Case |
+|--------|-----------------------|-----------|----------|
+| Dew Lab Studio (Windows) | Yes (native AVX/AVX2/AVX-512 acceleration) | Windows x64 | Highest-performance numerical and signal workflows with interactive visualization |
+| Dew Lab Studio Core | No native acceleration (managed-only) | Windows, Linux, macOS | Portable analytics, cross-platform builds, containers, cloud |
+| Dew Lab Studio Linux | Yes (native-accelerated Linux runtime) | Linux x64 | HPC nodes, compute clusters, headless server pipelines |
 
-Write code once and switch platform packages as needed.
+You can switch editions by changing the NuGet package reference—application code remains the same.
 
 ---
 
 ## Installing Evaluation or Full Version
 
-Evaluation builds are available directly from public NuGet:
+Evaluation builds are available from NuGet:
 
 Dew.Lab.Studio  
 Dew.Lab.Studio.Core  
 Dew.Lab.Studio.Linux
 
-Visual Studio 2017+ or JetBrains Rider will automatically restore all dependencies when opening a sample solution.
+Visual Studio 2017+ and Rider will automatically restore all packages when opening a sample solution.
 
-Native runtime libraries are automatically resolved by build scripts; no manual copying is required.
+Native runtimes are resolved automatically; **no manual DLL copying is required**.
 
 ---
 
 ## Repository Structure
 
-Each primary folder contains a main sample application consisting of multiple self-contained demonstrations:
+Each sample application contains multiple focused demonstrations:
 
-- Linear algebra workflows, solvers, matrix factorizations
-- Numerical modeling, interpolation, special functions
-- DSP chain construction, FFT pipelines, real-time spectral displays
-- Statistical distributions, regressions, stochastic models
-- 2D/3D visualization of numerical and signal data using TeeChart extensions
+- Matrix and vector workflows, dense & sparse solvers
+- Numerical modeling, interpolation, polynomial / Chebyshev approximation
+- Probability distributions, regression, hypothesis tests, simulation
+- Real-time DSP signal chains, filtering, FFT and spectral transforms
+- Oscilloscope views, spectrograms, waterfall and frequency-domain displays
+- Statistical histograms and visualization helpers
 
-Samples are intentionally designed to be small, isolated, and direct, making it easy to copy the code into your own projects.
-
----
-
-## Line Ending Note
-
-Ensure that CRLF is enabled when cloning this repository — some sample data files require Windows line endings.
+The samples are intentionally **short and direct**, designed to be copied into your own applications.
 
 ---
 
-## Contributing / Reporting Issues
+## Note on Line Endings
 
-If you encounter a bug or performance regression, please include:
+Enable **CRLF** when cloning this repository.  
+Some included data files depend on Windows line endings.
 
-- Dew Lab Studio edition + version
-- .NET runtime (net48, net8.0-windows, net9.0-windows, etc.)
-- OS type and CPU model (useful for AVX dispatch optimizations)
+---
 
-Pull requests for additional demo examples are welcome.
+## .NET Core / .NET 5+ Samples
+
+WinForms samples for `.NET 5 / 6 / 7 / 8 / 9` (also visualization-bound) are located in:
+
