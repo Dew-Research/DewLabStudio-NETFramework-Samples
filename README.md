@@ -1,43 +1,82 @@
 <a href="https://www.dewresearch.com/products/mtxvec/mtxvec-for-delphi-c-builder">
-<img align="right" src="https://www.dewresearch.com/images/Dew.png">
-</a>  
+<img align="right" src="https://www.dewresearch.com/images/Dew.png" width="128">
+</a>
 
-# Dew Lab Studio .NET for .NET Framework samples
-  
-Sample programs showing how to use Dew Lab Studio for .NET Framework (v2.0-4.8)
+# Dew Lab Studio .NET — Sample Projects (Windows, Core, Linux)
 
-Dew Lab Studio for .NET Framework contains several products. For each product there is a separate "main" demo project, which contains multiple independent examples. The .NET Core (5.0 and newer) samples are in a separate repository.
+This repository provides sample applications and reference code demonstrating how to use Dew Lab Studio for scientific computing, numerical analysis, DSP, statistical modeling, and high-performance data visualization.
 
-You'll need Dew Lab Studio for .NET evaluation or registered version to run the samples on this repository. Fully functional evaluation versions can be obtained from the public NuGet repository as "Dew Lab Studio". Dew Lab Studio is available in three editions:
+Each sample set corresponds to one or more of the following core libraries:
 
-* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows, net60, net60-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
-* Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50, net60), (32bit and 64bit)
-* Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50, net60) (64bit)
+- Dew.Math — vectorized numerical computing, dense & sparse linear algebra, optimization, special functions, probability distributions, Monte-Carlo, expression evaluation.
+- Dew.Signal — real-time DSP pipelines, FFT-based spectral analysis, filtering, multirate processing, streaming capture & playback, time-frequency transforms.
+- Dew.Stats — statistical modeling, regression methods, inference, distributions, hypothesis testing, stochastic simulation.
 
-VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
+Visualization examples also use:
 
-# <b>Important</b>
+- Dew.Math.TeePro
+- Dew.Signal.Tee
+- Dew.Stats.Tee
 
-When targeting .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
+These extend TeeChart for high-performance plotting of large numerical datasets, spectrograms, matrices, histograms, streaming signals, and model outputs.
+The visualization components internally rely on WinForms, but do not require your application to be WinForms-based; they can be used from WinForms, WPF, Avalonia, or custom UI frameworks when targeting Windows (net8.0-windows, net9.0-windows).
 
-.\packages\Dew.Math.X.0.Y\runtimes
+---
 
-And copy x86 content (dlls) to 
+## Editions and Platform Model
 
-C:\Windows\SysWO64\ 
+Dew Lab Studio is available in three variants, with the same API surface:
 
-and x64 content to 
+| Edition | Hardware Acceleration | OS / Platforms | Use Case |
+|--------|-----------------------|----------------|----------|
+| Dew Lab Studio (Windows) | Yes (native AVX/AVX2/AVX-512 acceleration) | Windows x64 | Maximum performance for engineering, scientific, financial, DSP, and real-time visualization workloads |
+| Dew Lab Studio Core | No native acceleration (managed-only) | Windows, Linux, macOS, containers | Portable code, cloud & CI/CD builds, cross-platform analytics |
+| Dew Lab Studio Linux | Yes (native-accelerated Linux runtime) | Linux x64 | HPC clusters, compute nodes, server pipelines, batch processing |
 
-C:\Windows\System32\
+Write code once and switch platform packages as needed.
 
-Failure to do so, will give an error when trying to run the application:
+---
 
-*The type initializer for 'Dew.Math.Units.MtxVec' threw an exception.*
+## Installing Evaluation or Full Version
 
-or in German:
+Evaluation builds are available directly from public NuGet:
 
-*Der Typeinitialisierer für "Dew.Math.Units.MtxVec" hat eine Ausnahme Verursacht.*
+Dew.Lab.Studio  
+Dew.Lab.Studio.Core  
+Dew.Lab.Studio.Linux
 
-When targeting .NET Core, these dlls are referenced in a different way and copying is not needed.
+Visual Studio 2017+ or JetBrains Rider will automatically restore all dependencies when opening a sample solution.
 
-To correctly checkout/pull a CRLF must be enabled for your GIT!! Although not used by the source files, some sample data files could be affected.
+Native runtime libraries are automatically resolved by build scripts; no manual copying is required.
+
+---
+
+## Repository Structure
+
+Each primary folder contains a main sample application consisting of multiple self-contained demonstrations:
+
+- Linear algebra workflows, solvers, matrix factorizations
+- Numerical modeling, interpolation, special functions
+- DSP chain construction, FFT pipelines, real-time spectral displays
+- Statistical distributions, regressions, stochastic models
+- 2D/3D visualization of numerical and signal data using TeeChart extensions
+
+Samples are intentionally designed to be small, isolated, and direct, making it easy to copy the code into your own projects.
+
+---
+
+## Line Ending Note
+
+Ensure that CRLF is enabled when cloning this repository — some sample data files require Windows line endings.
+
+---
+
+## Contributing / Reporting Issues
+
+If you encounter a bug or performance regression, please include:
+
+- Dew Lab Studio edition + version
+- .NET runtime (net48, net8.0-windows, net9.0-windows, etc.)
+- OS type and CPU model (useful for AVX dispatch optimizations)
+
+Pull requests for additional demo examples are welcome.
