@@ -8,6 +8,7 @@ using Dew.Signal.Units;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Signal.Tee;
+using Dew.Signal.Editors;
 using Dew.Demo;
 using Dew.Math.Editors;
 
@@ -106,7 +107,7 @@ namespace DSPDemo {
             this.CrossAnalyzer = new Dew.Signal.TCrossSpectrumAnalyzer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.MarkCursorBox = new System.Windows.Forms.CheckBox();
-            this.CrossSpectrumAnalyzerDialog = new Dew.Signal.CrossSpectrumAnalyzerDialog(this.components);
+            this.CrossSpectrumAnalyzerDialog = new Dew.Signal.Editors.CrossSpectrumAnalyzerDialog(this.components);
             this.SpectrumChart = new Dew.Signal.Tee.SpectrumChart();
             this.Series1 = new Steema.TeeChart.Styles.FastLine();
             this.Series2 = new Steema.TeeChart.Styles.Points();
@@ -193,7 +194,7 @@ namespace DSPDemo {
             this.FilteredSignal.FloatPrecisionLock = false;
             this.FilteredSignal.IsDouble = true;
             this.FilteredSignal.Name = "";
-            this.FilteredSignal.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.FilteredSignal_OnAfterUpdate);
+            this.FilteredSignal.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.FilteredSignal_OnAfterUpdate);
             // 
             // SignalRead1
             // 
@@ -216,7 +217,7 @@ namespace DSPDemo {
             // CrossAnalyzer
             // 
             this.CrossAnalyzer.Bands.TemplateIndex = -1;
-            this.CrossAnalyzer.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.CrossAnalyzer.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.CrossAnalyzer.BlockAssign = false;
             this.CrossAnalyzer.Complex = false;
             this.CrossAnalyzer.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -238,7 +239,7 @@ namespace DSPDemo {
             this.CrossAnalyzer.UnwrapPhase = true;
             this.CrossAnalyzer.Window = Dew.Signal.TSignalWindowType.wtHanning;
             this.CrossAnalyzer.ZeroPadding = 8;
-            this.CrossAnalyzer.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.CrossAnalyzer_OnParameterUpdate);
+            this.CrossAnalyzer.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.CrossAnalyzer_OnParameterUpdate);
             // 
             // panel1
             // 
@@ -1618,7 +1619,6 @@ namespace DSPDemo {
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
@@ -1787,7 +1787,6 @@ namespace DSPDemo {
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series2.Marks.TailParams.Margin = 0F;
             this.Series2.Marks.TailParams.PointerHeight = 8D;
             this.Series2.Marks.TailParams.PointerWidth = 8D;

@@ -140,9 +140,9 @@ namespace MtxVecDemo
             if (firstRun)
             {
                 firstRun  = false;
-                clMtxVec.clPlatform().UnMarkThreads();
-                clMtxVec.clPlatform().LoadProgramsForDevices(false, false, true, false, false);
-                device = clMtxVec.clPlatform().GetFirstGPUDevice();
+                ClMtxVec.clPlatform().UnMarkThreads();
+                ClMtxVec.clPlatform().LoadProgramsForDevices(false, false, true, false, false);
+                device = ClMtxVec.clPlatform().GetFirstGPUDevice();
                 vectorLen = 2 * x.Length;
                 device.Cache.SetCacheSize(15, vectorLen, 15, 15, 10);
                 device.CommandQueue[0].MarkThread();
@@ -452,7 +452,7 @@ namespace MtxVecDemo
             {
                 MtxVec.Controller.MarkThread(); //required to enable separate memory pools for each thread
                 InternalFmvtbd(aIndex, aThreadCount, vh, vk, vl);
-                MtxVec.Controller.UnMarkThread();
+                MtxVec.Controller.UnmarkThread();
             });
             calcTime = Math387.StopTimer();
         }
@@ -462,8 +462,8 @@ namespace MtxVecDemo
             calcName = "GPU - using OpenCL (TOpenClVector)";
             SetupOpenCL(2 * x.Length);
 
-            clMtxVec.CreateIt(out TOpenCLVector cx, out TOpenCLVector cy, out TOpenCLVector cz, out TOpenCLVector res);
-            clMtxVec.CreateIt(out TOpenCLVector tmp);
+            ClMtxVec.CreateIt(out TOpenCLVector cx, out TOpenCLVector cy, out TOpenCLVector cz, out TOpenCLVector res);
+            ClMtxVec.CreateIt(out TOpenCLVector tmp);
             try
             {
                 Math387.StartTimer();
@@ -484,8 +484,8 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref cx, ref cy, ref cz, ref res);
-                clMtxVec.FreeIt(ref tmp);
+                ClMtxVec.FreeIt(ref cx, ref cy, ref cz, ref res);
+                ClMtxVec.FreeIt(ref tmp);
             }
         }
 
@@ -496,9 +496,9 @@ namespace MtxVecDemo
 
             Math387.StartTimer();
 
-            clMtxVec.CreateIt(out TOpenCLVector vF, out TOpenCLVector vh, out TOpenCLVector vk, out TOpenCLVector vl);
-            clMtxVec.CreateIt(out TOpenCLVector cx, out TOpenCLVector cy);
-            clMtxVec.CreateIt(out TOpenCLVector cz);
+            ClMtxVec.CreateIt(out TOpenCLVector vF, out TOpenCLVector vh, out TOpenCLVector vk, out TOpenCLVector vl);
+            ClMtxVec.CreateIt(out TOpenCLVector cx, out TOpenCLVector cy);
+            ClMtxVec.CreateIt(out TOpenCLVector cz);
             try
             {
                 vh.CopyFromArray(h);
@@ -514,9 +514,9 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref vF, ref vh, ref vk, ref vl);
-                clMtxVec.FreeIt(ref cx, ref cy);
-                clMtxVec.FreeIt(ref cz);
+                ClMtxVec.FreeIt(ref vF, ref vh, ref vk, ref vl);
+                ClMtxVec.FreeIt(ref cx, ref cy);
+                ClMtxVec.FreeIt(ref cz);
 
                 calcTime = Math387.StopTimer();
             }           

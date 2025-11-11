@@ -1482,7 +1482,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
@@ -1529,8 +1528,7 @@ namespace DSPDemo
             // BiSpectrumAnalyzer1
             // 
             this.BiSpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.BiSpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
-            this.BiSpectrumAnalyzer1.BiAnalyzer.Lines = ((Dew.Math.TVec)(resources.GetObject("resource.Lines")));
+            this.BiSpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.BiSpectrumAnalyzer1.BiAnalyzer.Recursive = false;
             this.BiSpectrumAnalyzer1.BlockAssign = false;
             this.BiSpectrumAnalyzer1.Complex = false;

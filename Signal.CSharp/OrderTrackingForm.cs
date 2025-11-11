@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using Dew.Signal;
+using Dew.Signal.Editors;
 using Dew.Signal.Units;
 using Dew.Math.Units;
 using Dew.Signal.Tee;
@@ -101,7 +102,7 @@ namespace DSPDemo
             this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.Series1 = new Steema.TeeChart.Styles.FastLine();
             this.Series2 = new Steema.TeeChart.Styles.Points();
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
@@ -191,7 +192,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -1296,7 +1297,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.OriginalCursor = System.Windows.Forms.Cursors.Default;
             this.Series1.Title = "fastLine1";
             this.Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -1435,7 +1435,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series2.Marks.Transparent = true;
             this.Series2.Marks.Visible = true;
             this.Series2.OriginalCursor = System.Windows.Forms.Cursors.Default;

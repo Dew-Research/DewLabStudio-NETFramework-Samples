@@ -197,7 +197,7 @@ namespace MtxVecDemo
                         Math387.StartTimer();
                         for (int j = 0; j < Iters; j++)
                         {
-                            jit.MulKernelDouble(jit.Jitter, a, b, c);
+                            jit.MulKernelDouble(jit.jitter, a, b, c);
                         }
                         aTimings.Values[2, i] = Math387.StopTimer() * 1000;
                     }
@@ -206,7 +206,7 @@ namespace MtxVecDemo
                         Math387.StartTimer();
                         for (int j = 0; j < Iters; j++)
                         {
-                            jit.MulKernelComplexDouble(jit.Jitter, ac1, bc1, cc1);
+                            jit.MulKernelComplexDouble(jit.jitter, ac1, bc1, cc1);
                         }
                         aTimings.Values[2, i] = Math387.StopTimer() * 1000;
                     }

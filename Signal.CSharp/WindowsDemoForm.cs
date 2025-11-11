@@ -24,7 +24,7 @@ namespace DSPDemo
 		private System.Windows.Forms.Button button2;
 		private Dew.Signal.TSpectrumAnalyzer SpectrumAnalyzer1;
 		private Dew.Signal.TSignal Signal1;
-		private Dew.Signal.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
+		private Dew.Signal.Editors.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
 		private Steema.TeeChart.Editor ChartEditor;
 		private SpectrumChart SpectrumChart1;
 		private System.ComponentModel.IContainer components;
@@ -74,7 +74,7 @@ namespace DSPDemo
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WindowsDemoForm));
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.Signal1 = new Dew.Signal.TSignal(this.components);
-            this.SpectrumAnalyzerDialog1 = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog1 = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -86,7 +86,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.DCDump = false;
@@ -107,7 +107,7 @@ namespace DSPDemo
             this.SpectrumAnalyzer1.Report.UseTab = false;
             this.SpectrumAnalyzer1.SpectrumScale = 0D;
             this.SpectrumAnalyzer1.ZeroPadding = 16;
-            this.SpectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.tSpectrumAnalyzer1_OnParameterUpdate);
+            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.tSpectrumAnalyzer1_OnParameterUpdate);
             // 
             // Signal1
             // 
@@ -120,7 +120,7 @@ namespace DSPDemo
             this.Signal1.IsDouble = true;
             this.Signal1.Length = 64;
             this.Signal1.Name = "";
-            this.Signal1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.tSignal1_OnAfterUpdate);
+            this.Signal1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.tSignal1_OnAfterUpdate);
             // 
             // SpectrumAnalyzerDialog1
             // 

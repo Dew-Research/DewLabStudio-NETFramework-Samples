@@ -83,14 +83,19 @@ namespace MtxVecDemo {
             richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
 
             richTextBox1.SelectionIndent = 10;
-            Add("Changes for MtxVec v6.3.6 (July 2025):");
+            Add("Changes for MtxVec v6.3.5 (November 2025):");
             Add("");
             richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
             Add("Core product");
             richTextBox1.SelectionBullet = true;
             richTextBox1.SelectionIndent = 10;
             Add("Updated for Intel OneAPI v2025.0.New version of libiomp5md.dll is required.There will be an error about missing procedure entry point __kmpc_masked, if not provided.Make sure that the new version dll overwrites the old one.Additionally the new libomp5md.dll requires Visual C++ runtime libraries to be installed(v14).These libraries are present already when Rad Studio is being installed, but it affects deployment of the applications made with MtxVec. If absent, the error 0xc000007b will be reporting when attempting to start the application.");
-            Add("Added.NET Core v9 assemblies to the packages and removed.NET Core v7");
+            Add("Added .NET Core v9 assemblies to the distribution and removed .NET Core v7");
+            Add(".NET Framework target version raised to v4.8 with 100% C# code by using latest (C# v12) compiler delivering comprehensive performance boost for everybody still using .NET Framework.");
+            Add(".NET Core targets now use LibraryImport and .NET Framework targets still use DllImport. Precondition for AOT compilation!");
+            Add("Removed reference to Winforms from Dew.Math.dll, Dew.Signal and Dew.Stats.dll allowing slimer linking with WPF and ASP.NET on Windows!");
+            Add(".NET Standard v2.0 added to the supported target platform list for Linux and Core assemblies and included in distribution!");
+            Add("Dew.Math.Core are now targeting the largest possible platform set with netstandard2.0 TFM and no external dependancies.");
             Add("Intel AVX instruction code path has been removed from oneAPI, but of course AVX2 and AVX512 code paths remain.MtxVec will still work on any CPU with at least SSE3 support. The size of 64bit dlls is now less due to this." +
                 "Since the end of 2023 only the 64bit libraries continue receiving performance and feature updates from Intel for oneAPI.");
             Add("Some issues related to execution on AMD CPUs have been addressed according to Intel release notes for oneAPI 2025.0.");
@@ -102,12 +107,13 @@ namespace MtxVecDemo {
             Add("Added support for saving and loading the header row to the TVec / TMtx Caption property when saving / loading.csv files with LoadFromFile / SaveToFile method.");
             Add("Added TVec.Mask overload");
             Add("Added TMtx.MulSmallInit and TMtx.MulSmall methods to surface the JIT - ted small - matrix multiply.");
-            Add("Added JIT - ed matrix multiply to TMtx.Mul method.Kernels for sizes for square matrices up to 32x32 will be cached.");
+            Add("Added JIT-ed matrix multiply to TMtx.Mul method.Kernels for sizes for square matrices up to 32x32 will be cached.");
             Add("Added MtxVec.Controller.BlasThreadCount property for controlling threading count within MKL Blas.");
-            Add("Added extended CPU info(thread, core and instruction support) used by MtxVec.Controller that works across Intel and AMD CPUs.Check the Intro page of this demo for an example how to access and display this information.");
+            Add("Added extended CPU info(thread, core, instruction support and maker) used by MtxVec.Controller that works across Intel and AMD CPUs.Check the Intro page of this demo for an example how to access and display this information.");
             Add("Added a dedicated set of performance dlls targeting AMD Zen architecture(from Zen 1) for AVX2 and AVX512 instruction set.Although not comprehensive, they do improve some algorithms considerably and are a first step towards more comprehensive support also for AMD.These libraries are a separate download for registered customers.");
-            Add("Verified to run correctly on a multi - socket high - thread count AMD platform.");
+            Add("Verified to run correctly on a multi-socket high-thread count AMD platform.");
             Add("Added TVec.CumProduct method.");
+            Add("Added implicit conversion of TVec/TMtx/Vector/Matrix to Span<double>, Span<float>, Span<TCplx>, Span<TSCplx>");
             richTextBox1.SelectionBullet = false;
             Add("");
             richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
@@ -156,6 +162,15 @@ namespace MtxVecDemo {
             richTextBox1.SelectionBullet = false;
             Add("");
             richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Threading library");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("A separate threading library specifically targeting for-loops is now accessible from Dew.Math.Units.MtxVec.DoForLoop.");
+            Add("Integrates super-conductive memory management for TVec/TMtx/TVecInt/TMtxInt objects with separate memory pool for each thread.");
+            Add("Typically finishes faster than Parallel.For. The best improvement we noticed was 2x on a real science math job.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
             Add("Probabilities");
             richTextBox1.SelectionBullet = true;
             richTextBox1.SelectionIndent = 10;
@@ -181,6 +196,14 @@ namespace MtxVecDemo {
             richTextBox1.SelectionIndent = 10;
             Add("Added TStringList type support to TMtxExpression script.You can now call: list(i), list(2:3), or assign with list(i) = \"2\" or concatenate lists of strings with[list(2:3); list(14:15)]");
             Add("Added support to define externally owned TValueRec object as a variable in TMtxExpression script.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+            richTextBox1.SelectionFont = new System.Drawing.Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
+            Add("Debugger visualizers");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Rewritten to work without binary serialization");
+            Add("Added support for visualizing arrays. Specifically byte[], short[], int[], float[] and double[].");
             richTextBox1.SelectionBullet = false;
             Add("");
 
@@ -209,8 +232,8 @@ namespace MtxVecDemo {
             Add("Updated online and offline documentation.");
             Add("Updated Nuget package support to v6.9.");
             Add("Improved compatibility for .NET Core Winform(Preview) designer avoiding serialization of delegates");
-			Add("Added support for XML serialization for TVec, TVecInt, TMtx, TMtxInt, Vector, VectorInt, Matrix, MatrixInt for all .NET frameworks");
-			Add("Added support for JSON serialization for TVec, TVecInt, TMtx, TMtxInt, Vector, VectorInt, Matrix, MatrixInt for .NET Core v7 and newer");
+            Add("Added support for XML serialization for TVec, TVecInt, TMtx, TMtxInt, Vector, VectorInt, Matrix, MatrixInt for all .NET frameworks");
+            Add("Added support for JSON serialization for TVec, TVecInt, TMtx, TMtxInt, Vector, VectorInt, Matrix, MatrixInt for .NET Core v7 and newer");
             richTextBox1.SelectionBullet = false;
             Add("");
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
@@ -324,7 +347,7 @@ namespace MtxVecDemo {
             richTextBox1.SelectionIndent = 10;
             Add("Bug fix for TVecInt.BitUnpack when bit count was less than 32.");
             Add("Modifed SumOfSquares and Standard Deviation for greater numerical accuracy and about 50% higher speed.");
-            Add("TVec/TVecInt and TMtx/TMtx received upgrade of ValueToStrings for fixed width font output with headers. Usefull for command line printout of small matrices.");            
+            Add("TVec/TVecInt and TMtx/TMtx received upgrade of ValueToStrings for fixed width font output with headers. Usefull for command line printout of small matrices.");
             richTextBox1.SelectionBullet = false;
             Add("");
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Underline);
@@ -338,7 +361,7 @@ namespace MtxVecDemo {
             Add("Added \"Edit and Continue\" type of debugging support for the script.");
             Add("Added \"Tooltips\" for variable evaluation during debugging of the script.");
             Add("Added support for [1, 2 ; 3, 4] for vector/matrix concatenation/initialization.");
-            Add("Added support for \"if-else\", \"while\" and \"for-loop\" clauses.") ;
+            Add("Added support for \"if-else\", \"while\" and \"for-loop\" clauses.");
             Add("Added support for \"break\" and \"continue\" clauses.");
             Add("Added support for strings and custom objects.");
             Add("Added string grid adaptor, which enables reading and writing from an arbitrary string grid like object.");
@@ -419,7 +442,7 @@ namespace MtxVecDemo {
             Add("Added missing overload VectorInt.BlockInit(SrcVec);");
             Add("Fixed a bug with Matrix.SortDescend for complex values.");
             Add("Fixed a bug with TSparseMtx.Add when adding matrices which contain explicit zeros.");
-            Add("Fixed a bug with TSparseMtx.Copy when copying matrices which contain explicit zeros.");            
+            Add("Fixed a bug with TSparseMtx.Copy when copying matrices which contain explicit zeros.");
 
             richTextBox1.SelectionBullet = false;
             Add("");
@@ -489,11 +512,11 @@ namespace MtxVecDemo {
             Add("Core product:");
             richTextBox1.SelectionBullet = true;
             richTextBox1.SelectionIndent = 10;
-            Add("Cougar Open CL opens the world of GPU processing to Delphi developers. A new namespace clMtxVec adds two new types TOpenCLVector and TOpenCLMatrix which can run their functions on the GPU.");
-            Add("Cougar Open CL substantially simplifies custom Open CL algorithm development, integration and deployment.");            
+            Add("Cougar Open CL opens the world of GPU processing to Delphi developers. A new namespace ClMtxVec adds two new types TOpenCLVector and TOpenCLMatrix which can run their functions on the GPU.");
+            Add("Cougar Open CL substantially simplifies custom Open CL algorithm development, integration and deployment.");
             Add("Updated code related to Intel IPP and MKL libraries to the latest version. Note that the minimum CPU requirement has been raised by Intel to SSE2 capable CPU (P4, released in year 2000).");
             Add("Support for Visual Studio.NET 2012.");
-            Add("A number of various fixes and udpates");              
+            Add("A number of various fixes and udpates");
             richTextBox1.SelectionBullet = false;
             Add("");
 
@@ -546,7 +569,7 @@ namespace MtxVecDemo {
                 + "Log etc.. will benefit. Small improvements can be noticed across the board.");
             richTextBox1.SelectionBullet = false;
             Add("");
-            
+
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
             richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
             Add("List of new features in v3.5:");
@@ -683,52 +706,52 @@ namespace MtxVecDemo {
             Add("");
 
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
-			richTextBox1.SelectionColor = Color.FromArgb(51,104,196);
-			Add("List of new features in v2.0:");
-			Add("");
-			richTextBox1.SelectionBullet = true;
-			richTextBox1.SelectionIndent = 10;
-			Add("Support for .NET platform. Single source code compiles " +
-				"on .NET and W32.");
-			Add("Sparse matrices: Umfpack v4.3 and Pardiso solver.");
-			Add("All C/C++ (umfpack) code compiled with Intel C/C++ compiler " +
-				"with support for SSE2/SSE3.");
-			Add("All Fortran code compiled with Intel Fortran compiler " +
-				"with support for SSE2/SSE3.");
-			Add("Sparse solvers for complex sparse matrices.");
-			Add("New random generators via MKL 7.0");
-			Add("New FFT engine with support for arbitrary length FFTs " +
-				"(including arbitrary 2D FFT sizes) and symmetric multiprocessing.");
-			Add("Extensive tests written to interface DUnit test framework. "+
-				"Tests execute under .NET and W32 and ensure that code gives " +
-				"the same result.");
-			Add("New memory allocation bypassing Delphi memory manager and allowing "+
-				"to better exploit available system memory");
-			Add("Intel SPL calls replaced with Intel IPP 4.0.");
-			Add("New dll interfaces allow support of C++Builder and Kylix.");
-			Add("Common abstract class between for TVec, TMtx "+
-				"and TSparseMtx shares common functions. "+
-				"New syntax options allowing much more flexibility "+
-				"when exchanging data between TVec, TMtx "+
-				"and TSparseMtx. Only the \"view\" of memory is changed. " +
-																				 "It is possible to write single source code which can take vector "+
-																				 ",matrix and sparse matrix objects as parameters." );
-			Add("Vastly improved error checking, mostly due to " +
-				"in-depth tests. ");
-			Add("Prescot CPU support exploiting the features of the "+
-				"new (SSE3) instruction set. ");
-			Add("Extensive performance optimizations across "+
-				"the entire library.");
-			Add("Operator overloading under .NET for complex "+
-				"numbers. ");
-			Add("It should be possible to write single source code " +
-				"that would execute on W32 and .NET with the same "+
-				"or very similar performance even for short vectors " +
-				"and small matrices. ");
-			richTextBox1.SelectionBullet = false;
-			richTextBox1.SelectionIndent = 0;
+            richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
+            Add("List of new features in v2.0:");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Support for .NET platform. Single source code compiles " +
+                "on .NET and W32.");
+            Add("Sparse matrices: Umfpack v4.3 and Pardiso solver.");
+            Add("All C/C++ (umfpack) code compiled with Intel C/C++ compiler " +
+                "with support for SSE2/SSE3.");
+            Add("All Fortran code compiled with Intel Fortran compiler " +
+                "with support for SSE2/SSE3.");
+            Add("Sparse solvers for complex sparse matrices.");
+            Add("New random generators via MKL 7.0");
+            Add("New FFT engine with support for arbitrary length FFTs " +
+                "(including arbitrary 2D FFT sizes) and symmetric multiprocessing.");
+            Add("Extensive tests written to interface DUnit test framework. " +
+                "Tests execute under .NET and W32 and ensure that code gives " +
+                "the same result.");
+            Add("New memory allocation bypassing Delphi memory manager and allowing " +
+                "to better exploit available system memory");
+            Add("Intel SPL calls replaced with Intel IPP 4.0.");
+            Add("New dll interfaces allow support of C++Builder and Kylix.");
+            Add("Common abstract class between for TVec, TMtx " +
+                "and TSparseMtx shares common functions. " +
+                "New syntax options allowing much more flexibility " +
+                "when exchanging data between TVec, TMtx " +
+                "and TSparseMtx. Only the \"view\" of memory is changed. " +
+                                                                                 "It is possible to write single source code which can take vector " +
+                                                                                 ",matrix and sparse matrix objects as parameters.");
+            Add("Vastly improved error checking, mostly due to " +
+                "in-depth tests. ");
+            Add("Prescot CPU support exploiting the features of the " +
+                "new (SSE3) instruction set. ");
+            Add("Extensive performance optimizations across " +
+                "the entire library.");
+            Add("Operator overloading under .NET for complex " +
+                "numbers. ");
+            Add("It should be possible to write single source code " +
+                "that would execute on W32 and .NET with the same " +
+                "or very similar performance even for short vectors " +
+                "and small matrices. ");
+            richTextBox1.SelectionBullet = false;
+            richTextBox1.SelectionIndent = 0;
 
-		}
+        }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {

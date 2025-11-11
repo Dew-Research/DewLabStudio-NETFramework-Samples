@@ -32,10 +32,10 @@
             this.samplesBox = new System.Windows.Forms.ComboBox();
             this.phaseChart = new Steema.TeeChart.TChart();
             this.polar1 = new Steema.TeeChart.Styles.Polar();
-            this.SignalIn1 = new Dew.Signal.SignalIn(this.components);
+            this.SignalIn1 = new Dew.Signal.Audio.SignalIn(this.components);
             this.Signal1 = new Dew.Signal.TSignal(this.components);
             this.Signal2 = new Dew.Signal.TSignal(this.components);
-            this.SignalTimer1 = new Dew.Signal.SignalTimer(this.components);
+            this.SignalTimer1 = new Dew.Signal.Audio.SignalTimer(this.components);
             this.chartEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -1524,7 +1524,6 @@
             // 
             // 
             // 
-            this.polar1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.polar1.Marks.TailParams.Margin = 0F;
             this.polar1.Marks.TailParams.PointerHeight = 8D;
             this.polar1.Marks.TailParams.PointerWidth = 8D;
@@ -1582,9 +1581,9 @@
             this.SignalIn1.TriggerBelow = 0D;
             this.SignalIn1.TriggerChannel = Dew.Signal.TChannel.chLeft;
             this.SignalIn1.TriggerDelay = 0;
-            this.SignalIn1.Triggering = Dew.Signal.TriggerType.trNone;
-            this.SignalIn1.TriggerMode = Dew.Signal.TriggerMode.trCrossing;
-            this.SignalIn1.TriggerPosition = Dew.Signal.TriggerPosition.tpAfter;
+            this.SignalIn1.Triggering = Dew.Signal.Audio.TriggerType.trNone;
+            this.SignalIn1.TriggerMode = Dew.Signal.Audio.TriggerMode.trCrossing;
+            this.SignalIn1.TriggerPosition = Dew.Signal.Audio.TriggerPosition.tpAfter;
             // 
             // Signal1
             // 
@@ -1649,10 +1648,10 @@
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.Panel panel1;
 		private Steema.TeeChart.TChart phaseChart;
-		private Dew.Signal.SignalIn SignalIn1;
+		private Dew.Signal.Audio.SignalIn SignalIn1;
 		private Dew.Signal.TSignal Signal1;
 		private Dew.Signal.TSignal Signal2;
-		private Dew.Signal.SignalTimer SignalTimer1;
+		private Dew.Signal.Audio.SignalTimer SignalTimer1;
 		private System.Windows.Forms.ComboBox samplesBox;
 		private Steema.TeeChart.Styles.Polar polar1;
 		private System.Windows.Forms.Button button1;

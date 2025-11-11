@@ -10,6 +10,8 @@ using Dew.Math;
 using Dew.Math.Units;
 using Steema.TeeChart.Styles;
 using Dew.Math.Controls;
+using Dew.Signal.Editors;
+
 
 namespace DSPDemo
 {
@@ -121,6 +123,8 @@ namespace DSPDemo
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilterEditorForm));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -136,12 +140,12 @@ namespace DSPDemo
             this.MarkSeries1 = new Steema.TeeChart.Styles.Points();
             this.Signal1 = new Dew.Signal.TSignal(this.components);
             this.SignalFilter1 = new Dew.Signal.TSignalFilter(this.components);
-            this.SignalFilterDialog1 = new Dew.Signal.SignalFilterDialog(this.components);
+            this.SignalFilterDialog1 = new Dew.Signal.Editors.SignalFilterDialog(this.components);
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.Signal2 = new Dew.Signal.TSignal(this.components);
             this.SpectrumChartEditor = new Steema.TeeChart.Editor(this.components);
             this.SignalChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SignalChart1)).BeginInit();
@@ -241,18 +245,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -260,8 +259,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Bottom.Labels.Font.Size = 9;
             this.SignalChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -271,8 +268,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -280,8 +275,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -294,18 +287,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -313,8 +301,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Bottom.Title.Font.Size = 11;
             this.SignalChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -324,8 +310,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -333,8 +317,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -349,18 +331,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -368,8 +345,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Depth.Labels.Font.Size = 9;
             this.SignalChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -379,8 +354,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -388,8 +361,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -402,18 +373,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -421,8 +387,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Depth.Title.Font.Size = 11;
             this.SignalChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -432,8 +396,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -441,8 +403,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -457,18 +417,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -476,8 +431,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.DepthTop.Labels.Font.Size = 9;
             this.SignalChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -487,8 +440,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -496,8 +447,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -510,18 +459,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -529,8 +473,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.DepthTop.Title.Font.Size = 11;
             this.SignalChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -540,8 +482,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -549,8 +489,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -569,18 +507,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -588,8 +521,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Left.Labels.Font.Size = 9;
             this.SignalChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -599,8 +530,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -608,8 +537,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -622,18 +549,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.Left.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -641,8 +563,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Left.Title.Font.Size = 11;
             this.SignalChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -652,8 +572,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -661,8 +579,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -681,18 +597,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -700,8 +611,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Right.Labels.Font.Size = 9;
             this.SignalChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -711,8 +620,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -720,8 +627,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -734,18 +639,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.Right.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -753,8 +653,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Right.Title.Font.Size = 11;
             this.SignalChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -764,8 +662,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -773,8 +669,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -789,18 +683,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -808,8 +697,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Top.Labels.Font.Size = 9;
             this.SignalChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -819,8 +706,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -828,8 +713,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -842,18 +725,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Axes.Top.Title.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -861,8 +739,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Axes.Top.Title.Font.Size = 11;
             this.SignalChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -872,8 +748,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -881,8 +755,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.SignalChart1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.SignalChart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.SignalChart1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -897,18 +769,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Footer.Brush.Solid = true;
-            this.SignalChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SignalChart1.Footer.Font.Brush.Solid = true;
-            this.SignalChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -916,8 +783,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Footer.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Footer.Font.Size = 8;
             this.SignalChart1.Footer.Font.SizeFloat = 8F;
             // 
@@ -927,8 +792,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -936,8 +799,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Footer.Shadow.Brush.Solid = true;
-            this.SignalChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -949,18 +810,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SignalChart1.Header.Brush.Solid = true;
-            this.SignalChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Header.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.Header.Font.Brush.Solid = true;
-            this.SignalChart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -968,8 +824,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Header.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Header.Font.Size = 12;
             this.SignalChart1.Header.Font.SizeFloat = 12F;
             // 
@@ -979,8 +833,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Header.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Header.ImageBevel.Brush.Visible = true;
             this.SignalChart1.Header.Lines = new string[] {
         "Filter taps"};
             // 
@@ -990,8 +842,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SignalChart1.Header.Shadow.Brush.Solid = true;
-            this.SignalChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1003,18 +853,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Legend.Brush.Solid = true;
-            this.SignalChart1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SignalChart1.Legend.Font.Brush.Solid = true;
-            this.SignalChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1022,8 +867,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Legend.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Legend.Font.Size = 9;
             this.SignalChart1.Legend.Font.SizeFloat = 9F;
             // 
@@ -1033,8 +876,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1042,8 +883,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SignalChart1.Legend.Shadow.Brush.Solid = true;
-            this.SignalChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1054,8 +893,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.SignalChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1067,8 +904,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Legend.Title.Brush.Solid = true;
-            this.SignalChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -1077,8 +912,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.SignalChart1.Legend.Title.Font.Brush.Solid = true;
-            this.SignalChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1086,8 +919,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.Legend.Title.Font.Size = 8;
             this.SignalChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -1097,8 +928,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1106,8 +935,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.SignalChart1.Legend.Title.Shadow.Brush.Visible = true;
             this.SignalChart1.Legend.Visible = false;
             this.SignalChart1.Location = new System.Drawing.Point(0, 203);
             this.SignalChart1.Name = "SignalChart1";
@@ -1123,8 +950,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SignalChart1.Panel.Brush.Solid = true;
-            this.SignalChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1132,8 +957,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1141,8 +964,14 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Panel.Shadow.Brush.Solid = true;
-            this.SignalChart1.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins1.Bottom = 100;
+            margins1.Left = 100;
+            margins1.Right = 100;
+            margins1.Top = 100;
+            this.SignalChart1.Printer.Margins = margins1;
             this.SignalChart1.Size = new System.Drawing.Size(656, 231);
             // 
             // 
@@ -1155,18 +984,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.SubFooter.Brush.Solid = true;
-            this.SignalChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SignalChart1.SubFooter.Font.Brush.Solid = true;
-            this.SignalChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1174,8 +998,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.SubFooter.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.SubFooter.Font.Size = 8;
             this.SignalChart1.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -1185,8 +1007,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1194,8 +1014,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.SignalChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1207,18 +1025,13 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SignalChart1.SubHeader.Brush.Solid = true;
-            this.SignalChart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.SignalChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.SignalChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SignalChart1.SubHeader.Font.Brush.Solid = true;
-            this.SignalChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1226,8 +1039,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.SignalChart1.SubHeader.Font.Shadow.Brush.Visible = true;
             this.SignalChart1.SubHeader.Font.Size = 12;
             this.SignalChart1.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -1237,8 +1048,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1246,8 +1055,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SignalChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.SignalChart1.SubHeader.Shadow.Brush.Visible = true;
             this.SignalChart1.TabIndex = 2;
             // 
             // 
@@ -1263,7 +1070,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.SignalChart1.Walls.Back.Brush.Solid = true;
             this.SignalChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -1272,8 +1078,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1281,8 +1085,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.SignalChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1294,8 +1096,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.SignalChart1.Walls.Bottom.Brush.Solid = true;
-            this.SignalChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -1303,8 +1103,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1312,8 +1110,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.SignalChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1325,8 +1121,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SignalChart1.Walls.Left.Brush.Solid = true;
-            this.SignalChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -1334,8 +1128,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1343,8 +1135,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.SignalChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1356,8 +1146,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SignalChart1.Walls.Right.Brush.Solid = true;
-            this.SignalChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -1365,8 +1153,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SignalChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.SignalChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1374,8 +1160,6 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SignalChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.SignalChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1384,12 +1168,8 @@ namespace DSPDemo
             // 
             // 
             this.SignalChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.SignalChart1.Zoom.Brush.Solid = true;
             this.SignalChart1.Zoom.Brush.Visible = false;
             this.SignalChart1.Zoom.History = true;
-            this.SignalChart1.Zoom.FullRepaint = true;
-            this.SignalChart1.Zoom.Pen.Visible = true;
-
             // 
             // splitter1
             // 
@@ -1424,18 +1204,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1443,8 +1218,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -1454,8 +1227,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.Labels.Separation = 0;
             // 
             // 
@@ -1464,8 +1235,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.MaximumOffset = 4;
             this.SpectrumChart1.Axes.Bottom.MinimumOffset = 4;
             // 
@@ -1480,19 +1249,14 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.Title.Caption = "Frequency [Hz]";
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1500,8 +1264,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -1511,8 +1273,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             this.SpectrumChart1.Axes.Bottom.Title.Lines = new string[] {
         "Frequency [Hz]"};
             // 
@@ -1522,8 +1282,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1538,18 +1296,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1557,8 +1310,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Depth.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -1568,8 +1319,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1577,8 +1326,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1591,18 +1338,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1610,8 +1352,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Depth.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -1621,8 +1361,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1630,8 +1368,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1646,18 +1382,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1665,8 +1396,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.DepthTop.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -1676,8 +1405,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1685,8 +1412,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1699,18 +1424,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1718,8 +1438,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.DepthTop.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -1729,8 +1447,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1738,8 +1454,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1758,18 +1472,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1777,8 +1486,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Left.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -1788,8 +1495,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1797,8 +1502,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Left.MaximumOffset = 4;
             this.SpectrumChart1.Axes.Left.MinimumOffset = 4;
             // 
@@ -1813,18 +1516,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Left.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1832,8 +1530,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Left.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -1843,8 +1539,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1852,8 +1546,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1872,18 +1564,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1891,8 +1578,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Right.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -1902,8 +1587,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1911,8 +1594,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1925,18 +1606,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Right.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1944,8 +1620,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Right.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -1955,8 +1629,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1964,8 +1636,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1980,18 +1650,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1999,8 +1664,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Top.Labels.Font.Size = 9;
             this.SpectrumChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -2010,8 +1673,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2019,8 +1680,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2033,18 +1692,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Top.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2052,8 +1706,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Axes.Top.Title.Font.Size = 11;
             this.SpectrumChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -2063,8 +1715,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2072,8 +1722,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.SpectrumChart1.Dock = System.Windows.Forms.DockStyle.Top;
             // 
@@ -2087,18 +1735,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Footer.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SpectrumChart1.Footer.Font.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2106,8 +1749,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Footer.Font.Size = 8;
             this.SpectrumChart1.Footer.Font.SizeFloat = 8F;
             // 
@@ -2117,8 +1758,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2126,8 +1765,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Footer.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2139,18 +1776,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SpectrumChart1.Header.Brush.Solid = true;
-            this.SpectrumChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Header.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Header.Font.Brush.Solid = true;
-            this.SpectrumChart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2158,8 +1790,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Header.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Header.Font.Size = 12;
             this.SpectrumChart1.Header.Font.SizeFloat = 12F;
             // 
@@ -2169,8 +1799,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Header.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Header.ImageBevel.Brush.Visible = true;
             this.SpectrumChart1.Header.Lines = new string[] {
         "Frequency spectrum"};
             // 
@@ -2180,8 +1808,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SpectrumChart1.Header.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2193,18 +1819,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Legend.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Legend.Font.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2212,8 +1833,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Legend.Font.Size = 9;
             this.SpectrumChart1.Legend.Font.SizeFloat = 9F;
             // 
@@ -2223,8 +1842,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2232,8 +1849,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SpectrumChart1.Legend.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2244,8 +1859,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2257,8 +1870,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Legend.Title.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -2267,8 +1878,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.SpectrumChart1.Legend.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2276,8 +1885,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Legend.Title.Font.Size = 8;
             this.SpectrumChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -2287,8 +1894,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2296,8 +1901,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Shadow.Brush.Visible = true;
             this.SpectrumChart1.Legend.Visible = false;
             this.SpectrumChart1.Location = new System.Drawing.Point(0, 0);
             this.SpectrumChart1.Name = "SpectrumChart1";
@@ -2313,8 +1916,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SpectrumChart1.Panel.Brush.Solid = true;
-            this.SpectrumChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2322,8 +1923,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2331,8 +1930,14 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Panel.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            this.SpectrumChart1.Printer.Margins = margins2;
             this.SpectrumChart1.Series.Add(this.Series1);
             this.SpectrumChart1.Series.Add(this.MarkSeries1);
             this.SpectrumChart1.Size = new System.Drawing.Size(656, 200);
@@ -2348,18 +1953,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.SubFooter.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SpectrumChart1.SubFooter.Font.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2367,8 +1967,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.SubFooter.Font.Size = 8;
             this.SpectrumChart1.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -2378,8 +1976,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2387,8 +1983,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2400,18 +1994,13 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SpectrumChart1.SubHeader.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.SpectrumChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.SubHeader.Font.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2419,8 +2008,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart1.SubHeader.Font.Size = 12;
             this.SpectrumChart1.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -2430,8 +2017,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2439,8 +2024,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SpectrumChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Shadow.Brush.Visible = true;
             this.SpectrumChart1.TabIndex = 0;
             // 
             // 
@@ -2456,7 +2039,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Walls.Back.Brush.Solid = true;
             this.SpectrumChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -2465,8 +2047,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2474,8 +2054,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2487,8 +2065,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Walls.Bottom.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -2496,8 +2072,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2505,8 +2079,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2518,8 +2090,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SpectrumChart1.Walls.Left.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -2527,8 +2097,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2536,8 +2104,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2549,8 +2115,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SpectrumChart1.Walls.Right.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -2558,8 +2122,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2567,8 +2129,6 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2576,10 +2136,7 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.SpectrumChart1.Zoom.Brush.Solid = true;
             this.SpectrumChart1.Zoom.Brush.Visible = false;
-            this.SpectrumChart1.Zoom.FullRepaint = true;
-            this.SpectrumChart1.Zoom.Pen.Visible = true;
             // 
             // Series1
             // 
@@ -2596,18 +2153,13 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.Series1.Legend.Brush.Solid = true;
-            this.Series1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.Series1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series1.Legend.Font.Brush.Solid = true;
-            this.Series1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2615,8 +2167,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Legend.Font.Shadow.Brush.Solid = true;
-            this.Series1.Legend.Font.Shadow.Brush.Visible = true;
             this.Series1.Legend.Font.Size = 8;
             this.Series1.Legend.Font.SizeFloat = 8F;
             // 
@@ -2626,8 +2176,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Legend.ImageBevel.Brush.Solid = true;
-            this.Series1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2635,8 +2183,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Legend.Shadow.Brush.Solid = true;
-            this.Series1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2652,18 +2198,13 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Series1.Marks.Brush.Solid = true;
-            this.Series1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.Series1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series1.Marks.Font.Brush.Solid = true;
-            this.Series1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2671,8 +2212,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Marks.Font.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Font.Shadow.Brush.Visible = true;
             this.Series1.Marks.Font.Size = 8;
             this.Series1.Marks.Font.SizeFloat = 8F;
             // 
@@ -2682,8 +2221,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Marks.ImageBevel.Brush.Solid = true;
-            this.Series1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2691,8 +2228,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.Series1.Marks.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2704,8 +2239,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.Series1.Marks.Symbol.Brush.Solid = true;
-            this.Series1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -2713,8 +2246,6 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.Series1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2722,15 +2253,10 @@ namespace DSPDemo
             // 
             // 
             this.Series1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
-            this.Series1.Marks.TailParams.Margin = 0F;
-            this.Series1.Marks.TailParams.PointerHeight = 8D;
-            this.Series1.Marks.TailParams.PointerWidth = 8D;
             this.Series1.OriginalCursor = null;
             this.Series1.Title = "fastLine1";
             this.Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -2760,18 +2286,13 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.MarkSeries1.Legend.Brush.Solid = true;
-            this.MarkSeries1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.MarkSeries1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.MarkSeries1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.MarkSeries1.Legend.Font.Brush.Solid = true;
-            this.MarkSeries1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2779,8 +2300,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.MarkSeries1.Legend.Font.Shadow.Brush.Solid = true;
-            this.MarkSeries1.Legend.Font.Shadow.Brush.Visible = true;
             this.MarkSeries1.Legend.Font.Size = 8;
             this.MarkSeries1.Legend.Font.SizeFloat = 8F;
             // 
@@ -2790,8 +2309,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.MarkSeries1.Legend.ImageBevel.Brush.Solid = true;
-            this.MarkSeries1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2799,8 +2316,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.MarkSeries1.Legend.Shadow.Brush.Solid = true;
-            this.MarkSeries1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2821,18 +2336,14 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MarkSeries1.Marks.Brush.Solid = true;
             this.MarkSeries1.Marks.Brush.Visible = false;
             // 
             // 
             // 
-            this.MarkSeries1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.MarkSeries1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.MarkSeries1.Marks.Font.Brush.Solid = true;
-            this.MarkSeries1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2840,8 +2351,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.MarkSeries1.Marks.Font.Shadow.Brush.Solid = true;
-            this.MarkSeries1.Marks.Font.Shadow.Brush.Visible = true;
             this.MarkSeries1.Marks.Font.Size = 8;
             this.MarkSeries1.Marks.Font.SizeFloat = 8F;
             // 
@@ -2851,8 +2360,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.MarkSeries1.Marks.ImageBevel.Brush.Solid = true;
-            this.MarkSeries1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2860,8 +2367,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.MarkSeries1.Marks.Shadow.Brush.Solid = true;
-            this.MarkSeries1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2873,8 +2378,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.MarkSeries1.Marks.Symbol.Brush.Solid = true;
-            this.MarkSeries1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -2882,8 +2385,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.MarkSeries1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.MarkSeries1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2891,15 +2392,10 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.MarkSeries1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.MarkSeries1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             this.MarkSeries1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
-            this.MarkSeries1.Marks.TailParams.Margin = 0F;
-            this.MarkSeries1.Marks.TailParams.PointerHeight = 8D;
-            this.MarkSeries1.Marks.TailParams.PointerWidth = 8D;
             this.MarkSeries1.Marks.Transparent = true;
             this.MarkSeries1.Marks.Visible = true;
             this.MarkSeries1.OriginalCursor = null;
@@ -2910,8 +2406,6 @@ namespace DSPDemo
             // 
             // 
             this.MarkSeries1.Pointer.Brush.Color = System.Drawing.Color.Red;
-            this.MarkSeries1.Pointer.Brush.Solid = true;
-            this.MarkSeries1.Pointer.Brush.Visible = true;
             this.MarkSeries1.Pointer.HorizSize = 3;
             // 
             // 
@@ -2935,47 +2429,48 @@ namespace DSPDemo
             // 
             // Signal1
             // 
-            this.Signal1.BandwidthL = 0D;
-            this.Signal1.BlockAssign = false;
+            this.Signal1.ChannelCount = 1;
             this.Signal1.Complex = false;
+            this.Signal1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAAEQAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="));
             this.Signal1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal1.FloatPrecisionLock = false;
-            this.Signal1.Input = null;
             this.Signal1.IsDouble = true;
             this.Signal1.Length = 512;
-            this.Signal1.Name = "";
             this.Signal1.SamplingFrequency = 2D;
             // 
             // SignalFilter1
             // 
-            this.SignalFilter1.BandwidthL = 0D;
-            this.SignalFilter1.BlockAssign = false;
+            this.SignalFilter1.ChannelCount = 1;
             this.SignalFilter1.Complex = false;
             this.SignalFilter1.Continuous = false;
+            this.SignalFilter1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.SignalFilter1.DownDelay = 0;
+            this.SignalFilter1.DownSample = 1;
             this.SignalFilter1.Filters.TemplateIndex = 0;
-            this.SignalFilter1.Filters.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
-            this.SignalFilter1.FirLength = 37;
+            this.SignalFilter1.Filters.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("CQAAAERlZmF1bHQNCnsAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJqZmZmZmdk/AAAAAAAA8D8AAAAAAADwPwAAAAAAAAAAATMzMzMzM+M/AAAAAAAA8D8AAAAAAAAAAAQAAACjAkdAAAAAAAAAAAAB"));
+            this.SignalFilter1.FirLength = 17;
             this.SignalFilter1.FirMethod = Dew.Signal.TFirFilterMethod.fimParksMcClellan;
             this.SignalFilter1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalFilter1.FloatPrecisionLock = false;
+            this.SignalFilter1.GridDensity = 16;
             this.SignalFilter1.Input = this.Signal1;
             this.SignalFilter1.IsDouble = true;
-            this.SignalFilter1.Name = "";
+            this.SignalFilter1.Length = 12;
             this.SignalFilter1.Order = 6;
             this.SignalFilter1.Response = Dew.Signal.TResponseType.rstFIR;
             this.SignalFilter1.SamplingFrequency = 2D;
-            this.SignalFilter1.Taps = ((Dew.Math.TVec)(resources.GetObject("SignalFilter1.Taps")));
+            this.SignalFilter1.Taps = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAiEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAbY6CuHZXkL8a0cSm5raUv7wVSPKrt5I/x+P9BY0pqT8WiKba5M6Iv9fjXy5ovba/BHetGPPLlz9Xl4lxZVbUP6Zn8+Jk+d4/V5eJcWVW1D8Ed60Y88uXP9fjXy5ovba/Foim2uTOiL/H4/0FjSmpP7wVSPKrt5I/GtHEpua2lL9tjoK4dleQvw=="));
+            this.SignalFilter1.UpDelay = 0;
+            this.SignalFilter1.UpSample = 1;
             this.SignalFilter1.WaveletP1 = 0;
             this.SignalFilter1.WaveletP2 = 0;
-            this.SignalFilter1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.SignalFilter1_OnAfterUpdate);
-            this.SignalFilter1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.SignalFilter1_OnParameterUpdate);
+            this.SignalFilter1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.SignalFilter1_OnAfterUpdate);
+            this.SignalFilter1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SignalFilter1_OnParameterUpdate);
             // 
             // SignalFilterDialog1
             // 
-            this.SignalFilterDialog1.BlockAssign = false;
             this.SignalFilterDialog1.Docking = false;
             this.SignalFilterDialog1.FormCaption = null;
-            this.SignalFilterDialog1.Name = "";
             this.SignalFilterDialog1.RegistryPath = "\\Software\\Dew Research\\MtxVec";
             this.SignalFilterDialog1.ShowLive = false;
             this.SignalFilterDialog1.Source = this.SignalFilter1;
@@ -2983,41 +2478,50 @@ namespace DSPDemo
             // 
             // SpectrumAnalyzer1
             // 
+            this.SpectrumAnalyzer1.ArOrder = 100;
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
-            this.SpectrumAnalyzer1.BlockAssign = false;
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SpectrumAnalyzer1.FloatPrecisionLock = false;
+            this.SpectrumAnalyzer1.Harmonics = 10;
             this.SpectrumAnalyzer1.Input = this.SignalFilter1;
             this.SpectrumAnalyzer1.IsDouble = true;
+            this.SpectrumAnalyzer1.Length = 64;
             this.SpectrumAnalyzer1.Logarithmic = true;
             this.SpectrumAnalyzer1.LogBase = 0D;
             this.SpectrumAnalyzer1.LogScale = 0D;
-            this.SpectrumAnalyzer1.Name = "";
-            this.SpectrumAnalyzer1.Output = null;
+            this.SpectrumAnalyzer1.MainlobeWidth = 8;
+            this.SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
             this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
+            this.SpectrumAnalyzer1.Peaks.LargestCount = 1;
+            this.SpectrumAnalyzer1.Peaks.LargestRatio = 1E+15D;
+            this.SpectrumAnalyzer1.Peaks.NormalizedAmplt.PeakNumber = 1;
+            this.SpectrumAnalyzer1.Peaks.NormalizedFreq.PeakNumber = 1;
             this.SpectrumAnalyzer1.Report.AmplitudeFormat = null;
             this.SpectrumAnalyzer1.Report.FrequencyFormat = null;
             this.SpectrumAnalyzer1.Report.PhaseFormat = null;
             this.SpectrumAnalyzer1.Report.UseTab = false;
+            this.SpectrumAnalyzer1.Rotation = 0;
             this.SpectrumAnalyzer1.SidelobeAtt = 60D;
-            this.SpectrumAnalyzer1.SpectrumScale = 0D;
+            this.SpectrumAnalyzer1.Stats.Averaged = 0;
+            this.SpectrumAnalyzer1.Stats.Averages = 30;
+            this.SpectrumAnalyzer1.Stats.ExpDecay = 5;
+            this.SpectrumAnalyzer1.ZeroPadding = 1;
             // 
             // Signal2
             // 
-            this.Signal2.BandwidthL = 0D;
-            this.Signal2.BlockAssign = false;
+            this.Signal2.ChannelCount = 1;
             this.Signal2.Complex = false;
+            this.Signal2.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAAEQAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="));
             this.Signal2.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal2.FloatPrecisionLock = false;
-            this.Signal2.Input = null;
             this.Signal2.IsDouble = true;
             this.Signal2.Length = 512;
-            this.Signal2.Name = "";
             // 
             // SpectrumChartEditor
             // 
+            this.SpectrumChartEditor.AlwaysShowFuncSrc = false;
             this.SpectrumChartEditor.Chart = this.SpectrumChart1;
             this.SpectrumChartEditor.HighLightTabs = false;
             this.SpectrumChartEditor.Location = new System.Drawing.Point(0, 0);
@@ -3027,6 +2531,7 @@ namespace DSPDemo
             // 
             // SignalChartEditor
             // 
+            this.SignalChartEditor.AlwaysShowFuncSrc = false;
             this.SignalChartEditor.Chart = this.SignalChart1;
             this.SignalChartEditor.HighLightTabs = false;
             this.SignalChartEditor.Location = new System.Drawing.Point(0, 0);
@@ -3036,10 +2541,8 @@ namespace DSPDemo
             // 
             // SpectrumAnalyzerDialog
             // 
-            this.SpectrumAnalyzerDialog.BlockAssign = false;
             this.SpectrumAnalyzerDialog.Docking = false;
             this.SpectrumAnalyzerDialog.FormCaption = null;
-            this.SpectrumAnalyzerDialog.Name = null;
             this.SpectrumAnalyzerDialog.RegistryPath = "\\Software\\Dew Research\\MtxVec";
             this.SpectrumAnalyzerDialog.ShowLive = false;
             this.SpectrumAnalyzerDialog.Source = this.SpectrumAnalyzer1;

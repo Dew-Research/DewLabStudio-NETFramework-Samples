@@ -7,6 +7,7 @@ using Dew.Signal;
 using Dew.Math;
 using Dew.Signal.Tee;
 using Dew.Signal.Units;
+using Dew.Signal.Editors;
 using Dew.Math.Units;
 using Steema.TeeChart.Styles;
 using Dew.Math.Controls;
@@ -114,7 +115,7 @@ namespace DSPDemo
             this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -302,7 +303,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.DCDump = false;
             this.SpectrumAnalyzer1.Input = null;

@@ -117,35 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>144, 17</value>
-  </metadata>
-  <metadata name="signalRead1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="signalRead1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>284, 17</value>
-  </metadata>
-  <metadata name="signalDemux1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="signalDemux1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>401, 17</value>
-  </metadata>
-  <metadata name="spectrumAnalyzer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="spectrumAnalyzer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>529, 17</value>
-  </metadata>
-  <data name="resource.Templates" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAAQAAAACAAAA
-        AAs=
-</value>
   </data>
-  <data name="resource.Templates1" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAAQAAAACAAAA
-        AAs=
-</value>
-  </data>
-  <metadata name="computeSpectrogramThread.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="computeSpectrogramThread.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 56</value>
-  </metadata>
+  </data>
 </root>

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Data;
 using Dew.Demo;
 using Dew.Math.Units;
+using Dew.Signal.Units;
 
 namespace DSPDemo
 {
@@ -28,22 +29,24 @@ namespace DSPDemo
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-		public MainForm()
-		{
-			//
-			// Required for Windows Form Designer support
-			//
-			InitializeComponent();
+        public MainForm()
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
 
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-		}
+            //Math387.LoadParams("AAAA-BBBB");
+            //SignalUtils.LoadParams("CCCC-DDDD");
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{

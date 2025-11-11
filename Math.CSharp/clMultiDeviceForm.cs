@@ -25,7 +25,7 @@ namespace MtxVecDemo
         public clMultiDeviceForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
 
         private void clBenchmarkForm_Load(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace MtxVecDemo
             double a = 1;
 
 
-            clMtxVec.CreateIt(out clA, out clB,out clC, out clD);
+            ClMtxVec.CreateIt(out clA, out clB,out clC, out clD);
             try
             {               
                 switch (functionSelected)
@@ -196,7 +196,7 @@ namespace MtxVecDemo
                 }
                 finally
                 {
-                    clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);                    
+                    ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);                    
                 }
          }
 

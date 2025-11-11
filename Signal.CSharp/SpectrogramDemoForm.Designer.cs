@@ -34,7 +34,7 @@
             this.signalDemux1 = new Dew.Signal.TSignalDemux(this.components);
             this.spectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.spectrogram1 = new Dew.Signal.TSpectrogram(this.components);
-            this.computeSpectrogramThread = new Dew.Math.Controls.ProgressDialog();
+            this.computeSpectrogramThread = new Dew.Math.Controls.TMtxProgressDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1285,7 +1285,7 @@
             // spectrumAnalyzer1
             // 
             this.spectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.spectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.spectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.spectrumAnalyzer1.BlockAssign = false;
             this.spectrumAnalyzer1.Complex = false;
             this.spectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -1308,7 +1308,7 @@
             // spectrogram1
             // 
             this.spectrogram1.Bands.TemplateIndex = -1;
-            this.spectrogram1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
+            this.spectrogram1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.spectrogram1.BlockAssign = false;
             this.spectrogram1.Complex = false;
             this.spectrogram1.ConjExtend = false;
@@ -1347,8 +1347,8 @@
             this.computeSpectrogramThread.ShowDialog = false;
             this.computeSpectrogramThread.ThreadBypass = false;
             this.computeSpectrogramThread.ThreadName = "";
-            this.computeSpectrogramThread.Compute += new System.EventHandler(this.computeSpectrogramThread_Compute);
-            this.computeSpectrogramThread.ProgressUpdate += new Dew.Math.Controls.UpdateEventHandler(this.computeSpectrogramThread_ProgressUpdate);
+            this.computeSpectrogramThread.Compute += new Dew.Math.TComputeEvent(this.computeSpectrogramThread_Compute);
+            this.computeSpectrogramThread.ProgressUpdate += new Dew.Math.TProgressUpdateEvent(this.computeSpectrogramThread_ProgressUpdate);
             // 
             // SpectrogramDemoForm
             // 
@@ -1377,6 +1377,6 @@
 		private Dew.Signal.TSignalDemux signalDemux1;
 		private Dew.Signal.TSpectrumAnalyzer spectrumAnalyzer1;
 		private Dew.Signal.TSpectrogram spectrogram1;
-		private Dew.Math.Controls.ProgressDialog computeSpectrogramThread;
+		private Dew.Math.Controls.TMtxProgressDialog computeSpectrogramThread;
 	}
 }

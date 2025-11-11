@@ -1437,7 +1437,6 @@
             // 
             // 
             // 
-            this.fastLine4.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.fastLine4.Marks.TailParams.Margin = 0F;
             this.fastLine4.Marks.TailParams.PointerHeight = 8D;
             this.fastLine4.Marks.TailParams.PointerWidth = 8D;
@@ -2798,7 +2797,6 @@
             // 
             // 
             // 
-            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.fastLine1.Marks.TailParams.Margin = 0F;
             this.fastLine1.Marks.TailParams.PointerHeight = 8D;
             this.fastLine1.Marks.TailParams.PointerWidth = 8D;
@@ -2962,7 +2960,6 @@
             // 
             // 
             // 
-            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.fastLine2.Marks.TailParams.Margin = 0F;
             this.fastLine2.Marks.TailParams.PointerHeight = 8D;
             this.fastLine2.Marks.TailParams.PointerWidth = 8D;
@@ -3126,7 +3123,6 @@
             // 
             // 
             // 
-            this.fastLine3.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos3")));
             this.fastLine3.Marks.TailParams.Margin = 0F;
             this.fastLine3.Marks.TailParams.PointerHeight = 8D;
             this.fastLine3.Marks.TailParams.PointerWidth = 8D;

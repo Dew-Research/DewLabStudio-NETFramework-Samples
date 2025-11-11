@@ -46,11 +46,11 @@
             this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.points2 = new Steema.TeeChart.Styles.Points();
             this.SignalRead1 = new Dew.Signal.TSignalRead(this.components);
-            this.SignalOut1 = new Dew.Signal.SignalOut(this.components);
+            this.SignalOut1 = new Dew.Signal.Audio.SignalOut(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.SignalOutDialog1 = new Dew.Signal.SignalOutDialog(this.components);
-            this.SignalTimer1 = new Dew.Signal.SignalTimer(this.components);
-            this.SpectrumAnalyzerDialog1 = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SignalOutDialog1 = new Dew.Signal.Editors.SignalOutDialog(this.components);
+            this.SignalTimer1 = new Dew.Signal.Audio.SignalTimer(this.components);
+            this.SpectrumAnalyzerDialog1 = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.frequencyChartEditor = new Steema.TeeChart.Editor(this.components);
             this.signalChartEditor = new Steema.TeeChart.Editor(this.components);
@@ -238,7 +238,7 @@
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -258,7 +258,7 @@
             this.SpectrumAnalyzer1.Stats.Averaged = 0;
             this.SpectrumAnalyzer1.Stats.Averages = 30;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
-            this.SpectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
+            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
             // 
             // fastLine2
             // 
@@ -3259,11 +3259,11 @@
 		private System.Windows.Forms.Splitter splitter1;
 		private Dew.Signal.TSignalRead SignalRead1;
 		private Dew.Signal.TSignal Signal1;
-		private Dew.Signal.SignalOut SignalOut1;
+		private Dew.Signal.Audio.SignalOut SignalOut1;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
-		private Dew.Signal.SignalOutDialog SignalOutDialog1;
-		private Dew.Signal.SignalTimer SignalTimer1;
-		private Dew.Signal.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
+		private Dew.Signal.Editors.SignalOutDialog SignalOutDialog1;
+		private Dew.Signal.Audio.SignalTimer SignalTimer1;
+		private Dew.Signal.Editors.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
 		private Dew.Signal.TSpectrumAnalyzer SpectrumAnalyzer1;
 		private System.Windows.Forms.Button openButton;
 		private System.Windows.Forms.Label label1;

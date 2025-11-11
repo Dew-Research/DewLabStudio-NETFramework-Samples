@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Dew.Signal;
+using Dew.Signal.Audio;
 using Dew.Signal.Tee;
 
 namespace DSPDemo {

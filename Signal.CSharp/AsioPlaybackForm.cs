@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using Dew.Math.Units;
 using Dew.Math;
 using Dew.Signal;
+using Dew.Signal.Editors;
+using Dew.Signal.Audio;
 
 namespace DSPDemo
 {

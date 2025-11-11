@@ -1500,7 +1500,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.OriginalSeries.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.OriginalSeries.Marks.TailParams.Margin = 0F;
             this.OriginalSeries.Marks.TailParams.PointerHeight = 8D;
             this.OriginalSeries.Marks.TailParams.PointerWidth = 8D;
@@ -1665,7 +1664,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.FilteredSeries.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.FilteredSeries.Marks.TailParams.Margin = 0F;
             this.FilteredSeries.Marks.TailParams.PointerHeight = 8D;
             this.FilteredSeries.Marks.TailParams.PointerWidth = 8D;

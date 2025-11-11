@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using static Dew.Math.Tee.MtxVecTee;
 using System.IO;
+using Dew.Math;
 using Dew.Math.Controls;
 using Dew.Signal;
 using Dew.Signal.Units;
@@ -71,18 +72,18 @@ namespace DSPDemo {
 			}
 		}
 
-		private void computeSpectrogramThread_Compute(object sender, EventArgs e) {
+		private void computeSpectrogramThread_Compute(object sender) {
 			if (!signalRead1.IsEndOfFile())
 				spectrogram1.Pull();
 			else
 				computeSpectrogramThread.Cancel = true;
 		}
 
-		private void computeSpectrogramThread_ProgressUpdate(object sender, MtxProgressEvent e) {
+		private void computeSpectrogramThread_ProgressUpdate(object sender, TMtxProgressEvent e) {
 			TSignalRead dst = signalRead1;
 			TSpectrumAnalyzer a = spectrumAnalyzer1;
 			switch (e) {
-				case MtxProgressEvent.peInit:
+				case TMtxProgressEvent.peInit:
 					progressPanel.SliderMin = 0;
 					progressPanel.SliderMax = 100;
 					progressPanel.SliderPosition = 0;
@@ -102,12 +103,12 @@ namespace DSPDemo {
 					a.SuspendNotifyUpdate = true;
 					break;
 
-				case MtxProgressEvent.peCycle:
+				case TMtxProgressEvent.peCycle:
 					progressPanel.SliderSpan = dst.FrameNumber / dst.MaxFrames * 100;
 					//progressPanel.Caption = 'Spectrogram ' + FormatFloat('0%',ProgressPanel.SliderSpan);
 					break;
 
-				case MtxProgressEvent.peCleanUp:
+				case TMtxProgressEvent.peCleanUp:
 					dst.CloseFile();
 					progressPanel.Visible = false;
 					Cursor.Current = Cursors.Default;

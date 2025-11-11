@@ -25,7 +25,7 @@ namespace DSPDemo
 		private SpectrumChart SpectrumChart;
 		private System.Windows.Forms.CheckBox phaseBox;
         private Steema.TeeChart.Editor ChartEditor;
-        private Dew.Signal.SpectrumAnalyzerDialog SpectrumAnalyzerDialog;
+        private Dew.Signal.Editors.SpectrumAnalyzerDialog SpectrumAnalyzerDialog;
         private Dew.Math.Tee.MtxFastLine mtxFastLine1;
         private AxisScaleTool axisScaleTool1;
         private Steema.TeeChart.Styles.Points points1;
@@ -109,7 +109,7 @@ namespace DSPDemo
             this.SignalRead1 = new Dew.Signal.TSignalRead(this.components);
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart)).BeginInit();
             this.SuspendLayout();
@@ -1523,7 +1523,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.mtxFastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.mtxFastLine1.Marks.TailParams.Margin = 0F;
             this.mtxFastLine1.Marks.TailParams.PointerHeight = 8D;
             this.mtxFastLine1.Marks.TailParams.PointerWidth = 8D;
@@ -1687,7 +1686,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.points1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.points1.Marks.TailParams.Margin = 0F;
             this.points1.Marks.TailParams.PointerHeight = 8D;
             this.points1.Marks.TailParams.PointerWidth = 8D;
@@ -1753,7 +1751,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -1774,7 +1772,7 @@ namespace DSPDemo
             this.SpectrumAnalyzer1.SpectrumScale = 0D;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
             this.SpectrumAnalyzer1.ZeroPadding = 16;
-            this.SpectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
+            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
             // 
             // ChartEditor
             // 

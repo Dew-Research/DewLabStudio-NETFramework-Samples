@@ -25,14 +25,17 @@ namespace DSPDemo
 			InitializeComponent();
 		}
 
-		protected void Add(String s) {
-			richTextBox1.SelectedText = s + "\n";
-		}
+        protected void Add(string s)
+        {
+            richTextBox1.SelectionStart = richTextBox1.TextLength; // <- ensure insertion point is at end
+            richTextBox1.SelectionLength = 0;                      // <- ensure no selection
+            richTextBox1.SelectedText = s + Environment.NewLine;   // <- now correct formatting applies
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{

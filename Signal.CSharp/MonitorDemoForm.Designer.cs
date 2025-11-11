@@ -46,11 +46,11 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.Series2 = new Steema.TeeChart.Styles.Points();
-            this.SignalIn1 = new Dew.Signal.SignalIn(this.components);
+            this.SignalIn1 = new Dew.Signal.Audio.SignalIn(this.components);
             this.SignalWrite1 = new Dew.Signal.TSignalWrite(this.components);
-            this.SignalInDialog1 = new Dew.Signal.SignalInDialog(this.components);
-            this.SignalTimer1 = new Dew.Signal.SignalTimer(this.components);
-            this.SpectrumAnalyzerDialog1 = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SignalInDialog1 = new Dew.Signal.Editors.SignalInDialog(this.components);
+            this.SignalTimer1 = new Dew.Signal.Audio.SignalTimer(this.components);
+            this.SpectrumAnalyzerDialog1 = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.spectrumEditor = new Steema.TeeChart.Editor(this.components);
             this.signalEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
@@ -217,7 +217,6 @@
             // 
             // 
             // 
-            this.Series3.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series3.Marks.TailParams.Margin = 0F;
             this.Series3.Marks.TailParams.PointerHeight = 8D;
             this.Series3.Marks.TailParams.PointerWidth = 8D;
@@ -238,7 +237,7 @@
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -257,7 +256,7 @@
             this.SpectrumAnalyzer1.RunningPhase = Dew.Signal.TRunningPhase.rpDefault;
             this.SpectrumAnalyzer1.SpectrumScale = 0D;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
-            this.SpectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
+            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdate);
             // 
             // Series1
             // 
@@ -406,7 +405,6 @@
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
@@ -3103,7 +3101,6 @@
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.Series2.Marks.TailParams.Margin = 0F;
             this.Series2.Marks.TailParams.PointerHeight = 8D;
             this.Series2.Marks.TailParams.PointerWidth = 8D;
@@ -3163,9 +3160,9 @@
             this.SignalIn1.TriggerBelow = -1000D;
             this.SignalIn1.TriggerChannel = Dew.Signal.TChannel.chLeft;
             this.SignalIn1.TriggerDelay = 0;
-            this.SignalIn1.Triggering = Dew.Signal.TriggerType.trNone;
-            this.SignalIn1.TriggerMode = Dew.Signal.TriggerMode.trCrossing;
-            this.SignalIn1.TriggerPosition = Dew.Signal.TriggerPosition.tpAfter;
+            this.SignalIn1.Triggering = Dew.Signal.Audio.TriggerType.trNone;
+            this.SignalIn1.TriggerMode = Dew.Signal.Audio.TriggerMode.trCrossing;
+            this.SignalIn1.TriggerPosition = Dew.Signal.Audio.TriggerPosition.tpAfter;
             // 
             // SignalWrite1
             // 
@@ -3272,12 +3269,12 @@
 		private Steema.TeeChart.Styles.FastLine Series1;
 		private Steema.TeeChart.Styles.Points Series2;
 		private Steema.TeeChart.Styles.FastLine Series3;
-		private Dew.Signal.SignalIn SignalIn1;
-		private Dew.Signal.SignalInDialog SignalInDialog1;
+		private Dew.Signal.Audio.SignalIn SignalIn1;
+		private Dew.Signal.Editors.SignalInDialog SignalInDialog1;
 		private Dew.Signal.TSignalWrite SignalWrite1;
 		private Dew.Signal.TSignal Signal1;
-		private Dew.Signal.SignalTimer SignalTimer1;
-		private Dew.Signal.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
+		private Dew.Signal.Audio.SignalTimer SignalTimer1;
+		private Dew.Signal.Editors.SpectrumAnalyzerDialog SpectrumAnalyzerDialog1;
 		private Dew.Signal.TSpectrumAnalyzer SpectrumAnalyzer1;
 		private System.Windows.Forms.CheckBox recordToFileCheckBox;
 		private Steema.TeeChart.Editor spectrumEditor;

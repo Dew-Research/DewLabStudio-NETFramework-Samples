@@ -126,24 +126,6 @@
   <metadata name="signalGenerator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="resource.Templates" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAIECAAACDQAA
-        AFRvbmUNCk5vaXNlDQrIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAABAAAOAAAAAAAAABRAAAAAAAAAAAAA
-        AAAAAAAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQAADgAA
-        AAAAAAAqQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA
-        AAAAAAAAAAAAAAEBEQAAAAAAAAAAKkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAOAAAAAAAAgEZAAAAAAAAAAAAAAAAAAAAIQAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQERAAAAAAAAAIBGQAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAABAAAAAAEABQ4AAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAhAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAL
-</value>
-  </data>
   <metadata name="convertedSignal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>336, 56</value>
   </metadata>
@@ -170,14 +152,6 @@
   <metadata name="spectrumAnalyzer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>612, 17</value>
   </metadata>
-  <data name="resource.Templates1" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAAQAAAACAAAA
-        AAs=
-</value>
-  </data>
   <metadata name="convertedSpectrum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -191,14 +165,6 @@
   <metadata name="spectrumAnalyzer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>761, 17</value>
   </metadata>
-  <data name="resource.Templates2" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAAQAAAACAAAA
-        AAs=
-</value>
-  </data>
   <metadata name="originalSpectrum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>183, 56</value>
   </metadata>

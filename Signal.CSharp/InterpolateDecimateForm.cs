@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using Dew.Signal;
+using Dew.Signal.Editors;
 using Dew.Math;
 using Dew.Signal.Tee;
 using Dew.Signal.Units;
@@ -175,7 +176,7 @@ namespace DSPDemo
             this.SignalDecimator1 = new Dew.Signal.TSignalDecimator(this.components);
             this.SpectrumAnalyzer = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -473,7 +474,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Input = this.SignalRead3;
             this.SpectrumAnalyzer1.Name = "";
@@ -545,7 +546,7 @@ namespace DSPDemo
             // SpectrumAnalyzer
             // 
             this.SpectrumAnalyzer.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
+            this.SpectrumAnalyzer.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer.BlockAssign = false;
             this.SpectrumAnalyzer.DCDump = false;
             this.SpectrumAnalyzer.Input = this.SignalRead2;

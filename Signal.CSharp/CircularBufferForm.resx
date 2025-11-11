@@ -120,14 +120,6 @@
   <metadata name="spectrumAnalyzer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>436, 17</value>
   </metadata>
-  <data name="resource.Templates" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAAQAAAACAAAA
-        AAs=
-</value>
-  </data>
   <metadata name="signalStoreBuffer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>285, 17</value>
   </metadata>
@@ -137,19 +129,6 @@
   <metadata name="signalGenerator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="resource.Templates1" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAE1EZXcuU2lnbmFsLCBWZXJzaW9uPTYuMC40LjAsIEN1bHR1cmU9
-        bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDFkNGRkNzUyMjhjNGNjYgUBAAAAHERldy5TaWduYWwuVFN0
-        cmluZ1N0cmVhbUxpc3QBAAAAEVRTdHJpbmdTdHJlYW1EYXRhBwICAAAACQMAAAAPAwAAAFwBAAACGAAA
-        AFRlbXBsYXRlIDENClRlbXBsYXRlIDINCpgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAEAAA4AWDm0yHa+
-        8z8AAAAAAAAAAM3MzMzMzABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA
-        AAAAAACYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAOAAAAAAAAAAhAAAAAAAAAAADNzMzMzMwAQAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
   <metadata name="fastLine1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>592, 17</value>
   </metadata>
@@ -160,8 +139,8 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <metadata name="fastLine2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 62</value>
+  <metadata name="fastLine3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 62</value>
   </metadata>
   <data name="resource.CustomPointPos1" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -170,8 +149,8 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <metadata name="fastLine3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 62</value>
+  <metadata name="fastLine2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 62</value>
   </metadata>
   <data name="resource.CustomPointPos2" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>

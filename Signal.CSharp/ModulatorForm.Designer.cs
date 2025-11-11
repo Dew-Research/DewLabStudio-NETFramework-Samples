@@ -51,7 +51,7 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.spectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.editor1 = new Steema.TeeChart.Editor(this.components);
-            this.spectrumAnalyzerDialog1 = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.spectrumAnalyzerDialog1 = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spectrumChart2)).BeginInit();
@@ -61,7 +61,7 @@
             // spectrumAnalyzer2
             // 
             this.spectrumAnalyzer2.Bands.TemplateIndex = -1;
-            this.spectrumAnalyzer2.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.spectrumAnalyzer2.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.spectrumAnalyzer2.BlockAssign = false;
             this.spectrumAnalyzer2.Complex = false;
             this.spectrumAnalyzer2.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -82,7 +82,7 @@
             this.spectrumAnalyzer2.Stats.Averaged = 0;
             this.spectrumAnalyzer2.Stats.Averages = 30;
             this.spectrumAnalyzer2.ZeroPadding = 4;
-            this.spectrumAnalyzer2.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.spectrumAnalyzer1_OnParameterUpdate);
+            this.spectrumAnalyzer2.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.spectrumAnalyzer1_OnParameterUpdate);
             // 
             // signalRead1
             // 
@@ -247,7 +247,6 @@
             // 
             // 
             // 
-            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.fastLine2.Marks.TailParams.Margin = 0F;
             this.fastLine2.Marks.TailParams.PointerHeight = 8D;
             this.fastLine2.Marks.TailParams.PointerWidth = 8D;
@@ -268,7 +267,7 @@
             // spectrumAnalyzer1
             // 
             this.spectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.spectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
+            this.spectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.spectrumAnalyzer1.BlockAssign = false;
             this.spectrumAnalyzer1.Complex = false;
             this.spectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -290,7 +289,7 @@
             this.spectrumAnalyzer1.Stats.Averages = 30;
             this.spectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
             this.spectrumAnalyzer1.ZeroPadding = 4;
-            this.spectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.spectrumAnalyzer1_OnParameterUpdate);
+            this.spectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.spectrumAnalyzer1_OnParameterUpdate);
             // 
             // signalBuffer1
             // 
@@ -463,7 +462,6 @@
             // 
             // 
             // 
-            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.fastLine1.Marks.TailParams.Margin = 0F;
             this.fastLine1.Marks.TailParams.PointerHeight = 8D;
             this.fastLine1.Marks.TailParams.PointerWidth = 8D;
@@ -3064,7 +3062,7 @@
 		private Dew.Signal.TSpectrumAnalyzer spectrumAnalyzer1;
 		private Dew.Signal.TSpectrumAnalyzer spectrumAnalyzer2;
 		private Steema.TeeChart.Editor editor1;
-		private Dew.Signal.SpectrumAnalyzerDialog spectrumAnalyzerDialog1;
+		private Dew.Signal.Editors.SpectrumAnalyzerDialog spectrumAnalyzerDialog1;
 		private Dew.Signal.TSignalBuffer signalBuffer1;
 	}
 }

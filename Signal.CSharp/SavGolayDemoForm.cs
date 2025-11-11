@@ -9,6 +9,7 @@ using Dew.Math.Controls;
 using Dew.Signal.Units;
 using Dew.Math.Units;
 using Dew.Signal.Tee;
+using Dew.Signal.Editors;
 
 namespace DSPDemo
 {
@@ -113,7 +114,7 @@ namespace DSPDemo
             this.MarkSeries1 = new Steema.TeeChart.Styles.Points();
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.SignalRead1 = new Dew.Signal.TSignalRead(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
@@ -1785,7 +1786,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -1807,7 +1808,7 @@ namespace DSPDemo
             this.SpectrumAnalyzer1.Stats.Averaged = 0;
             this.SpectrumAnalyzer1.Stats.Averages = 30;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
-            this.SpectrumAnalyzer1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnAfterUpdate);
+            this.SpectrumAnalyzer1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnAfterUpdate);
             // 
             // SignalRead1
             // 

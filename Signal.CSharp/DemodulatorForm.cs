@@ -10,6 +10,7 @@ using Dew.Signal.Units;
 using Dew.Math.Units;
 using Dew.Math.Controls;
 using Dew.Demo;
+using Dew.Signal.Editors;
 
 namespace DSPDemo
 {
@@ -156,7 +157,7 @@ namespace DSPDemo
             this.SignalDemodulator1 = new Dew.Signal.TSignalDemodulator(this.components);
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.SpectrumAnalyzer2 = new Dew.Signal.TSpectrumAnalyzer(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1592,7 +1593,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series2.Marks.TailParams.Margin = 0F;
             this.Series2.Marks.TailParams.PointerHeight = 8D;
             this.Series2.Marks.TailParams.PointerWidth = 8D;
@@ -1761,7 +1761,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.MarkSeries2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.MarkSeries2.Marks.TailParams.Margin = 0F;
             this.MarkSeries2.Marks.TailParams.PointerHeight = 8D;
             this.MarkSeries2.Marks.TailParams.PointerWidth = 8D;
@@ -3139,7 +3138,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
@@ -3307,8 +3305,7 @@ namespace DSPDemo
             this.MarkSeries1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
-            // 
-            this.MarkSeries1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos3")));
+            //             
             this.MarkSeries1.Marks.TailParams.Margin = 0F;
             this.MarkSeries1.Marks.TailParams.PointerHeight = 8D;
             this.MarkSeries1.Marks.TailParams.PointerWidth = 8D;
@@ -3379,7 +3376,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -3404,7 +3401,7 @@ namespace DSPDemo
             // SpectrumAnalyzer2
             // 
             this.SpectrumAnalyzer2.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer2.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
+            this.SpectrumAnalyzer2.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer2.BlockAssign = false;
             this.SpectrumAnalyzer2.Complex = false;
             this.SpectrumAnalyzer2.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;

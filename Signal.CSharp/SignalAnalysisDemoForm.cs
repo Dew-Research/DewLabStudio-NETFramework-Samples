@@ -9,6 +9,7 @@ using Dew.Math.Controls;
 using Dew.Signal.Units;
 using Dew.Math.Units;
 using Dew.Signal.Tee;
+using Dew.Signal.Editors;
 
 namespace DSPDemo
 {
@@ -89,7 +90,7 @@ namespace DSPDemo
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SignalAnalyzer1 = new Dew.Signal.TSignalAnalyzer(this.components);
-            this.SignalAnalyzerDialog = new Dew.Signal.SignalAnalyzerDialog(this.components);
+            this.SignalAnalyzerDialog = new Dew.Signal.Editors.SignalAnalyzerDialog(this.components);
             this.SignalChart1 = new Dew.Signal.Tee.SignalChart();
             this.Series1 = new Steema.TeeChart.Styles.FastLine();
             this.MarkSeries1 = new Steema.TeeChart.Styles.Points();
@@ -195,7 +196,7 @@ namespace DSPDemo
             this.SignalAnalyzer1.Report.AmplitudeFormat = null;
             this.SignalAnalyzer1.Report.TimeFormat = null;
             this.SignalAnalyzer1.Report.UseTab = false;
-            this.SignalAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.SignalAnalyzer1_OnParameterUpdate);
+            this.SignalAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SignalAnalyzer1_OnParameterUpdate);
             // 
             // SignalAnalyzerDialog
             // 

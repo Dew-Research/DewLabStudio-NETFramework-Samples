@@ -52,7 +52,7 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompoundExpressionsForm));
             this.Panel1 = new System.Windows.Forms.Panel();
             this.RunButton = new System.Windows.Forms.Button();
@@ -893,11 +893,11 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            margins1.Bottom = 100;
-            margins1.Left = 100;
-            margins1.Right = 100;
-            margins1.Top = 100;
-            this.Chart.Printer.Margins = margins1;
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            this.Chart.Printer.Margins = margins2;
             this.Chart.Series.Add(this.Series1);
             this.Chart.Series.Add(this.Series2);
             this.Chart.Size = new System.Drawing.Size(1077, 627);
@@ -1396,6 +1396,7 @@ namespace MtxVecDemo
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CompoundExpressionsForm";
+            this.Tag = "";
             this.Text = "CompoundExpressionsForm";
             this.Load += new System.EventHandler(this.CompoundExpressionsForm_Load);
             this.Panel1.ResumeLayout(false);

@@ -39,9 +39,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.spectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.points1 = new Steema.TeeChart.Styles.Points();
-            this.SignalIn1 = new Dew.Signal.SignalIn(this.components);
-            this.SignalTimer1 = new Dew.Signal.SignalTimer(this.components);
-            this.CrossSpectrumAnalyzerDialog1 = new Dew.Signal.CrossSpectrumAnalyzerDialog(this.components);
+            this.SignalIn1 = new Dew.Signal.Audio.SignalIn(this.components);
+            this.SignalTimer1 = new Dew.Signal.Audio.SignalTimer(this.components);
+            this.CrossSpectrumAnalyzerDialog1 = new Dew.Signal.Editors.CrossSpectrumAnalyzerDialog(this.components);
             this.chartEditor = new Steema.TeeChart.Editor(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spectrumChart1)).BeginInit();
@@ -50,7 +50,7 @@
             // CrossSpectrumAnalyzer1
             // 
             this.CrossSpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.CrossSpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.CrossSpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.CrossSpectrumAnalyzer1.BlockAssign = false;
             this.CrossSpectrumAnalyzer1.Complex = false;
             this.CrossSpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -65,7 +65,7 @@
             this.CrossSpectrumAnalyzer1.Report.UseTab = false;
             this.CrossSpectrumAnalyzer1.SpectrumScale = 0D;
             this.CrossSpectrumAnalyzer1.Stats.Averaging = Dew.Signal.TAveraging.avLinearInf;
-            this.CrossSpectrumAnalyzer1.OnParameterUpdate += new Dew.Math.TNotifyEvent(this.CrossSpectrumAnalyzer1_OnParameterUpdate);
+            this.CrossSpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.CrossSpectrumAnalyzer1_OnParameterUpdate);
             // 
             // Signal1
             // 
@@ -235,7 +235,6 @@
             // 
             // 
             // 
-            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.fastLine1.Marks.TailParams.Margin = 0F;
             this.fastLine1.Marks.TailParams.PointerHeight = 8D;
             this.fastLine1.Marks.TailParams.PointerWidth = 8D;
@@ -1679,7 +1678,6 @@
             // 
             // 
             // 
-            this.points1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.points1.Marks.TailParams.Margin = 0F;
             this.points1.Marks.TailParams.PointerHeight = 8D;
             this.points1.Marks.TailParams.PointerWidth = 8D;
@@ -1739,9 +1737,9 @@
             this.SignalIn1.TriggerBelow = 0D;
             this.SignalIn1.TriggerChannel = Dew.Signal.TChannel.chLeft;
             this.SignalIn1.TriggerDelay = 0;
-            this.SignalIn1.Triggering = Dew.Signal.TriggerType.trNone;
-            this.SignalIn1.TriggerMode = Dew.Signal.TriggerMode.trCrossing;
-            this.SignalIn1.TriggerPosition = Dew.Signal.TriggerPosition.tpAfter;
+            this.SignalIn1.Triggering = Dew.Signal.Audio.TriggerType.trNone;
+            this.SignalIn1.TriggerMode = Dew.Signal.Audio.TriggerMode.trCrossing;
+            this.SignalIn1.TriggerPosition = Dew.Signal.Audio.TriggerPosition.tpAfter;
             // 
             // SignalTimer1
             // 
@@ -1800,12 +1798,12 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
-		private Dew.Signal.SignalIn SignalIn1;
+		private Dew.Signal.Audio.SignalIn SignalIn1;
 		private Dew.Signal.TSignal Signal1;
 		private Dew.Signal.TSignal Signal2;
-		private Dew.Signal.SignalTimer SignalTimer1;
+		private Dew.Signal.Audio.SignalTimer SignalTimer1;
 		private Dew.Signal.TCrossSpectrumAnalyzer CrossSpectrumAnalyzer1;
-		private Dew.Signal.CrossSpectrumAnalyzerDialog CrossSpectrumAnalyzerDialog1;
+		private Dew.Signal.Editors.CrossSpectrumAnalyzerDialog CrossSpectrumAnalyzerDialog1;
 		private Steema.TeeChart.Editor chartEditor;
 		private Steema.TeeChart.Styles.FastLine fastLine1;
 		private Steema.TeeChart.Styles.Points points1;

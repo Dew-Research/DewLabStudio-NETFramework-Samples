@@ -54,7 +54,9 @@ namespace DSPDemo {
 
 		private void BrowseDemoForm_Load(object sender, EventArgs e) {
 			channelBox.SelectedIndex = 0;
-			signalBrowse1.ProgressThread.UpdateInterval = 50;
+			signalBrowse1.ProgressRuntime = progressDialog.Runtime;
+			signalBrowse1.OverviewRepositoryPath = Application.StartupPath + "\\SignalPkFiles";
+            progressDialog.UpdateInterval = 50;
 			richTextBox1.Text = "Open a few 10MB long uncompressed wav file. The chart will display signal overview." +
           "For 200 MB long wav file, it takes a little less then 6 seconds to create the overview. " +
           "(.pk file). It is then possible to browse through the entire signal, pan and zoom with " +
@@ -100,12 +102,12 @@ namespace DSPDemo {
 			}
 		}
 
-		private void signalBrowse1_OnProgressUpdate(object sender, Dew.Math.Controls.MtxProgressEvent e) {
+		private void signalBrowse1_OnProgressUpdate(object sender, Dew.Math.TMtxProgressEvent e) {
 			switch (e) {
-				case MtxProgressEvent.peCycle:
+				case TMtxProgressEvent.peCycle:
 					positionPanel1.SliderSpan = signalBrowse1.SignalFile.RecordPosition * 100 / signalBrowse1.SignalFile.RecordLength;
 					break;
-				case MtxProgressEvent.peCleanUp:
+				case TMtxProgressEvent.peCleanUp:
 					positionPanel1.SliderSpan = 100;
 					signalBrowse1.LoadFullRecord();
 					BrowseChartUpdate(0);

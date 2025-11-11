@@ -10,6 +10,7 @@ using Dew.Math.Units;
 using Dew.Signal.Tee;
 using Dew.Math.Controls;
 using Dew.Math.Tee;
+using Dew.Signal.Editors;
 using static Dew.Math.Tee.MtxVecTee;
 
 namespace DSPDemo
@@ -128,7 +129,7 @@ namespace DSPDemo
             this.Signal1 = new Dew.Signal.TSignal(this.components);
             this.BiSpectrumAnalyzer1 = new Dew.Signal.TBiSpectrumAnalyzer(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
@@ -363,10 +364,7 @@ namespace DSPDemo
             this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
-            // 
-            this.SpectrumChart1.Axes.Depth.Automatic = false;
-            this.SpectrumChart1.Axes.Depth.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.Depth.AutomaticMinimum = false;
+           
             // 
             // 
             // 
@@ -477,9 +475,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Automatic = false;
-            this.SpectrumChart1.Axes.DepthTop.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.DepthTop.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -821,9 +816,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Automatic = false;
-            this.SpectrumChart1.Axes.Top.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.Top.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1587,7 +1579,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
@@ -1756,7 +1747,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series2.Marks.TailParams.Margin = 0F;
             this.Series2.Marks.TailParams.PointerHeight = 8D;
             this.Series2.Marks.TailParams.PointerWidth = 8D;
@@ -2983,7 +2973,7 @@ namespace DSPDemo
             // SpectrumAnalyzer1
             // 
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
@@ -3017,13 +3007,12 @@ namespace DSPDemo
             this.Signal1.Length = 256;
             this.Signal1.Name = "";
             this.Signal1.SamplingFrequency = 256D;
-            this.Signal1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.Signal1_OnAfterUpdate);
+            this.Signal1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.Signal1_OnAfterUpdate);
             // 
             // BiSpectrumAnalyzer1
             // 
             this.BiSpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.BiSpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
-            this.BiSpectrumAnalyzer1.BiAnalyzer.Lines = ((Dew.Math.TVec)(resources.GetObject("resource.Lines")));
+            this.BiSpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.BiSpectrumAnalyzer1.BiAnalyzer.Recursive = false;
             this.BiSpectrumAnalyzer1.BlockAssign = false;
             this.BiSpectrumAnalyzer1.Complex = false;

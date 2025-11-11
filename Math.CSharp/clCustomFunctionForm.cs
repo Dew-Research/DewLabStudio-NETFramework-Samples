@@ -20,7 +20,7 @@ namespace MtxVecDemo
         public clCustomFunctionForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
        
         private void platformListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,8 +96,8 @@ namespace MtxVecDemo
             B.SetVal(0);
 
 
-            clMtxVec.CreateIt(out clB, out clC);
-            clMtxVec.CreateIt(out clA);
+            ClMtxVec.CreateIt(out clB, out clC);
+            ClMtxVec.CreateIt(out clA);
             try
             {
                 clA.Copy(A);
@@ -114,8 +114,8 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref clA, ref clB);
-                clMtxVec.FreeIt(ref clC);
+                ClMtxVec.FreeIt(ref clA, ref clB);
+                ClMtxVec.FreeIt(ref clC);
                 this.Cursor = Cursors.Default;
             }
         }
@@ -138,7 +138,7 @@ namespace MtxVecDemo
             TOpenCLVector clB, clC, clA, clD;
             int i;
 
-            clMtxVec.CreateIt(out clA, out clB, out clC, out clD);
+            ClMtxVec.CreateIt(out clA, out clB, out clC, out clD);
             try
             {
                 clA.Size(VectorLen, TclFloatPrecision.clFloat, false);
@@ -156,7 +156,7 @@ namespace MtxVecDemo
                 clC.Finish(); //Wait for computation on GPU to finish
             }
             finally {
-                clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
+                ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
             }
 
         }
@@ -191,7 +191,7 @@ namespace MtxVecDemo
             //Main form requires:
             //protected override void Dispose( bool disposing )
             //{
-            //    clMtxVec.clPlatform.Free();
+            //    ClMtxVec.clPlatform.Free();
 
             int i, k, kernelSum;
 

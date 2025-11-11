@@ -20,7 +20,7 @@ namespace MtxVecDemo
         public clBenchmarkForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
 
         private void clBenchmarkForm_Load(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace MtxVecDemo
             //Main form requires:
             //protected override void Dispose( bool disposing )
             //{
-            //    clMtxVec.clPlatform.Free();
+            //    ClMtxVec.clPlatform.Free();
 
             int i, k, kernelSum;
             i = (int)(sizeof(double) * 8);            
@@ -114,7 +114,7 @@ namespace MtxVecDemo
 
             clPlatforms.UnMarkThreads();
             selectedDevice = clPlatforms[platformListBox.SelectedIndex][deviceListBox.SelectedIndex];
-            if ((selectedDevice.DevicePlatform.Name == clMtxVec.INTEL_PLATFORM) & clPlatforms.IgnoreIntel)
+            if ((selectedDevice.DevicePlatform.Name == ClMtxVec.INTEL_PLATFORM) & clPlatforms.IgnoreIntel)
             {
                 MessageBox.Show("clPlatform.IgnoreIntel = True. If you want to run benchmark for Intel platform set this flag to false first!");
             }
@@ -160,8 +160,8 @@ namespace MtxVecDemo
             C = new Vector(0);
             R = new Vector(0);
             this.Cursor = Cursors.WaitCursor;
-            clMtxVec.CreateIt(out clB, out clC);
-            clMtxVec.CreateIt(out clA, out clD);
+            ClMtxVec.CreateIt(out clB, out clC);
+            ClMtxVec.CreateIt(out clA, out clD);
             try
             {
                 clC.FloatPrecision = (TclFloatPrecision)floatPrecisionBox.SelectedIndex;
@@ -403,7 +403,7 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
+                ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
                 this.Cursor = Cursors.Default;
             }
         }

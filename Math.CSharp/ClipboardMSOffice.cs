@@ -64,7 +64,7 @@ namespace MtxVecDemo
             // 
             // button2
             // 
-            this.button2.Image = global::MtxVecDemo.Properties.Resources.Word24x24;
+            //this.button2.Image = global::MtxVecDemo.Properties.Resources.Word24x24;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(16, 67);
             this.button2.Name = "button2";
@@ -78,7 +78,7 @@ namespace MtxVecDemo
             // 
             // button1
             // 
-            this.button1.Image = global::MtxVecDemo.Properties.Resources.Excel24x24;
+            //this.button1.Image = global::MtxVecDemo.Properties.Resources.Excel24x24;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(16, 24);
             this.button1.Name = "button1";

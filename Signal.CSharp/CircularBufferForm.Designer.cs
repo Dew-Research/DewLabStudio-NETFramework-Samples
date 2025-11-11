@@ -25,16 +25,19 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CircularBufferForm));
+            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SpectrumTeeItem spectrumTeeItem1 = new Dew.Signal.Tee.SpectrumTeeItem();
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
+            Steema.TeeChart.Margins margins3 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem2 = new Dew.Signal.Tee.SignalTeeItem();
             this.spectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.signalStoreBuffer1 = new Dew.Signal.TSignalStoreBuffer(this.components);
             this.signalBuffer1 = new Dew.Signal.TSignalBuffer(this.components);
             this.signalGenerator1 = new Dew.Signal.TSignalGenerator(this.components);
             this.fastLine1 = new Steema.TeeChart.Styles.FastLine();
-            this.fastLine2 = new Steema.TeeChart.Styles.FastLine();
             this.fastLine3 = new Steema.TeeChart.Styles.FastLine();
+            this.fastLine2 = new Steema.TeeChart.Styles.FastLine();
             this.spectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.resetButton = new System.Windows.Forms.Button();
@@ -65,74 +68,82 @@
             // 
             // spectrumAnalyzer1
             // 
+            this.spectrumAnalyzer1.ArOrder = 100;
             this.spectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.spectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
-            this.spectrumAnalyzer1.BlockAssign = false;
+            this.spectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.spectrumAnalyzer1.Complex = false;
             this.spectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.spectrumAnalyzer1.FloatPrecisionLock = false;
+            this.spectrumAnalyzer1.Harmonics = 10;
             this.spectrumAnalyzer1.Input = this.signalStoreBuffer1;
             this.spectrumAnalyzer1.IsDouble = true;
+            this.spectrumAnalyzer1.Length = 64;
             this.spectrumAnalyzer1.Logarithmic = true;
             this.spectrumAnalyzer1.LogBase = 0D;
             this.spectrumAnalyzer1.LogScale = 0D;
             this.spectrumAnalyzer1.LogSpan = Dew.Signal.TLogSpan.ls200;
-            this.spectrumAnalyzer1.Name = null;
-            this.spectrumAnalyzer1.Output = null;
+            this.spectrumAnalyzer1.MainlobeWidth = 8;
+            this.spectrumAnalyzer1.Peaks.HarmonicsCount = 10;
             this.spectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
+            this.spectrumAnalyzer1.Peaks.LargestCount = 1;
+            this.spectrumAnalyzer1.Peaks.LargestRatio = 1E+15D;
+            this.spectrumAnalyzer1.Peaks.NormalizedAmplt.PeakNumber = 1;
+            this.spectrumAnalyzer1.Peaks.NormalizedFreq.PeakNumber = 1;
             this.spectrumAnalyzer1.Report.AmplitudeFormat = null;
             this.spectrumAnalyzer1.Report.FrequencyFormat = null;
             this.spectrumAnalyzer1.Report.PhaseFormat = null;
             this.spectrumAnalyzer1.Report.UseTab = false;
+            this.spectrumAnalyzer1.Rotation = 0;
             this.spectrumAnalyzer1.SidelobeAtt = 90D;
-            this.spectrumAnalyzer1.SpectrumScale = 0D;
+            this.spectrumAnalyzer1.Stats.Averaged = 0;
+            this.spectrumAnalyzer1.Stats.Averages = 30;
+            this.spectrumAnalyzer1.Stats.ExpDecay = 5;
             this.spectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtKaiser;
             this.spectrumAnalyzer1.ZeroPadding = 16;
             // 
             // signalStoreBuffer1
             // 
             this.signalStoreBuffer1.ActualBufferSize = 0;
-            this.signalStoreBuffer1.BandwidthL = 0D;
-            this.signalStoreBuffer1.BlockAssign = false;
+            this.signalStoreBuffer1.ChannelCount = 1;
             this.signalStoreBuffer1.Complex = false;
+            this.signalStoreBuffer1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAAAAAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAA"));
             this.signalStoreBuffer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalStoreBuffer1.FloatPrecisionLock = false;
+            this.signalStoreBuffer1.InitialBufferSize = 16;
             this.signalStoreBuffer1.Input = this.signalBuffer1;
             this.signalStoreBuffer1.IsDouble = true;
             this.signalStoreBuffer1.Length = 0;
-            this.signalStoreBuffer1.Name = null;
+            this.signalStoreBuffer1.MaxBufferLength = -1;
             // 
             // signalBuffer1
             // 
-            this.signalBuffer1.BandwidthL = 0D;
-            this.signalBuffer1.BlockAssign = false;
+            this.signalBuffer1.BufferSizeLimit = 2000000;
+            this.signalBuffer1.ChannelCount = 1;
             this.signalBuffer1.Complex = false;
+            this.signalBuffer1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAA+kMAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="));
             this.signalBuffer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalBuffer1.FloatPrecisionLock = false;
             this.signalBuffer1.IncrementStep = 1D;
             this.signalBuffer1.Input = this.signalGenerator1;
             this.signalBuffer1.IsDouble = true;
             this.signalBuffer1.Length = 500;
-            this.signalBuffer1.Name = null;
-            this.signalBuffer1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.signalBuffer1_OnAfterUpdate);
-            this.signalBuffer1.OnBeforeUpdate += new Dew.Math.TNotifyEvent(this.signalBuffer1_OnBeforeUpdate);
+            this.signalBuffer1.StrideLength = 0;
+            this.signalBuffer1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.signalBuffer1_OnAfterUpdate);
+            this.signalBuffer1.OnBeforeUpdateEvent += new Dew.Math.TNotifyEvent(this.signalBuffer1_OnBeforeUpdate);
             // 
             // signalGenerator1
             // 
-            this.signalGenerator1.BandwidthL = 0D;
-            this.signalGenerator1.BlockAssign = false;
+            this.signalGenerator1.ChannelCount = 1;
             this.signalGenerator1.Complex = false;
-            this.signalGenerator1.ComputeMessage = "";
+            this.signalGenerator1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAYUQAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
             this.signalGenerator1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalGenerator1.FloatPrecisionLock = false;
-            this.signalGenerator1.Input = null;
             this.signalGenerator1.IsDouble = true;
             this.signalGenerator1.Length = 900;
-            this.signalGenerator1.Name = null;
-            this.signalGenerator1.SamplingFrequency = 40D;
-            this.signalGenerator1.Sounds.TemplateIndex = 1;
-            this.signalGenerator1.Sounds.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates1")));
-            this.signalGenerator1.OnAfterUpdate += new Dew.Math.TNotifyEvent(this.signalGenerator1_OnAfterUpdate);
+            this.signalGenerator1.SamplingFrequency = 1000D;
+            this.signalGenerator1.Sounds.TemplateIndex = 0;
+            this.signalGenerator1.Sounds.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("DAAAAFRlbXBsYXRlIDENCjABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAEAAA4AAAAAAACAa0AAAAAAAAAAAAAAAAAAACZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAAAOAAAAAAAAADRAAAAAAAAAAAAAAAAAAAAYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQERAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="));
+            this.signalGenerator1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.signalGenerator1_OnAfterUpdate);
             // 
             // fastLine1
             // 
@@ -149,18 +160,13 @@
             // 
             // 
             this.fastLine1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Legend.Brush.Solid = true;
-            this.fastLine1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Legend.Font.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -168,8 +174,6 @@
             // 
             // 
             this.fastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Shadow.Brush.Visible = true;
             this.fastLine1.Legend.Font.Size = 8;
             this.fastLine1.Legend.Font.SizeFloat = 8F;
             // 
@@ -179,8 +183,6 @@
             // 
             // 
             this.fastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -188,8 +190,6 @@
             // 
             // 
             this.fastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -205,18 +205,13 @@
             // 
             // 
             this.fastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine1.Marks.Brush.Solid = true;
-            this.fastLine1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Marks.Font.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -224,8 +219,6 @@
             // 
             // 
             this.fastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Shadow.Brush.Visible = true;
             this.fastLine1.Marks.Font.Size = 8;
             this.fastLine1.Marks.Font.SizeFloat = 8F;
             // 
@@ -235,8 +228,6 @@
             // 
             // 
             this.fastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -244,8 +235,6 @@
             // 
             // 
             this.fastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine1.Marks.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -257,8 +246,6 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Marks.Symbol.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -266,8 +253,6 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -275,15 +260,10 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
-            this.fastLine1.Marks.TailParams.Margin = 0F;
-            this.fastLine1.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine1.Marks.TailParams.PointerWidth = 8D;
             this.fastLine1.OriginalCursor = System.Windows.Forms.Cursors.Default;
             this.fastLine1.Title = "fastLine1";
             this.fastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -297,170 +277,6 @@
             // 
             // 
             this.fastLine1.YValues.DataMember = "Y";
-            // 
-            // fastLine2
-            // 
-            this.fastLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fastLine2.ColorEach = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine2.Legend.Brush.Solid = true;
-            this.fastLine2.Legend.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine2.Legend.Font.Brush.Solid = true;
-            this.fastLine2.Legend.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine2.Legend.Font.Shadow.Brush.Visible = true;
-            this.fastLine2.Legend.Font.Size = 8;
-            this.fastLine2.Legend.Font.SizeFloat = 8F;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Legend.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Legend.Shadow.Brush.Solid = true;
-            this.fastLine2.Legend.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine2.Marks.Brush.Solid = true;
-            this.fastLine2.Marks.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine2.Marks.Font.Brush.Solid = true;
-            this.fastLine2.Marks.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Font.Shadow.Brush.Visible = true;
-            this.fastLine2.Marks.Font.Size = 8;
-            this.fastLine2.Marks.Font.SizeFloat = 8F;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine2.Marks.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine2.Marks.Symbol.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
-            this.fastLine2.Marks.TailParams.Margin = 0F;
-            this.fastLine2.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine2.Marks.TailParams.PointerWidth = 8D;
-            this.fastLine2.OriginalCursor = System.Windows.Forms.Cursors.Default;
-            this.fastLine2.Title = "fastLine2";
-            this.fastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.fastLine2.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.fastLine2.XValues.DataMember = "X";
-            this.fastLine2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            // 
-            // 
-            // 
-            this.fastLine2.YValues.DataMember = "Y";
             // 
             // fastLine3
             // 
@@ -477,18 +293,13 @@
             // 
             // 
             this.fastLine3.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine3.Legend.Brush.Solid = true;
-            this.fastLine3.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine3.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine3.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine3.Legend.Font.Brush.Solid = true;
-            this.fastLine3.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -496,8 +307,6 @@
             // 
             // 
             this.fastLine3.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine3.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine3.Legend.Font.Shadow.Brush.Visible = true;
             this.fastLine3.Legend.Font.Size = 8;
             this.fastLine3.Legend.Font.SizeFloat = 8F;
             // 
@@ -507,8 +316,6 @@
             // 
             // 
             this.fastLine3.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine3.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine3.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -516,8 +323,6 @@
             // 
             // 
             this.fastLine3.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine3.Legend.Shadow.Brush.Solid = true;
-            this.fastLine3.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -533,18 +338,13 @@
             // 
             // 
             this.fastLine3.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine3.Marks.Brush.Solid = true;
-            this.fastLine3.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine3.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine3.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine3.Marks.Font.Brush.Solid = true;
-            this.fastLine3.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -552,8 +352,6 @@
             // 
             // 
             this.fastLine3.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine3.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine3.Marks.Font.Shadow.Brush.Visible = true;
             this.fastLine3.Marks.Font.Size = 8;
             this.fastLine3.Marks.Font.SizeFloat = 8F;
             // 
@@ -563,8 +361,6 @@
             // 
             // 
             this.fastLine3.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine3.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine3.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -572,8 +368,6 @@
             // 
             // 
             this.fastLine3.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine3.Marks.Shadow.Brush.Solid = true;
-            this.fastLine3.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -585,8 +379,6 @@
             // 
             // 
             this.fastLine3.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine3.Marks.Symbol.Brush.Solid = true;
-            this.fastLine3.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -594,8 +386,6 @@
             // 
             // 
             this.fastLine3.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine3.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine3.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -603,15 +393,10 @@
             // 
             // 
             this.fastLine3.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine3.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine3.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine3.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
-            this.fastLine3.Marks.TailParams.Margin = 0F;
-            this.fastLine3.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine3.Marks.TailParams.PointerWidth = 8D;
+            this.fastLine3.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.fastLine3.OriginalCursor = System.Windows.Forms.Cursors.Default;
             this.fastLine3.Title = "fastLine1";
             this.fastLine3.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -625,6 +410,139 @@
             // 
             // 
             this.fastLine3.YValues.DataMember = "Y";
+            // 
+            // fastLine2
+            // 
+            this.fastLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fastLine2.ColorEach = false;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Brush.Color = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Legend.Font.Size = 8;
+            this.fastLine2.Legend.Font.SizeFloat = 8F;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            // 
+            // 
+            // 
+            this.fastLine2.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Marks.Font.Size = 8;
+            this.fastLine2.Marks.Font.SizeFloat = 8F;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
+            this.fastLine2.OriginalCursor = System.Windows.Forms.Cursors.Default;
+            this.fastLine2.Title = "fastLine2";
+            this.fastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            this.fastLine2.UseExtendedNumRange = false;
+            // 
+            // 
+            // 
+            this.fastLine2.XValues.DataMember = "X";
+            this.fastLine2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            // 
+            // 
+            // 
+            this.fastLine2.YValues.DataMember = "Y";
             // 
             // spectrumChart1
             // 
@@ -650,18 +568,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -669,8 +582,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Bottom.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -680,8 +591,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -689,8 +598,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -703,18 +610,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -722,8 +624,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Bottom.Title.Font.Size = 11;
             this.spectrumChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -733,8 +633,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -742,8 +640,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -758,18 +654,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -777,8 +668,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Depth.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -788,8 +677,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -797,8 +684,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -811,18 +696,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -830,8 +710,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Depth.Title.Font.Size = 11;
             this.spectrumChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -841,8 +719,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -850,8 +726,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -866,18 +740,13 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -885,8 +754,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.DepthTop.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -896,8 +763,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -905,8 +770,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -919,18 +782,13 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -938,8 +796,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.DepthTop.Title.Font.Size = 11;
             this.spectrumChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -949,8 +805,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -958,8 +812,6 @@
             // 
             // 
             this.spectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -978,18 +830,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -997,8 +844,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Left.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -1008,8 +853,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1017,8 +860,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1031,18 +872,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.Left.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1050,8 +886,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Left.Title.Font.Size = 11;
             this.spectrumChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -1061,8 +895,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1070,8 +902,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1090,18 +920,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1109,8 +934,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Right.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -1120,8 +943,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1129,8 +950,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1143,18 +962,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.Right.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1162,8 +976,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Right.Title.Font.Size = 11;
             this.spectrumChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -1173,8 +985,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1182,8 +992,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1198,18 +1006,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1217,8 +1020,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Top.Labels.Font.Size = 9;
             this.spectrumChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -1228,8 +1029,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1237,8 +1036,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1251,18 +1048,13 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Axes.Top.Title.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1270,8 +1062,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Axes.Top.Title.Font.Size = 11;
             this.spectrumChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -1281,8 +1071,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1290,8 +1078,6 @@
             // 
             // 
             this.spectrumChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.spectrumChart1.Color = System.Drawing.Color.White;
             this.spectrumChart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.spectrumChart1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1306,18 +1092,13 @@
             // 
             // 
             this.spectrumChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Footer.Brush.Solid = true;
-            this.spectrumChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.spectrumChart1.Footer.Font.Brush.Solid = true;
-            this.spectrumChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1325,8 +1106,6 @@
             // 
             // 
             this.spectrumChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Footer.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Footer.Font.Size = 8;
             this.spectrumChart1.Footer.Font.SizeFloat = 8F;
             // 
@@ -1336,8 +1115,6 @@
             // 
             // 
             this.spectrumChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1345,8 +1122,6 @@
             // 
             // 
             this.spectrumChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Footer.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1358,18 +1133,13 @@
             // 
             // 
             this.spectrumChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.spectrumChart1.Header.Brush.Solid = true;
-            this.spectrumChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Header.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.Header.Font.Brush.Solid = true;
-            this.spectrumChart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1377,8 +1147,6 @@
             // 
             // 
             this.spectrumChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Header.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Header.Font.Size = 12;
             this.spectrumChart1.Header.Font.SizeFloat = 12F;
             // 
@@ -1388,8 +1156,6 @@
             // 
             // 
             this.spectrumChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Header.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Header.ImageBevel.Brush.Visible = true;
             this.spectrumChart1.Header.Lines = new string[] {
         "Spectrum"};
             // 
@@ -1399,8 +1165,6 @@
             // 
             // 
             this.spectrumChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.spectrumChart1.Header.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1412,18 +1176,13 @@
             // 
             // 
             this.spectrumChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Legend.Brush.Solid = true;
-            this.spectrumChart1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.spectrumChart1.Legend.Font.Brush.Solid = true;
-            this.spectrumChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1431,8 +1190,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Legend.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Legend.Font.Size = 9;
             this.spectrumChart1.Legend.Font.SizeFloat = 9F;
             // 
@@ -1442,8 +1199,6 @@
             // 
             // 
             this.spectrumChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1451,8 +1206,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.spectrumChart1.Legend.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1463,8 +1216,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1476,8 +1227,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Legend.Title.Brush.Solid = true;
-            this.spectrumChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -1486,8 +1235,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.spectrumChart1.Legend.Title.Font.Brush.Solid = true;
-            this.spectrumChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1495,8 +1242,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.Legend.Title.Font.Size = 8;
             this.spectrumChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -1506,8 +1251,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1515,8 +1258,6 @@
             // 
             // 
             this.spectrumChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Legend.Title.Shadow.Brush.Visible = true;
             this.spectrumChart1.Legend.Visible = false;
             this.spectrumChart1.Location = new System.Drawing.Point(0, 0);
             this.spectrumChart1.Name = "spectrumChart1";
@@ -1531,8 +1272,6 @@
             // 
             // 
             this.spectrumChart1.Panel.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Panel.Brush.Solid = true;
-            this.spectrumChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1540,8 +1279,6 @@
             // 
             // 
             this.spectrumChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1549,8 +1286,14 @@
             // 
             // 
             this.spectrumChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Panel.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins1.Bottom = 100;
+            margins1.Left = 100;
+            margins1.Right = 100;
+            margins1.Top = 100;
+            this.spectrumChart1.Printer.Margins = margins1;
             this.spectrumChart1.Series.Add(this.fastLine1);
             this.spectrumChart1.Size = new System.Drawing.Size(905, 152);
             this.spectrumChart1.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
@@ -1572,18 +1315,13 @@
             // 
             // 
             this.spectrumChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.SubFooter.Brush.Solid = true;
-            this.spectrumChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.spectrumChart1.SubFooter.Font.Brush.Solid = true;
-            this.spectrumChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1591,8 +1329,6 @@
             // 
             // 
             this.spectrumChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.SubFooter.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.SubFooter.Font.Size = 8;
             this.spectrumChart1.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -1602,8 +1338,6 @@
             // 
             // 
             this.spectrumChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1611,8 +1345,6 @@
             // 
             // 
             this.spectrumChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.spectrumChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1624,18 +1356,13 @@
             // 
             // 
             this.spectrumChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.spectrumChart1.SubHeader.Brush.Solid = true;
-            this.spectrumChart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.spectrumChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.spectrumChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.spectrumChart1.SubHeader.Font.Brush.Solid = true;
-            this.spectrumChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1643,8 +1370,6 @@
             // 
             // 
             this.spectrumChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.spectrumChart1.SubHeader.Font.Shadow.Brush.Visible = true;
             this.spectrumChart1.SubHeader.Font.Size = 12;
             this.spectrumChart1.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -1654,8 +1379,6 @@
             // 
             // 
             this.spectrumChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1663,8 +1386,6 @@
             // 
             // 
             this.spectrumChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.spectrumChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.spectrumChart1.SubHeader.Shadow.Brush.Visible = true;
             this.spectrumChart1.TabIndex = 0;
             // 
             // 
@@ -1680,7 +1401,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.spectrumChart1.Walls.Back.Brush.Solid = true;
             this.spectrumChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -1689,8 +1409,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1698,8 +1416,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1711,8 +1427,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.spectrumChart1.Walls.Bottom.Brush.Solid = true;
-            this.spectrumChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -1720,8 +1434,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1729,8 +1441,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1742,8 +1452,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.spectrumChart1.Walls.Left.Brush.Solid = true;
-            this.spectrumChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -1751,8 +1459,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1760,8 +1466,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1773,8 +1477,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.spectrumChart1.Walls.Right.Brush.Solid = true;
-            this.spectrumChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -1782,8 +1484,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.spectrumChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.spectrumChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1791,8 +1491,6 @@
             // 
             // 
             this.spectrumChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.spectrumChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.spectrumChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1801,11 +1499,7 @@
             // 
             // 
             this.spectrumChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.spectrumChart1.Zoom.Brush.Solid = true;
             this.spectrumChart1.Zoom.Brush.Visible = false;
-            this.spectrumChart1.Zoom.FullRepaint = true;
-            this.spectrumChart1.Zoom.Pen.Visible = true;
-
             // 
             // panel1
             // 
@@ -2020,18 +1714,13 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.Bottom.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2039,8 +1728,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Bottom.Labels.Font.Size = 9;
             this.signalChart2.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -2050,8 +1737,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2059,8 +1744,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2073,18 +1756,13 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.Bottom.Title.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2092,8 +1770,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Bottom.Title.Font.Size = 11;
             this.signalChart2.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -2103,8 +1779,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2112,8 +1786,6 @@
             // 
             // 
             this.signalChart2.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2128,18 +1800,13 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.Depth.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2147,8 +1814,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Depth.Labels.Font.Size = 9;
             this.signalChart2.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -2158,8 +1823,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2167,8 +1830,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2181,18 +1842,13 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.Depth.Title.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2200,8 +1856,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Depth.Title.Font.Size = 11;
             this.signalChart2.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -2211,8 +1865,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2220,8 +1872,6 @@
             // 
             // 
             this.signalChart2.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2236,18 +1886,13 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2255,8 +1900,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.DepthTop.Labels.Font.Size = 9;
             this.signalChart2.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -2266,8 +1909,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2275,8 +1916,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2289,18 +1928,13 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.DepthTop.Title.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2308,8 +1942,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.DepthTop.Title.Font.Size = 11;
             this.signalChart2.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -2319,8 +1951,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2328,8 +1958,6 @@
             // 
             // 
             this.signalChart2.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2348,18 +1976,13 @@
             // 
             // 
             this.signalChart2.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.Left.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2367,8 +1990,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Left.Labels.Font.Size = 9;
             this.signalChart2.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -2378,8 +1999,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2387,8 +2006,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2401,18 +2018,13 @@
             // 
             // 
             this.signalChart2.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.Left.Title.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.Left.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2420,8 +2032,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Left.Title.Font.Size = 11;
             this.signalChart2.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -2431,8 +2041,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2440,8 +2048,6 @@
             // 
             // 
             this.signalChart2.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2456,18 +2062,13 @@
             // 
             // 
             this.signalChart2.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.Right.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2475,8 +2076,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Right.Labels.Font.Size = 9;
             this.signalChart2.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -2486,8 +2085,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2495,8 +2092,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2509,18 +2104,13 @@
             // 
             // 
             this.signalChart2.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.Right.Title.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.Right.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2528,8 +2118,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Right.Title.Font.Size = 11;
             this.signalChart2.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -2539,8 +2127,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2548,8 +2134,6 @@
             // 
             // 
             this.signalChart2.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2564,18 +2148,13 @@
             // 
             // 
             this.signalChart2.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Axes.Top.Labels.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2583,8 +2162,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Top.Labels.Font.Size = 9;
             this.signalChart2.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -2594,8 +2171,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2603,8 +2178,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2617,18 +2190,13 @@
             // 
             // 
             this.signalChart2.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Axes.Top.Title.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Axes.Top.Title.Font.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2636,8 +2204,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Axes.Top.Title.Font.Size = 11;
             this.signalChart2.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -2647,8 +2213,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2656,8 +2220,6 @@
             // 
             // 
             this.signalChart2.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.signalChart2.Color = System.Drawing.Color.White;
             this.signalChart2.Cursor = System.Windows.Forms.Cursors.Default;
             this.signalChart2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2672,18 +2234,13 @@
             // 
             // 
             this.signalChart2.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Footer.Brush.Solid = true;
-            this.signalChart2.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart2.Footer.Font.Brush.Solid = true;
-            this.signalChart2.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2691,8 +2248,6 @@
             // 
             // 
             this.signalChart2.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Footer.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Footer.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Footer.Font.Size = 8;
             this.signalChart2.Footer.Font.SizeFloat = 8F;
             // 
@@ -2702,8 +2257,6 @@
             // 
             // 
             this.signalChart2.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Footer.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2711,8 +2264,6 @@
             // 
             // 
             this.signalChart2.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Footer.Shadow.Brush.Solid = true;
-            this.signalChart2.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2724,18 +2275,13 @@
             // 
             // 
             this.signalChart2.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart2.Header.Brush.Solid = true;
-            this.signalChart2.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Header.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.Header.Font.Brush.Solid = true;
-            this.signalChart2.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2743,8 +2289,6 @@
             // 
             // 
             this.signalChart2.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Header.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Header.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Header.Font.Size = 12;
             this.signalChart2.Header.Font.SizeFloat = 12F;
             // 
@@ -2754,8 +2298,6 @@
             // 
             // 
             this.signalChart2.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Header.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Header.ImageBevel.Brush.Visible = true;
             this.signalChart2.Header.Lines = new string[] {
         "Signal buffer chart"};
             // 
@@ -2765,8 +2307,6 @@
             // 
             // 
             this.signalChart2.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart2.Header.Shadow.Brush.Solid = true;
-            this.signalChart2.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2778,18 +2318,13 @@
             // 
             // 
             this.signalChart2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Legend.Brush.Solid = true;
-            this.signalChart2.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart2.Legend.Font.Brush.Solid = true;
-            this.signalChart2.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2797,8 +2332,6 @@
             // 
             // 
             this.signalChart2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Legend.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Legend.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Legend.Font.Size = 9;
             this.signalChart2.Legend.Font.SizeFloat = 9F;
             // 
@@ -2808,8 +2341,6 @@
             // 
             // 
             this.signalChart2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Legend.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2817,8 +2348,6 @@
             // 
             // 
             this.signalChart2.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.signalChart2.Legend.Shadow.Brush.Solid = true;
-            this.signalChart2.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2829,8 +2358,6 @@
             // 
             // 
             this.signalChart2.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.signalChart2.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2842,8 +2369,6 @@
             // 
             // 
             this.signalChart2.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Legend.Title.Brush.Solid = true;
-            this.signalChart2.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -2852,8 +2377,6 @@
             // 
             // 
             this.signalChart2.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.signalChart2.Legend.Title.Font.Brush.Solid = true;
-            this.signalChart2.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2861,8 +2384,6 @@
             // 
             // 
             this.signalChart2.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart2.Legend.Title.Font.Size = 8;
             this.signalChart2.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -2872,8 +2393,6 @@
             // 
             // 
             this.signalChart2.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2881,8 +2400,6 @@
             // 
             // 
             this.signalChart2.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Legend.Title.Shadow.Brush.Solid = true;
-            this.signalChart2.Legend.Title.Shadow.Brush.Visible = true;
             this.signalChart2.Legend.Visible = false;
             this.signalChart2.Location = new System.Drawing.Point(0, 117);
             this.signalChart2.Name = "signalChart2";
@@ -2897,8 +2414,6 @@
             // 
             // 
             this.signalChart2.Panel.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Panel.Brush.Solid = true;
-            this.signalChart2.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2906,8 +2421,6 @@
             // 
             // 
             this.signalChart2.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Panel.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2915,8 +2428,14 @@
             // 
             // 
             this.signalChart2.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Panel.Shadow.Brush.Solid = true;
-            this.signalChart2.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            this.signalChart2.Printer.Margins = margins2;
             this.signalChart2.Series.Add(this.fastLine3);
             signalTeeItem1.Caption = null;
             signalTeeItem1.Input = this.signalStoreBuffer1;
@@ -2937,18 +2456,13 @@
             // 
             // 
             this.signalChart2.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.SubFooter.Brush.Solid = true;
-            this.signalChart2.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart2.SubFooter.Font.Brush.Solid = true;
-            this.signalChart2.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2956,8 +2470,6 @@
             // 
             // 
             this.signalChart2.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.SubFooter.Font.Shadow.Brush.Visible = true;
             this.signalChart2.SubFooter.Font.Size = 8;
             this.signalChart2.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -2967,8 +2479,6 @@
             // 
             // 
             this.signalChart2.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.SubFooter.ImageBevel.Brush.Solid = true;
-            this.signalChart2.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2976,8 +2486,6 @@
             // 
             // 
             this.signalChart2.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.SubFooter.Shadow.Brush.Solid = true;
-            this.signalChart2.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2989,18 +2497,13 @@
             // 
             // 
             this.signalChart2.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart2.SubHeader.Brush.Solid = true;
-            this.signalChart2.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart2.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart2.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart2.SubHeader.Font.Brush.Solid = true;
-            this.signalChart2.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3008,8 +2511,6 @@
             // 
             // 
             this.signalChart2.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.signalChart2.SubHeader.Font.Shadow.Brush.Visible = true;
             this.signalChart2.SubHeader.Font.Size = 12;
             this.signalChart2.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -3019,8 +2520,6 @@
             // 
             // 
             this.signalChart2.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.SubHeader.ImageBevel.Brush.Solid = true;
-            this.signalChart2.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3028,8 +2527,6 @@
             // 
             // 
             this.signalChart2.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart2.SubHeader.Shadow.Brush.Solid = true;
-            this.signalChart2.SubHeader.Shadow.Brush.Visible = true;
             this.signalChart2.TabIndex = 4;
             // 
             // 
@@ -3045,7 +2542,6 @@
             // 
             // 
             this.signalChart2.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart2.Walls.Back.Brush.Solid = true;
             this.signalChart2.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -3054,8 +2550,6 @@
             // 
             // 
             this.signalChart2.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3063,8 +2557,6 @@
             // 
             // 
             this.signalChart2.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Walls.Back.Shadow.Brush.Solid = true;
-            this.signalChart2.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3076,8 +2568,6 @@
             // 
             // 
             this.signalChart2.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.signalChart2.Walls.Bottom.Brush.Solid = true;
-            this.signalChart2.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -3085,8 +2575,6 @@
             // 
             // 
             this.signalChart2.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3094,8 +2582,6 @@
             // 
             // 
             this.signalChart2.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.signalChart2.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3107,8 +2593,6 @@
             // 
             // 
             this.signalChart2.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart2.Walls.Left.Brush.Solid = true;
-            this.signalChart2.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -3116,8 +2600,6 @@
             // 
             // 
             this.signalChart2.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3125,8 +2607,6 @@
             // 
             // 
             this.signalChart2.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Walls.Left.Shadow.Brush.Solid = true;
-            this.signalChart2.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3138,8 +2618,6 @@
             // 
             // 
             this.signalChart2.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart2.Walls.Right.Brush.Solid = true;
-            this.signalChart2.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -3147,8 +2625,6 @@
             // 
             // 
             this.signalChart2.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart2.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.signalChart2.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3156,8 +2632,6 @@
             // 
             // 
             this.signalChart2.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart2.Walls.Right.Shadow.Brush.Solid = true;
-            this.signalChart2.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3166,11 +2640,8 @@
             // 
             // 
             this.signalChart2.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.signalChart2.Zoom.Brush.Solid = true;
             this.signalChart2.Zoom.Brush.Visible = false;
             this.signalChart2.Zoom.History = true;
-            this.signalChart1.Zoom.FullRepaint = true;
-            this.signalChart1.Zoom.Pen.Visible = true;
             // 
             // signalChart1
             // 
@@ -3196,18 +2667,13 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3215,8 +2681,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Labels.Font.Size = 9;
             this.signalChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -3226,8 +2690,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3235,8 +2697,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3249,18 +2709,13 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3268,8 +2723,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Title.Font.Size = 11;
             this.signalChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -3279,8 +2732,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3288,8 +2739,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3304,18 +2753,13 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3323,8 +2767,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Depth.Labels.Font.Size = 9;
             this.signalChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -3334,8 +2776,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3343,8 +2783,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3357,18 +2795,13 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3376,8 +2809,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Depth.Title.Font.Size = 11;
             this.signalChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -3387,8 +2818,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3396,8 +2825,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3412,18 +2839,13 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3431,8 +2853,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.DepthTop.Labels.Font.Size = 9;
             this.signalChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -3442,8 +2862,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3451,8 +2869,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3465,18 +2881,13 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3484,8 +2895,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.DepthTop.Title.Font.Size = 11;
             this.signalChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -3495,8 +2904,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3504,8 +2911,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3524,18 +2929,13 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3543,8 +2943,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Left.Labels.Font.Size = 9;
             this.signalChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -3554,8 +2952,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3563,8 +2959,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3577,18 +2971,13 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Left.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3596,8 +2985,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Left.Title.Font.Size = 11;
             this.signalChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -3607,8 +2994,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3616,8 +3001,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3632,18 +3015,13 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3651,8 +3029,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Right.Labels.Font.Size = 9;
             this.signalChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -3662,8 +3038,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3671,8 +3045,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3685,18 +3057,13 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Right.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3704,8 +3071,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Right.Title.Font.Size = 11;
             this.signalChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -3715,8 +3080,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3724,8 +3087,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3740,18 +3101,13 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3759,8 +3115,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Top.Labels.Font.Size = 9;
             this.signalChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -3770,8 +3124,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3779,8 +3131,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3793,18 +3143,13 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Top.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3812,8 +3157,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Top.Title.Font.Size = 11;
             this.signalChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -3823,8 +3166,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3832,8 +3173,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Color = System.Drawing.Color.White;
             this.signalChart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.signalChart1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -3848,18 +3187,13 @@
             // 
             // 
             this.signalChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Footer.Brush.Solid = true;
-            this.signalChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart1.Footer.Font.Brush.Solid = true;
-            this.signalChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3867,8 +3201,6 @@
             // 
             // 
             this.signalChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Footer.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Footer.Font.Size = 8;
             this.signalChart1.Footer.Font.SizeFloat = 8F;
             // 
@@ -3878,8 +3210,6 @@
             // 
             // 
             this.signalChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3887,8 +3217,6 @@
             // 
             // 
             this.signalChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Footer.Shadow.Brush.Solid = true;
-            this.signalChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3900,18 +3228,13 @@
             // 
             // 
             this.signalChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart1.Header.Brush.Solid = true;
-            this.signalChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Header.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Header.Font.Brush.Solid = true;
-            this.signalChart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3919,8 +3242,6 @@
             // 
             // 
             this.signalChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Header.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Header.Font.Size = 12;
             this.signalChart1.Header.Font.SizeFloat = 12F;
             // 
@@ -3930,8 +3251,6 @@
             // 
             // 
             this.signalChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Header.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Header.ImageBevel.Brush.Visible = true;
             this.signalChart1.Header.Lines = new string[] {
         "Signal generator chart"};
             // 
@@ -3941,8 +3260,6 @@
             // 
             // 
             this.signalChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart1.Header.Shadow.Brush.Solid = true;
-            this.signalChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3954,18 +3271,13 @@
             // 
             // 
             this.signalChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Legend.Brush.Solid = true;
-            this.signalChart1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Legend.Font.Brush.Solid = true;
-            this.signalChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3973,8 +3285,6 @@
             // 
             // 
             this.signalChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Font.Size = 9;
             this.signalChart1.Legend.Font.SizeFloat = 9F;
             // 
@@ -3984,8 +3294,6 @@
             // 
             // 
             this.signalChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3993,8 +3301,6 @@
             // 
             // 
             this.signalChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.signalChart1.Legend.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4005,8 +3311,6 @@
             // 
             // 
             this.signalChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4018,8 +3322,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Legend.Title.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -4028,8 +3330,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.signalChart1.Legend.Title.Font.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4037,8 +3337,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Title.Font.Size = 8;
             this.signalChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -4048,8 +3346,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4057,8 +3353,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Visible = false;
             this.signalChart1.Location = new System.Drawing.Point(0, 0);
             this.signalChart1.Name = "signalChart1";
@@ -4073,8 +3367,6 @@
             // 
             // 
             this.signalChart1.Panel.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Panel.Brush.Solid = true;
-            this.signalChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4082,8 +3374,6 @@
             // 
             // 
             this.signalChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4091,8 +3381,14 @@
             // 
             // 
             this.signalChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Panel.Shadow.Brush.Solid = true;
-            this.signalChart1.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins3.Bottom = 100;
+            margins3.Left = 100;
+            margins3.Right = 100;
+            margins3.Top = 100;
+            this.signalChart1.Printer.Margins = margins3;
             this.signalChart1.Series.Add(this.fastLine2);
             signalTeeItem2.Caption = null;
             signalTeeItem2.Input = this.signalGenerator1;
@@ -4113,18 +3409,13 @@
             // 
             // 
             this.signalChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.SubFooter.Brush.Solid = true;
-            this.signalChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart1.SubFooter.Font.Brush.Solid = true;
-            this.signalChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4132,8 +3423,6 @@
             // 
             // 
             this.signalChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.SubFooter.Font.Shadow.Brush.Visible = true;
             this.signalChart1.SubFooter.Font.Size = 8;
             this.signalChart1.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -4143,8 +3432,6 @@
             // 
             // 
             this.signalChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.signalChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4152,8 +3439,6 @@
             // 
             // 
             this.signalChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.signalChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4165,18 +3450,13 @@
             // 
             // 
             this.signalChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart1.SubHeader.Brush.Solid = true;
-            this.signalChart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.SubHeader.Font.Brush.Solid = true;
-            this.signalChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4184,8 +3464,6 @@
             // 
             // 
             this.signalChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.SubHeader.Font.Shadow.Brush.Visible = true;
             this.signalChart1.SubHeader.Font.Size = 12;
             this.signalChart1.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -4195,8 +3473,6 @@
             // 
             // 
             this.signalChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.signalChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4204,8 +3480,6 @@
             // 
             // 
             this.signalChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.signalChart1.SubHeader.Shadow.Brush.Visible = true;
             this.signalChart1.TabIndex = 3;
             // 
             // 
@@ -4221,7 +3495,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Walls.Back.Brush.Solid = true;
             this.signalChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -4230,8 +3503,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4239,8 +3510,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4252,8 +3521,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Walls.Bottom.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -4261,8 +3528,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4270,8 +3535,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4283,8 +3546,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart1.Walls.Left.Brush.Solid = true;
-            this.signalChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -4292,8 +3553,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4301,8 +3560,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4314,8 +3571,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart1.Walls.Right.Brush.Solid = true;
-            this.signalChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -4323,8 +3578,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4332,8 +3585,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4342,14 +3593,12 @@
             // 
             // 
             this.signalChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.signalChart1.Zoom.Brush.Solid = true;
             this.signalChart1.Zoom.Brush.Visible = false;
             this.signalChart1.Zoom.History = true;
-            this.signalChart1.Zoom.FullRepaint = true;
-            this.signalChart1.Zoom.Pen.Visible = true;
             // 
             // CircularBufferForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 519);
