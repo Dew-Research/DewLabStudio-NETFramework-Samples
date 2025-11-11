@@ -1,43 +1,102 @@
 <a href="https://www.dewresearch.com/products/mtxvec/mtxvec-for-delphi-c-builder">
-<img align="right" src="https://www.dewresearch.com/images/Dew.png">
-</a>  
+<img align="right" src="https://www.dewresearch.com/images/Dew.png" width="128">
+</a>
 
-# Dew Lab Studio .NET for .NET Framework samples
-  
-Sample programs showing how to use Dew Lab Studio for .NET Framework (v2.0-4.8)
+# Dew Lab Studio .NET — Sample Projects (WinForms, Windows / Core / Linux Variants)
 
-Dew Lab Studio for .NET Framework contains several products. For each product there is a separate "main" demo project, which contains multiple independent examples. The .NET Core (5.0 and newer) samples are in a separate repository.
+This repository provides sample applications and reference code demonstrating how to use Dew Lab Studio for numerical analysis, scientific computing, DSP, statistical modeling, and high-performance data visualization.
 
-You'll need Dew Lab Studio for .NET evaluation or registered version to run the samples on this repository. Fully functional evaluation versions can be obtained from the public NuGet repository as "Dew Lab Studio". Dew Lab Studio is available in three editions:
+**All samples in this repository are WinForms applications.**  
+The visualization libraries (Dew.Math.TeePro, Dew.Signal.Tee, Dew.Stats.Tee) are built on top of TeeChart and require WinForms support.  
+Therefore, these sample projects target Windows desktop-enabled frameworks:
 
-* Windows Edition. Includes Hardware Acceleration library and runs only on Windows. (net20, net50, net50-windows, net60, net60-windows), (32bit and 64bit) Automatically referenced by the  sample project. 
-* Core Edition. Runs on all .NET Core supported platforms, but without Hardware Acceleration library. (net50, net60), (32bit and 64bit)
-* Linux Edition. Includes Hardware Acceleration library and runs only on Linux. (net50, net60) (64bit)
+- `net48`
+- `net8.0-windows7.0`
+- `net9.0-windows7.0`
 
-VS.NET 2015 and newer should be able to automatically restore missing NuGet packages when attempting to build. If not, install "Dew Lab Studio" NuGet from the public repository for the solution first by using the NuGet Package Manager.  
+The **core computation libraries** (Dew.Math, Dew.Signal, Dew.Stats) are independent of WinForms and can be used from WPF, Avalonia, services, console applications, or custom UI frameworks when targeting Windows.  
+However, the visualization examples shown here specifically demonstrate WinForms-based charting and real-time display workflows.
 
-# <b>Important</b>
+---
 
-When targeting .NET Framework, inside of the solution folder there will be a "Packages" folder created during the build. Within this folder locate 
+## Trial NuGet Packages and Debugger Requirement
 
-.\packages\Dew.Math.X.0.Y\runtimes
+These sample projects reference the **trial editions** of the Dew Lab Studio libraries from the public NuGet repository.
 
-And copy x86 content (dlls) to 
+Trial behavior:
+- The libraries run in **full functionality** mode **when a debugger is attached**.
+- When the application is executed **without a debugger**, trial restrictions apply (reduced performance and evaluation notices).
+- To run applications normally outside debugging, a **registered license** is required.
 
-C:\Windows\SysWO64\ 
+This affects both `.NET Framework` and `.NET (Core)` usage.
 
-and x64 content to 
+---
 
-C:\Windows\System32\
+## .NET (Core) / .NET 5+ Sample Repository
 
-Failure to do so, will give an error when trying to run the application:
+WinForms sample applications targeting `.NET 5 / 6 / 7 / 8 / 9` are located here:
 
-*The type initializer for 'Dew.Math.Units.MtxVec' threw an exception.*
+https://github.com/Dew-Research/DewLabStudio-NETCore-Samples
 
-or in German:
+The separation is required because **TeeChart serialization formats differ** between .NET Framework and .NET (Core).
 
-*Der Typeinitialisierer für "Dew.Math.Units.MtxVec" hat eine Ausnahme Verursacht.*
+---
 
-When targeting .NET Core, these dlls are referenced in a different way and copying is not needed.
+## Editions and Platform Model
 
-To correctly checkout/pull a CRLF must be enabled for your GIT!! Although not used by the source files, some sample data files could be affected.
+Dew Lab Studio is available in three variants, all sharing the same API surface:
+
+| Edition | Hardware Acceleration | Platforms | Use Case |
+|--------|-----------------------|-----------|----------|
+| Dew Lab Studio (Windows) | Yes (native AVX / AVX2 / AVX-512 acceleration) | Windows x64 | Highest-performance workloads and real-time visualization |
+| Dew Lab Studio Core | No native acceleration (managed-only) | Windows, Linux, macOS | Portable analytics, cross-platform builds, cloud/CI/CD |
+| Dew Lab Studio Linux | Yes (native-accelerated Linux kernels) | Linux x64 | HPC compute nodes, batch scientific pipelines, servers |
+
+You can switch editions simply by changing the NuGet package reference.
+
+---
+
+## Installing Evaluation or Full Version
+
+Evaluation builds are available from NuGet:
+
+Dew.Lab.Studio  
+Dew.Lab.Studio.Core  
+Dew.Lab.Studio.Linux
+
+Visual Studio 2017+ and Rider will automatically restore all NuGet dependencies.  
+Native runtimes are resolved automatically; **no manual DLL copying is required**.
+
+---
+
+## Repository Structure
+
+Each sample application demonstrates focused workflows:
+
+- Dense & sparse linear algebra, matrix factorizations, solvers
+- Interpolation, special functions, Chebyshev / polynomial approximation
+- Probability distributions, regression, hypothesis testing, Monte-Carlo simulation
+- Real-time DSP pipelines, FFT-based spectral analysis, filtering, multirate processing
+- Spectrograms, oscilloscopes, histograms, surface and matrix-based visualization
+
+Samples are concise and designed for easy adaptation into your own applications.
+
+---
+
+## Line Ending Note
+
+Enable **CRLF** when cloning this repository.  
+Some dataset files depend on Windows line endings.
+
+---
+
+## Contributing / Feedback
+
+When reporting a performance issue, include:
+
+- Dew edition (Windows / Core / Linux)
+- Target runtime (`net48`, `net8.0-windows`, etc.)
+- OS version
+- CPU model (relevant for AVX / AVX-512 dispatch)
+
+Pull requests for new sample cases are welcome.
