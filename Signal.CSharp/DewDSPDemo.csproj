@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	<TargetFrameworks>net48</TargetFrameworks>
+	<LangVersion>Latest</LangVersion>
+	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	<Deterministic>true</Deterministic>
+	<PublishRepositoryUrl>false</PublishRepositoryUrl>
+	  
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>FFTProp5.ico</ApplicationIcon>
+    <RootNamespace>DSPDemo</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+	<Target Name="PostBuild" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true'">
+
+		<MakeDir Directories="$(TargetDir)Data" />
+
+		<ItemGroup>
+			<DataFiles Include="$(ProjectDir)Data\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(DataFiles)" DestinationFolder="$(TargetDir)Data\" />
+
+	</Target>
+
+	<ItemGroup>
+	  <PackageReference Include="Dew.Signal.Tee" Version="6.3.6" />
+	</ItemGroup>
+
+</Project>
