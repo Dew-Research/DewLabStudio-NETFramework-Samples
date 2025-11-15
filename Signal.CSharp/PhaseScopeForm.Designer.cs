@@ -25,6 +25,9 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhaseScopeForm));
+            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
+            Steema.TeeChart.Margins margins3 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
             this.Signal1 = new Dew.Signal.TSignal(this.components);
             this.fastLine1 = new Steema.TeeChart.Styles.FastLine();
@@ -54,14 +57,15 @@
             // 
             // Signal1
             // 
-            this.Signal1.BandwidthL = 0D;
-            this.Signal1.BlockAssign = false;
+            this.Signal1.ChannelCount = 1;
             this.Signal1.Complex = false;
+            this.Signal1.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.Signal1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal1.FloatPrecisionLock = false;
-            this.Signal1.Input = null;
             this.Signal1.IsDouble = true;
-            this.Signal1.Name = null;
+            this.Signal1.Length = 12;
             // 
             // fastLine1
             // 
@@ -78,18 +82,13 @@
             // 
             // 
             this.fastLine1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Legend.Brush.Solid = true;
-            this.fastLine1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Legend.Font.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -97,8 +96,6 @@
             // 
             // 
             this.fastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Shadow.Brush.Visible = true;
             this.fastLine1.Legend.Font.Size = 8;
             this.fastLine1.Legend.Font.SizeFloat = 8F;
             // 
@@ -108,8 +105,6 @@
             // 
             // 
             this.fastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -117,8 +112,6 @@
             // 
             // 
             this.fastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -134,18 +127,13 @@
             // 
             // 
             this.fastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine1.Marks.Brush.Solid = true;
-            this.fastLine1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.fastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Marks.Font.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -153,8 +141,6 @@
             // 
             // 
             this.fastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Shadow.Brush.Visible = true;
             this.fastLine1.Marks.Font.Size = 8;
             this.fastLine1.Marks.Font.SizeFloat = 8F;
             // 
@@ -164,8 +150,6 @@
             // 
             // 
             this.fastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -173,8 +157,6 @@
             // 
             // 
             this.fastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine1.Marks.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -186,8 +168,6 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Marks.Symbol.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -195,8 +175,6 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -204,14 +182,10 @@
             // 
             // 
             this.fastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.fastLine1.Marks.TailParams.Margin = 0F;
-            this.fastLine1.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine1.Marks.TailParams.PointerWidth = 8D;
+            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.fastLine1.OriginalCursor = null;
             this.fastLine1.Title = "fastLine1";
             this.fastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -231,7 +205,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(633, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(914, 96);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -241,9 +215,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 393);
+            this.panel1.Location = new System.Drawing.Point(0, 532);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 55);
+            this.panel1.Size = new System.Drawing.Size(914, 55);
             this.panel1.TabIndex = 1;
             // 
             // channelBox
@@ -285,16 +259,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 297);
+            this.panel2.Size = new System.Drawing.Size(914, 436);
             this.panel2.TabIndex = 2;
             this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 133);
+            this.splitter1.Location = new System.Drawing.Point(0, 272);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(633, 3);
+            this.splitter1.Size = new System.Drawing.Size(914, 3);
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
@@ -306,7 +280,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(633, 136);
+            this.panel3.Size = new System.Drawing.Size(914, 275);
             this.panel3.TabIndex = 1;
             // 
             // rightPhaseChart
@@ -325,10 +299,12 @@
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Automatic = false;
             // 
             // 
             // 
+            this.rightPhaseChart.Axes.Bottom.Automatic = false;
+            this.rightPhaseChart.Axes.Bottom.AutomaticMaximum = false;
+            this.rightPhaseChart.Axes.Bottom.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -340,18 +316,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.Bottom.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -359,8 +330,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Bottom.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -370,8 +339,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -379,8 +346,8 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
+            this.rightPhaseChart.Axes.Bottom.Maximum = 0D;
+            this.rightPhaseChart.Axes.Bottom.Minimum = 0D;
             // 
             // 
             // 
@@ -393,18 +360,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.Bottom.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -412,8 +374,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Bottom.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -423,8 +383,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -432,11 +390,12 @@
             // 
             // 
             this.rightPhaseChart.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.rightPhaseChart.Axes.Depth.Automatic = false;
+            this.rightPhaseChart.Axes.Depth.AutomaticMaximum = false;
+            this.rightPhaseChart.Axes.Depth.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -448,18 +407,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.Depth.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -467,8 +421,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Depth.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -478,8 +430,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -487,8 +437,8 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Labels.Shadow.Brush.Visible = true;
+            this.rightPhaseChart.Axes.Depth.Maximum = 0D;
+            this.rightPhaseChart.Axes.Depth.Minimum = 0D;
             // 
             // 
             // 
@@ -501,18 +451,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.Depth.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -520,8 +465,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Depth.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -531,8 +474,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -540,11 +481,12 @@
             // 
             // 
             this.rightPhaseChart.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.rightPhaseChart.Axes.DepthTop.Automatic = false;
+            this.rightPhaseChart.Axes.DepthTop.AutomaticMaximum = false;
+            this.rightPhaseChart.Axes.DepthTop.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -556,18 +498,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -575,8 +512,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.DepthTop.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -586,8 +521,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -595,8 +528,8 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
+            this.rightPhaseChart.Axes.DepthTop.Maximum = 0D;
+            this.rightPhaseChart.Axes.DepthTop.Minimum = 0D;
             // 
             // 
             // 
@@ -609,18 +542,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.DepthTop.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -628,8 +556,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.DepthTop.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -639,8 +565,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -648,8 +572,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -671,18 +593,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.Left.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -690,8 +607,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Left.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -701,8 +616,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -710,8 +623,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Left.Maximum = 1D;
             this.rightPhaseChart.Axes.Left.Minimum = 0D;
             // 
@@ -726,18 +637,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.Left.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.Left.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -745,8 +651,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Left.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -756,8 +660,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -765,11 +667,12 @@
             // 
             // 
             this.rightPhaseChart.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.rightPhaseChart.Axes.Right.Automatic = false;
+            this.rightPhaseChart.Axes.Right.AutomaticMaximum = false;
+            this.rightPhaseChart.Axes.Right.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -785,18 +688,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.Right.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -804,8 +702,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Right.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -815,8 +711,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -824,8 +718,8 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Labels.Shadow.Brush.Visible = true;
+            this.rightPhaseChart.Axes.Right.Maximum = 0D;
+            this.rightPhaseChart.Axes.Right.Minimum = 0D;
             // 
             // 
             // 
@@ -838,18 +732,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.Right.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.Right.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -857,8 +746,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Right.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -868,8 +755,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -877,11 +762,12 @@
             // 
             // 
             this.rightPhaseChart.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.rightPhaseChart.Axes.Top.Automatic = false;
+            this.rightPhaseChart.Axes.Top.AutomaticMaximum = false;
+            this.rightPhaseChart.Axes.Top.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -893,18 +779,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Axes.Top.Labels.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -912,8 +793,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Top.Labels.Font.Size = 9;
             this.rightPhaseChart.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -923,8 +802,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -932,8 +809,8 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Labels.Shadow.Brush.Visible = true;
+            this.rightPhaseChart.Axes.Top.Maximum = 0D;
+            this.rightPhaseChart.Axes.Top.Minimum = 0D;
             // 
             // 
             // 
@@ -946,18 +823,13 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Axes.Top.Title.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Axes.Top.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -965,8 +837,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Axes.Top.Title.Font.Size = 11;
             this.rightPhaseChart.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -976,8 +846,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -985,8 +853,6 @@
             // 
             // 
             this.rightPhaseChart.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // 
@@ -999,18 +865,13 @@
             // 
             // 
             this.rightPhaseChart.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Footer.Brush.Solid = true;
-            this.rightPhaseChart.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.rightPhaseChart.Footer.Font.Brush.Solid = true;
-            this.rightPhaseChart.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1018,8 +879,6 @@
             // 
             // 
             this.rightPhaseChart.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Footer.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Footer.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Footer.Font.Size = 8;
             this.rightPhaseChart.Footer.Font.SizeFloat = 8F;
             // 
@@ -1029,8 +888,6 @@
             // 
             // 
             this.rightPhaseChart.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Footer.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1038,8 +895,6 @@
             // 
             // 
             this.rightPhaseChart.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Footer.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1051,18 +906,13 @@
             // 
             // 
             this.rightPhaseChart.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.rightPhaseChart.Header.Brush.Solid = true;
-            this.rightPhaseChart.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Header.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.Header.Font.Brush.Solid = true;
-            this.rightPhaseChart.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1070,8 +920,6 @@
             // 
             // 
             this.rightPhaseChart.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Header.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Header.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Header.Font.Size = 12;
             this.rightPhaseChart.Header.Font.SizeFloat = 12F;
             // 
@@ -1081,8 +929,6 @@
             // 
             // 
             this.rightPhaseChart.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Header.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Header.ImageBevel.Brush.Visible = true;
             this.rightPhaseChart.Header.Lines = new string[] {
         "Right channel"};
             // 
@@ -1092,8 +938,6 @@
             // 
             // 
             this.rightPhaseChart.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.rightPhaseChart.Header.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1105,18 +949,13 @@
             // 
             // 
             this.rightPhaseChart.Legend.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Legend.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rightPhaseChart.Legend.Font.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1124,8 +963,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Legend.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Legend.Font.Size = 9;
             this.rightPhaseChart.Legend.Font.SizeFloat = 9F;
             // 
@@ -1135,8 +972,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Legend.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1144,8 +979,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rightPhaseChart.Legend.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1156,8 +989,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1169,8 +1000,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Legend.Title.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -1179,8 +1008,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.rightPhaseChart.Legend.Title.Font.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1188,8 +1015,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Legend.Title.Font.Size = 8;
             this.rightPhaseChart.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -1199,8 +1024,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1208,8 +1031,6 @@
             // 
             // 
             this.rightPhaseChart.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Legend.Title.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Legend.Title.Shadow.Brush.Visible = true;
             this.rightPhaseChart.Legend.Visible = false;
             this.rightPhaseChart.Location = new System.Drawing.Point(299, 0);
             this.rightPhaseChart.Name = "rightPhaseChart";
@@ -1224,8 +1045,6 @@
             // 
             // 
             this.rightPhaseChart.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.rightPhaseChart.Panel.Brush.Solid = true;
-            this.rightPhaseChart.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1233,8 +1052,6 @@
             // 
             // 
             this.rightPhaseChart.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Panel.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1242,10 +1059,16 @@
             // 
             // 
             this.rightPhaseChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Panel.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins1.Bottom = 100;
+            margins1.Left = 100;
+            margins1.Right = 100;
+            margins1.Top = 100;
+            this.rightPhaseChart.Printer.Margins = margins1;
             this.rightPhaseChart.Series.Add(this.polar2);
-            this.rightPhaseChart.Size = new System.Drawing.Size(334, 136);
+            this.rightPhaseChart.Size = new System.Drawing.Size(615, 275);
             // 
             // 
             // 
@@ -1257,18 +1080,13 @@
             // 
             // 
             this.rightPhaseChart.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.SubFooter.Brush.Solid = true;
-            this.rightPhaseChart.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.rightPhaseChart.SubFooter.Font.Brush.Solid = true;
-            this.rightPhaseChart.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1276,8 +1094,6 @@
             // 
             // 
             this.rightPhaseChart.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.SubFooter.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.SubFooter.Font.Size = 8;
             this.rightPhaseChart.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -1287,8 +1103,6 @@
             // 
             // 
             this.rightPhaseChart.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.SubFooter.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1296,8 +1110,6 @@
             // 
             // 
             this.rightPhaseChart.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.SubFooter.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1309,18 +1121,13 @@
             // 
             // 
             this.rightPhaseChart.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.rightPhaseChart.SubHeader.Brush.Solid = true;
-            this.rightPhaseChart.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.rightPhaseChart.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.rightPhaseChart.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.rightPhaseChart.SubHeader.Font.Brush.Solid = true;
-            this.rightPhaseChart.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1328,8 +1135,6 @@
             // 
             // 
             this.rightPhaseChart.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.SubHeader.Font.Shadow.Brush.Visible = true;
             this.rightPhaseChart.SubHeader.Font.Size = 12;
             this.rightPhaseChart.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -1339,8 +1144,6 @@
             // 
             // 
             this.rightPhaseChart.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.SubHeader.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1348,8 +1151,6 @@
             // 
             // 
             this.rightPhaseChart.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.rightPhaseChart.SubHeader.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.SubHeader.Shadow.Brush.Visible = true;
             this.rightPhaseChart.TabIndex = 3;
             // 
             // 
@@ -1365,7 +1166,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.rightPhaseChart.Walls.Back.Brush.Solid = true;
             this.rightPhaseChart.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -1374,8 +1174,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1383,8 +1181,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Walls.Back.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1396,8 +1192,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.rightPhaseChart.Walls.Bottom.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -1405,8 +1199,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1414,8 +1206,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1427,8 +1217,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.rightPhaseChart.Walls.Left.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -1436,8 +1224,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1445,8 +1231,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Walls.Left.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1458,8 +1242,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.rightPhaseChart.Walls.Right.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -1467,8 +1249,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.rightPhaseChart.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1476,8 +1256,6 @@
             // 
             // 
             this.rightPhaseChart.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.rightPhaseChart.Walls.Right.Shadow.Brush.Solid = true;
-            this.rightPhaseChart.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1485,7 +1263,6 @@
             // 
             // 
             this.rightPhaseChart.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.rightPhaseChart.Zoom.Brush.Solid = true;
             this.rightPhaseChart.Zoom.Brush.Visible = false;
             // 
             // polar2
@@ -1494,19 +1271,15 @@
             // 
             // 
             this.polar2.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            this.polar2.Brush.Solid = true;
             this.polar2.Brush.Visible = false;
             this.polar2.Circled = true;
             // 
             // 
             // 
-            this.polar2.CircleLabelsFont.Bold = false;
             // 
             // 
             // 
             this.polar2.CircleLabelsFont.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar2.CircleLabelsFont.Brush.Solid = true;
-            this.polar2.CircleLabelsFont.Brush.Visible = true;
             // 
             // 
             // 
@@ -1514,8 +1287,6 @@
             // 
             // 
             this.polar2.CircleLabelsFont.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.CircleLabelsFont.Shadow.Brush.Solid = true;
-            this.polar2.CircleLabelsFont.Shadow.Brush.Visible = true;
             this.polar2.CircleLabelsFont.Size = 8;
             this.polar2.CircleLabelsFont.SizeFloat = 8F;
             this.polar2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -1523,13 +1294,10 @@
             // 
             // 
             // 
-            this.polar2.Font.Bold = false;
             // 
             // 
             // 
             this.polar2.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar2.Font.Brush.Solid = true;
-            this.polar2.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1537,8 +1305,6 @@
             // 
             // 
             this.polar2.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.Font.Shadow.Brush.Solid = true;
-            this.polar2.Font.Shadow.Brush.Visible = true;
             this.polar2.Font.Size = 8;
             this.polar2.Font.SizeFloat = 8F;
             // 
@@ -1553,14 +1319,10 @@
             // 
             // 
             this.polar2.Frame.InnerBand.Color = System.Drawing.Color.Gray;
-            this.polar2.Frame.InnerBand.Solid = true;
-            this.polar2.Frame.InnerBand.Visible = true;
             // 
             // 
             // 
             this.polar2.Frame.MiddleBand.Color = System.Drawing.Color.Gray;
-            this.polar2.Frame.MiddleBand.Solid = true;
-            this.polar2.Frame.MiddleBand.Visible = true;
             // 
             // 
             // 
@@ -1569,8 +1331,6 @@
             // 
             // 
             this.polar2.Frame.OuterBand.Gradient.UseMiddle = false;
-            this.polar2.Frame.OuterBand.Solid = true;
-            this.polar2.Frame.OuterBand.Visible = true;
             // 
             // 
             // 
@@ -1582,18 +1342,13 @@
             // 
             // 
             this.polar2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.polar2.Legend.Brush.Solid = true;
-            this.polar2.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar2.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.polar2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.polar2.Legend.Font.Brush.Solid = true;
-            this.polar2.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1601,8 +1356,6 @@
             // 
             // 
             this.polar2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.Legend.Font.Shadow.Brush.Solid = true;
-            this.polar2.Legend.Font.Shadow.Brush.Visible = true;
             this.polar2.Legend.Font.Size = 8;
             this.polar2.Legend.Font.SizeFloat = 8F;
             // 
@@ -1612,8 +1365,6 @@
             // 
             // 
             this.polar2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar2.Legend.ImageBevel.Brush.Solid = true;
-            this.polar2.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1621,8 +1372,6 @@
             // 
             // 
             this.polar2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.Legend.Shadow.Brush.Solid = true;
-            this.polar2.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1634,18 +1383,13 @@
             // 
             // 
             this.polar2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.polar2.Marks.Brush.Solid = true;
-            this.polar2.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar2.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.polar2.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar2.Marks.Font.Brush.Solid = true;
-            this.polar2.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1653,8 +1397,6 @@
             // 
             // 
             this.polar2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.Marks.Font.Shadow.Brush.Solid = true;
-            this.polar2.Marks.Font.Shadow.Brush.Visible = true;
             this.polar2.Marks.Font.Size = 8;
             this.polar2.Marks.Font.SizeFloat = 8F;
             // 
@@ -1664,8 +1406,6 @@
             // 
             // 
             this.polar2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar2.Marks.ImageBevel.Brush.Solid = true;
-            this.polar2.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1673,8 +1413,6 @@
             // 
             // 
             this.polar2.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.polar2.Marks.Shadow.Brush.Solid = true;
-            this.polar2.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1686,8 +1424,6 @@
             // 
             // 
             this.polar2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.polar2.Marks.Symbol.Brush.Solid = true;
-            this.polar2.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -1695,8 +1431,6 @@
             // 
             // 
             this.polar2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.polar2.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1704,14 +1438,10 @@
             // 
             // 
             this.polar2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.polar2.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar2.Marks.TailParams.Margin = 0F;
-            this.polar2.Marks.TailParams.PointerHeight = 8D;
-            this.polar2.Marks.TailParams.PointerWidth = 8D;
+            this.polar2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.polar2.OriginalCursor = null;
             // 
             // 
@@ -1725,8 +1455,6 @@
             // 
             // 
             this.polar2.Pointer.Brush.Color = System.Drawing.Color.Empty;
-            this.polar2.Pointer.Brush.Solid = true;
-            this.polar2.Pointer.Brush.Visible = true;
             this.polar2.Pointer.HorizSize = 1;
             this.polar2.Pointer.SizeDouble = 0D;
             this.polar2.Pointer.SizeUnits = Steema.TeeChart.Styles.PointerSizeUnits.Pixels;
@@ -1749,7 +1477,7 @@
             // 
             this.splitter2.Location = new System.Drawing.Point(296, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 136);
+            this.splitter2.Size = new System.Drawing.Size(3, 275);
             this.splitter2.TabIndex = 2;
             this.splitter2.TabStop = false;
             // 
@@ -1769,10 +1497,12 @@
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Automatic = false;
             // 
             // 
             // 
+            this.leftPhaseChart.Axes.Bottom.Automatic = false;
+            this.leftPhaseChart.Axes.Bottom.AutomaticMaximum = false;
+            this.leftPhaseChart.Axes.Bottom.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1784,18 +1514,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.Bottom.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1803,8 +1528,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Bottom.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -1814,8 +1537,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1823,8 +1544,8 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
+            this.leftPhaseChart.Axes.Bottom.Maximum = 0D;
+            this.leftPhaseChart.Axes.Bottom.Minimum = 0D;
             // 
             // 
             // 
@@ -1837,18 +1558,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.Bottom.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1856,8 +1572,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Bottom.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -1867,8 +1581,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1876,11 +1588,12 @@
             // 
             // 
             this.leftPhaseChart.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.leftPhaseChart.Axes.Depth.Automatic = false;
+            this.leftPhaseChart.Axes.Depth.AutomaticMaximum = false;
+            this.leftPhaseChart.Axes.Depth.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1892,18 +1605,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.Depth.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1911,8 +1619,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Depth.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -1922,8 +1628,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1931,8 +1635,8 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Labels.Shadow.Brush.Visible = true;
+            this.leftPhaseChart.Axes.Depth.Maximum = 0D;
+            this.leftPhaseChart.Axes.Depth.Minimum = 0D;
             // 
             // 
             // 
@@ -1945,18 +1649,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.Depth.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1964,8 +1663,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Depth.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -1975,8 +1672,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1984,11 +1679,12 @@
             // 
             // 
             this.leftPhaseChart.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.leftPhaseChart.Axes.DepthTop.Automatic = false;
+            this.leftPhaseChart.Axes.DepthTop.AutomaticMaximum = false;
+            this.leftPhaseChart.Axes.DepthTop.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2000,18 +1696,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2019,8 +1710,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.DepthTop.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -2030,8 +1719,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2039,8 +1726,8 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
+            this.leftPhaseChart.Axes.DepthTop.Maximum = 0D;
+            this.leftPhaseChart.Axes.DepthTop.Minimum = 0D;
             // 
             // 
             // 
@@ -2053,18 +1740,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.DepthTop.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2072,8 +1754,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.DepthTop.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -2083,8 +1763,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2092,8 +1770,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2115,18 +1791,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.Left.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2134,8 +1805,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Left.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -2145,8 +1814,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2154,8 +1821,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Left.Maximum = 1D;
             this.leftPhaseChart.Axes.Left.Minimum = 0D;
             // 
@@ -2170,18 +1835,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.Left.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.Left.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2189,8 +1849,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Left.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -2200,8 +1858,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2209,11 +1865,12 @@
             // 
             // 
             this.leftPhaseChart.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.leftPhaseChart.Axes.Right.Automatic = false;
+            this.leftPhaseChart.Axes.Right.AutomaticMaximum = false;
+            this.leftPhaseChart.Axes.Right.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2229,18 +1886,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.Right.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2248,8 +1900,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Right.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -2259,8 +1909,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2268,8 +1916,8 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Labels.Shadow.Brush.Visible = true;
+            this.leftPhaseChart.Axes.Right.Maximum = 0D;
+            this.leftPhaseChart.Axes.Right.Minimum = 0D;
             // 
             // 
             // 
@@ -2282,18 +1930,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.Right.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.Right.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2301,8 +1944,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Right.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -2312,8 +1953,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2321,11 +1960,12 @@
             // 
             // 
             this.leftPhaseChart.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.leftPhaseChart.Axes.Top.Automatic = false;
+            this.leftPhaseChart.Axes.Top.AutomaticMaximum = false;
+            this.leftPhaseChart.Axes.Top.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2337,18 +1977,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Axes.Top.Labels.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2356,8 +1991,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Top.Labels.Font.Size = 9;
             this.leftPhaseChart.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -2367,8 +2000,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2376,8 +2007,8 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Labels.Shadow.Brush.Visible = true;
+            this.leftPhaseChart.Axes.Top.Maximum = 0D;
+            this.leftPhaseChart.Axes.Top.Minimum = 0D;
             // 
             // 
             // 
@@ -2390,18 +2021,13 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Axes.Top.Title.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Axes.Top.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2409,8 +2035,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Axes.Top.Title.Font.Size = 11;
             this.leftPhaseChart.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -2420,8 +2044,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2429,8 +2051,6 @@
             // 
             // 
             this.leftPhaseChart.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Dock = System.Windows.Forms.DockStyle.Left;
             // 
             // 
@@ -2443,18 +2063,13 @@
             // 
             // 
             this.leftPhaseChart.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Footer.Brush.Solid = true;
-            this.leftPhaseChart.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.leftPhaseChart.Footer.Font.Brush.Solid = true;
-            this.leftPhaseChart.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2462,8 +2077,6 @@
             // 
             // 
             this.leftPhaseChart.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Footer.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Footer.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Footer.Font.Size = 8;
             this.leftPhaseChart.Footer.Font.SizeFloat = 8F;
             // 
@@ -2473,8 +2086,6 @@
             // 
             // 
             this.leftPhaseChart.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Footer.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2482,8 +2093,6 @@
             // 
             // 
             this.leftPhaseChart.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Footer.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2495,18 +2104,13 @@
             // 
             // 
             this.leftPhaseChart.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.leftPhaseChart.Header.Brush.Solid = true;
-            this.leftPhaseChart.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Header.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.Header.Font.Brush.Solid = true;
-            this.leftPhaseChart.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2514,8 +2118,6 @@
             // 
             // 
             this.leftPhaseChart.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Header.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Header.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Header.Font.Size = 12;
             this.leftPhaseChart.Header.Font.SizeFloat = 12F;
             // 
@@ -2525,8 +2127,6 @@
             // 
             // 
             this.leftPhaseChart.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Header.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Header.ImageBevel.Brush.Visible = true;
             this.leftPhaseChart.Header.Lines = new string[] {
         "Left channel"};
             // 
@@ -2536,8 +2136,6 @@
             // 
             // 
             this.leftPhaseChart.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.leftPhaseChart.Header.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2549,18 +2147,13 @@
             // 
             // 
             this.leftPhaseChart.Legend.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Legend.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.leftPhaseChart.Legend.Font.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2568,8 +2161,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Legend.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Legend.Font.Size = 9;
             this.leftPhaseChart.Legend.Font.SizeFloat = 9F;
             // 
@@ -2579,8 +2170,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Legend.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2588,8 +2177,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.leftPhaseChart.Legend.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2600,8 +2187,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2613,8 +2198,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Legend.Title.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -2623,8 +2206,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.leftPhaseChart.Legend.Title.Font.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2632,8 +2213,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Legend.Title.Font.Size = 8;
             this.leftPhaseChart.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -2643,8 +2222,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2652,8 +2229,6 @@
             // 
             // 
             this.leftPhaseChart.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Legend.Title.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Legend.Title.Shadow.Brush.Visible = true;
             this.leftPhaseChart.Legend.Visible = false;
             this.leftPhaseChart.Location = new System.Drawing.Point(0, 0);
             this.leftPhaseChart.Name = "leftPhaseChart";
@@ -2668,8 +2243,6 @@
             // 
             // 
             this.leftPhaseChart.Panel.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.leftPhaseChart.Panel.Brush.Solid = true;
-            this.leftPhaseChart.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2677,8 +2250,6 @@
             // 
             // 
             this.leftPhaseChart.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Panel.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2686,10 +2257,16 @@
             // 
             // 
             this.leftPhaseChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Panel.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            this.leftPhaseChart.Printer.Margins = margins2;
             this.leftPhaseChart.Series.Add(this.polar1);
-            this.leftPhaseChart.Size = new System.Drawing.Size(296, 136);
+            this.leftPhaseChart.Size = new System.Drawing.Size(296, 275);
             // 
             // 
             // 
@@ -2701,18 +2278,13 @@
             // 
             // 
             this.leftPhaseChart.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.SubFooter.Brush.Solid = true;
-            this.leftPhaseChart.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.leftPhaseChart.SubFooter.Font.Brush.Solid = true;
-            this.leftPhaseChart.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2720,8 +2292,6 @@
             // 
             // 
             this.leftPhaseChart.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.SubFooter.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.SubFooter.Font.Size = 8;
             this.leftPhaseChart.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -2731,8 +2301,6 @@
             // 
             // 
             this.leftPhaseChart.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.SubFooter.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2740,8 +2308,6 @@
             // 
             // 
             this.leftPhaseChart.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.SubFooter.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2753,18 +2319,13 @@
             // 
             // 
             this.leftPhaseChart.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.leftPhaseChart.SubHeader.Brush.Solid = true;
-            this.leftPhaseChart.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.leftPhaseChart.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.leftPhaseChart.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.leftPhaseChart.SubHeader.Font.Brush.Solid = true;
-            this.leftPhaseChart.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2772,8 +2333,6 @@
             // 
             // 
             this.leftPhaseChart.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.SubHeader.Font.Shadow.Brush.Visible = true;
             this.leftPhaseChart.SubHeader.Font.Size = 12;
             this.leftPhaseChart.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -2783,8 +2342,6 @@
             // 
             // 
             this.leftPhaseChart.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.SubHeader.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2792,8 +2349,6 @@
             // 
             // 
             this.leftPhaseChart.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.leftPhaseChart.SubHeader.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.SubHeader.Shadow.Brush.Visible = true;
             this.leftPhaseChart.TabIndex = 0;
             // 
             // 
@@ -2809,7 +2364,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.leftPhaseChart.Walls.Back.Brush.Solid = true;
             this.leftPhaseChart.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -2818,8 +2372,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2827,8 +2379,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Walls.Back.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2840,8 +2390,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.leftPhaseChart.Walls.Bottom.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -2849,8 +2397,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2858,8 +2404,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2871,8 +2415,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.leftPhaseChart.Walls.Left.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -2880,8 +2422,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2889,8 +2429,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Walls.Left.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2902,8 +2440,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.leftPhaseChart.Walls.Right.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -2911,8 +2447,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.leftPhaseChart.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2920,8 +2454,6 @@
             // 
             // 
             this.leftPhaseChart.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.leftPhaseChart.Walls.Right.Shadow.Brush.Solid = true;
-            this.leftPhaseChart.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2929,7 +2461,6 @@
             // 
             // 
             this.leftPhaseChart.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.leftPhaseChart.Zoom.Brush.Solid = true;
             this.leftPhaseChart.Zoom.Brush.Visible = false;
             // 
             // polar1
@@ -2938,19 +2469,15 @@
             // 
             // 
             this.polar1.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            this.polar1.Brush.Solid = true;
             this.polar1.Brush.Visible = false;
             this.polar1.Circled = true;
             // 
             // 
             // 
-            this.polar1.CircleLabelsFont.Bold = false;
             // 
             // 
             // 
             this.polar1.CircleLabelsFont.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar1.CircleLabelsFont.Brush.Solid = true;
-            this.polar1.CircleLabelsFont.Brush.Visible = true;
             // 
             // 
             // 
@@ -2958,8 +2485,6 @@
             // 
             // 
             this.polar1.CircleLabelsFont.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.CircleLabelsFont.Shadow.Brush.Solid = true;
-            this.polar1.CircleLabelsFont.Shadow.Brush.Visible = true;
             this.polar1.CircleLabelsFont.Size = 8;
             this.polar1.CircleLabelsFont.SizeFloat = 8F;
             // 
@@ -2971,13 +2496,10 @@
             // 
             // 
             // 
-            this.polar1.Font.Bold = false;
             // 
             // 
             // 
             this.polar1.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar1.Font.Brush.Solid = true;
-            this.polar1.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2985,8 +2507,6 @@
             // 
             // 
             this.polar1.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.Font.Shadow.Brush.Solid = true;
-            this.polar1.Font.Shadow.Brush.Visible = true;
             this.polar1.Font.Size = 8;
             this.polar1.Font.SizeFloat = 8F;
             // 
@@ -3001,14 +2521,10 @@
             // 
             // 
             this.polar1.Frame.InnerBand.Color = System.Drawing.Color.Gray;
-            this.polar1.Frame.InnerBand.Solid = true;
-            this.polar1.Frame.InnerBand.Visible = true;
             // 
             // 
             // 
             this.polar1.Frame.MiddleBand.Color = System.Drawing.Color.Gray;
-            this.polar1.Frame.MiddleBand.Solid = true;
-            this.polar1.Frame.MiddleBand.Visible = true;
             // 
             // 
             // 
@@ -3017,8 +2533,6 @@
             // 
             // 
             this.polar1.Frame.OuterBand.Gradient.UseMiddle = false;
-            this.polar1.Frame.OuterBand.Solid = true;
-            this.polar1.Frame.OuterBand.Visible = true;
             // 
             // 
             // 
@@ -3030,18 +2544,13 @@
             // 
             // 
             this.polar1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.polar1.Legend.Brush.Solid = true;
-            this.polar1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.polar1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.polar1.Legend.Font.Brush.Solid = true;
-            this.polar1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3049,8 +2558,6 @@
             // 
             // 
             this.polar1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.Legend.Font.Shadow.Brush.Solid = true;
-            this.polar1.Legend.Font.Shadow.Brush.Visible = true;
             this.polar1.Legend.Font.Size = 8;
             this.polar1.Legend.Font.SizeFloat = 8F;
             // 
@@ -3060,8 +2567,6 @@
             // 
             // 
             this.polar1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar1.Legend.ImageBevel.Brush.Solid = true;
-            this.polar1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3069,8 +2574,6 @@
             // 
             // 
             this.polar1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.Legend.Shadow.Brush.Solid = true;
-            this.polar1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3082,18 +2585,13 @@
             // 
             // 
             this.polar1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.polar1.Marks.Brush.Solid = true;
-            this.polar1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.polar1.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.polar1.Marks.Font.Brush.Solid = true;
-            this.polar1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3101,8 +2599,6 @@
             // 
             // 
             this.polar1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.Marks.Font.Shadow.Brush.Solid = true;
-            this.polar1.Marks.Font.Shadow.Brush.Visible = true;
             this.polar1.Marks.Font.Size = 8;
             this.polar1.Marks.Font.SizeFloat = 8F;
             // 
@@ -3112,8 +2608,6 @@
             // 
             // 
             this.polar1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar1.Marks.ImageBevel.Brush.Solid = true;
-            this.polar1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3121,8 +2615,6 @@
             // 
             // 
             this.polar1.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.polar1.Marks.Shadow.Brush.Solid = true;
-            this.polar1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3134,8 +2626,6 @@
             // 
             // 
             this.polar1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.polar1.Marks.Symbol.Brush.Solid = true;
-            this.polar1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -3143,8 +2633,6 @@
             // 
             // 
             this.polar1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.polar1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.polar1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3152,14 +2640,10 @@
             // 
             // 
             this.polar1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.polar1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.polar1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.polar1.Marks.TailParams.Margin = 0F;
-            this.polar1.Marks.TailParams.PointerHeight = 8D;
-            this.polar1.Marks.TailParams.PointerWidth = 8D;
+            this.polar1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.polar1.OriginalCursor = null;
             // 
             // 
@@ -3173,8 +2657,6 @@
             // 
             // 
             this.polar1.Pointer.Brush.Color = System.Drawing.Color.Empty;
-            this.polar1.Pointer.Brush.Solid = true;
-            this.polar1.Pointer.Brush.Visible = true;
             this.polar1.Pointer.Dark3D = false;
             this.polar1.Pointer.Draw3D = false;
             this.polar1.Pointer.HorizSize = 1;
@@ -3223,18 +2705,13 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3242,8 +2719,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Labels.Font.Size = 9;
             this.signalChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -3253,8 +2728,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3262,8 +2735,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3276,19 +2747,14 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Title.Caption = "Time[s]";
             // 
             // 
             // 
-            this.signalChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3296,8 +2762,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Title.Font.Size = 11;
             this.signalChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -3307,8 +2771,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             this.signalChart1.Axes.Bottom.Title.Lines = new string[] {
         "Time[s]"};
             // 
@@ -3318,8 +2780,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3334,18 +2794,13 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3353,8 +2808,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Depth.Labels.Font.Size = 9;
             this.signalChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -3364,8 +2817,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3373,8 +2824,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3387,18 +2836,13 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3406,8 +2850,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Depth.Title.Font.Size = 11;
             this.signalChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -3417,8 +2859,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3426,8 +2866,6 @@
             // 
             // 
             this.signalChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3442,18 +2880,13 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3461,8 +2894,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.DepthTop.Labels.Font.Size = 9;
             this.signalChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -3472,8 +2903,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3481,8 +2910,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3495,18 +2922,13 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3514,8 +2936,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.DepthTop.Title.Font.Size = 11;
             this.signalChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -3525,8 +2945,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3534,8 +2952,6 @@
             // 
             // 
             this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3554,18 +2970,13 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3573,8 +2984,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Left.Labels.Font.Size = 9;
             this.signalChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -3584,8 +2993,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3593,8 +3000,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3607,18 +3012,13 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Left.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3626,8 +3026,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Left.Title.Font.Size = 11;
             this.signalChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -3637,8 +3035,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3646,8 +3042,6 @@
             // 
             // 
             this.signalChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3666,18 +3060,13 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3685,8 +3074,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Right.Labels.Font.Size = 9;
             this.signalChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -3696,8 +3083,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3705,8 +3090,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3719,18 +3102,13 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Right.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3738,8 +3116,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Right.Title.Font.Size = 11;
             this.signalChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -3749,8 +3125,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3758,8 +3132,6 @@
             // 
             // 
             this.signalChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Right.Visible = false;
             // 
             // 
@@ -3775,18 +3147,13 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3794,8 +3161,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Top.Labels.Font.Size = 9;
             this.signalChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -3805,8 +3170,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3814,8 +3177,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3828,18 +3189,13 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Axes.Top.Title.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3847,8 +3203,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Axes.Top.Title.Font.Size = 11;
             this.signalChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -3858,8 +3212,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3867,8 +3219,6 @@
             // 
             // 
             this.signalChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Color = System.Drawing.Color.White;
             this.signalChart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.signalChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -3883,18 +3233,13 @@
             // 
             // 
             this.signalChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Footer.Brush.Solid = true;
-            this.signalChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart1.Footer.Font.Brush.Solid = true;
-            this.signalChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3902,8 +3247,6 @@
             // 
             // 
             this.signalChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Footer.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Footer.Font.Size = 8;
             this.signalChart1.Footer.Font.SizeFloat = 8F;
             // 
@@ -3913,8 +3256,6 @@
             // 
             // 
             this.signalChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3922,8 +3263,6 @@
             // 
             // 
             this.signalChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Footer.Shadow.Brush.Solid = true;
-            this.signalChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3935,18 +3274,13 @@
             // 
             // 
             this.signalChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart1.Header.Brush.Solid = true;
-            this.signalChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Header.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.Header.Font.Brush.Solid = true;
-            this.signalChart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -3954,8 +3288,6 @@
             // 
             // 
             this.signalChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Header.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Header.Font.Size = 12;
             this.signalChart1.Header.Font.SizeFloat = 12F;
             // 
@@ -3965,8 +3297,6 @@
             // 
             // 
             this.signalChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Header.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Header.ImageBevel.Brush.Visible = true;
             this.signalChart1.Header.Lines = new string[] {
         "Time signal"};
             // 
@@ -3976,8 +3306,6 @@
             // 
             // 
             this.signalChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart1.Header.Shadow.Brush.Solid = true;
-            this.signalChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3989,18 +3317,13 @@
             // 
             // 
             this.signalChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Legend.Brush.Solid = true;
-            this.signalChart1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signalChart1.Legend.Font.Brush.Solid = true;
-            this.signalChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4008,8 +3331,6 @@
             // 
             // 
             this.signalChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Font.Size = 9;
             this.signalChart1.Legend.Font.SizeFloat = 9F;
             // 
@@ -4019,8 +3340,6 @@
             // 
             // 
             this.signalChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4028,8 +3347,6 @@
             // 
             // 
             this.signalChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.signalChart1.Legend.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4040,8 +3357,6 @@
             // 
             // 
             this.signalChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4053,8 +3368,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Legend.Title.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -4063,8 +3376,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.signalChart1.Legend.Title.Font.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4072,8 +3383,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Title.Font.Size = 8;
             this.signalChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -4083,8 +3392,6 @@
             // 
             // 
             this.signalChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4092,10 +3399,8 @@
             // 
             // 
             this.signalChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.signalChart1.Legend.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Legend.Visible = false;
-            this.signalChart1.Location = new System.Drawing.Point(0, 136);
+            this.signalChart1.Location = new System.Drawing.Point(0, 275);
             this.signalChart1.Name = "signalChart1";
             // 
             // 
@@ -4108,8 +3413,6 @@
             // 
             // 
             this.signalChart1.Panel.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Panel.Brush.Solid = true;
-            this.signalChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4117,8 +3420,6 @@
             // 
             // 
             this.signalChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4126,8 +3427,14 @@
             // 
             // 
             this.signalChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Panel.Shadow.Brush.Solid = true;
-            this.signalChart1.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins3.Bottom = 100;
+            margins3.Left = 100;
+            margins3.Right = 100;
+            margins3.Top = 100;
+            this.signalChart1.Printer.Margins = margins3;
             this.signalChart1.Series.Add(this.fastLine1);
             signalTeeItem1.Caption = null;
             signalTeeItem1.Input = this.Signal1;
@@ -4136,7 +3443,7 @@
             signalTeeItem1.Series = this.fastLine1;
             signalTeeItem1.SeriesName = "fastLine1";
             this.signalChart1.Signals.Add(signalTeeItem1);
-            this.signalChart1.Size = new System.Drawing.Size(633, 161);
+            this.signalChart1.Size = new System.Drawing.Size(914, 161);
             // 
             // 
             // 
@@ -4148,18 +3455,13 @@
             // 
             // 
             this.signalChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.SubFooter.Brush.Solid = true;
-            this.signalChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.signalChart1.SubFooter.Font.Brush.Solid = true;
-            this.signalChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4167,8 +3469,6 @@
             // 
             // 
             this.signalChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.SubFooter.Font.Shadow.Brush.Visible = true;
             this.signalChart1.SubFooter.Font.Size = 8;
             this.signalChart1.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -4178,8 +3478,6 @@
             // 
             // 
             this.signalChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.signalChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4187,8 +3485,6 @@
             // 
             // 
             this.signalChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.signalChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4200,18 +3496,13 @@
             // 
             // 
             this.signalChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.signalChart1.SubHeader.Brush.Solid = true;
-            this.signalChart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.signalChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.signalChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.signalChart1.SubHeader.Font.Brush.Solid = true;
-            this.signalChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -4219,8 +3510,6 @@
             // 
             // 
             this.signalChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.signalChart1.SubHeader.Font.Shadow.Brush.Visible = true;
             this.signalChart1.SubHeader.Font.Size = 12;
             this.signalChart1.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -4230,8 +3519,6 @@
             // 
             // 
             this.signalChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.signalChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4239,8 +3526,6 @@
             // 
             // 
             this.signalChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.signalChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.signalChart1.SubHeader.Shadow.Brush.Visible = true;
             this.signalChart1.TabIndex = 0;
             // 
             // 
@@ -4256,7 +3541,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.signalChart1.Walls.Back.Brush.Solid = true;
             this.signalChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -4265,8 +3549,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4274,8 +3556,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4287,8 +3567,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.signalChart1.Walls.Bottom.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -4296,8 +3574,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4305,8 +3581,6 @@
             // 
             // 
             this.signalChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4318,8 +3592,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart1.Walls.Left.Brush.Solid = true;
-            this.signalChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -4327,8 +3599,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4336,8 +3606,6 @@
             // 
             // 
             this.signalChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4349,8 +3617,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.signalChart1.Walls.Right.Brush.Solid = true;
-            this.signalChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -4358,8 +3624,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.signalChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.signalChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -4367,8 +3631,6 @@
             // 
             // 
             this.signalChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.signalChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.signalChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -4376,11 +3638,11 @@
             // 
             // 
             this.signalChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.signalChart1.Zoom.Brush.Solid = true;
             this.signalChart1.Zoom.Brush.Visible = false;
             // 
             // chartEditor
             // 
+            this.chartEditor.AlwaysShowFuncSrc = false;
             this.chartEditor.Chart = this.signalChart1;
             this.chartEditor.HighLightTabs = false;
             this.chartEditor.Location = new System.Drawing.Point(0, 0);
@@ -4390,27 +3652,28 @@
             // 
             // Signal2
             // 
-            this.Signal2.BandwidthL = 0D;
-            this.Signal2.BlockAssign = false;
+            this.Signal2.ChannelCount = 1;
             this.Signal2.Complex = false;
+            this.Signal2.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.Signal2.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal2.FloatPrecisionLock = false;
-            this.Signal2.Input = null;
             this.Signal2.IsDouble = true;
-            this.Signal2.Name = null;
+            this.Signal2.Length = 12;
             // 
             // SignalIn1
             // 
-            this.SignalIn1.BandwidthL = 0D;
-            this.SignalIn1.BlockAssign = false;
-            this.SignalIn1.CalibrationTarget = 0;
             this.SignalIn1.ChannelCount = 2;
             this.SignalIn1.Complex = false;
+            this.SignalIn1.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.SignalIn1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalIn1.FloatPrecisionLock = false;
             this.SignalIn1.Input = null;
             this.SignalIn1.IsDouble = true;
-            this.SignalIn1.Name = null;
+            this.SignalIn1.Length = 12;
             this.SignalIn1.Quantization = ((ushort)(16));
             this.SignalIn1.SamplingFrequency = 11025D;
             this.SignalIn1.TriggerAbove = 0D;
@@ -4423,10 +3686,8 @@
             // 
             // SignalTimer1
             // 
-            this.SignalTimer1.BlockAssign = false;
             this.SignalTimer1.Frequency = 5D;
             this.SignalTimer1.Interval = ((uint)(200u));
-            this.SignalTimer1.Name = null;
             this.SignalTimer1.Resolution = ((uint)(10u));
             this.SignalTimer1.OnTimer += new System.EventHandler(this.SignalTimer1_OnTimer);
             // 
@@ -4434,7 +3695,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 448);
+            this.ClientSize = new System.Drawing.Size(914, 587);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);

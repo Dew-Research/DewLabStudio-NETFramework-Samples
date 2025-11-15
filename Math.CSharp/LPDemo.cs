@@ -104,6 +104,7 @@ namespace MtxVecDemo
             this.mtxGridViewA = new Dew.Math.Controls.MtxGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -119,25 +120,21 @@ namespace MtxVecDemo
             // panel2
             // 
             this.panel2.Controls.Add(this.splitContainer1);
-            this.panel2.Size = new System.Drawing.Size(719, 285);
+            this.panel2.Size = new System.Drawing.Size(918, 425);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(719, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 537);
+            this.panel3.Size = new System.Drawing.Size(918, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(719, 112);
+            this.richTextBox1.Size = new System.Drawing.Size(918, 112);
             // 
             // tMtxLP1
             // 
             this.tMtxLP1.Algorithm = Dew.Math.TLPAlgorithm.LPAlgoTwoPhaseSimplex;
-            this.tMtxLP1.BlockAssign = false;
-            this.tMtxLP1.Dirty = false;
-            this.tMtxLP1.Minimize = true;
-            this.tMtxLP1.Name = null;
             this.tMtxLP1.Relations = null;
-            this.tMtxLP1.Verbose = null;
             // 
             // splitContainer1
             // 
@@ -159,7 +156,7 @@ namespace MtxVecDemo
             // 
             this.splitContainer1.Panel2.Controls.Add(this.richTextBoxLog);
             this.splitContainer1.Panel2.Controls.Add(this.panelSystem);
-            this.splitContainer1.Size = new System.Drawing.Size(719, 285);
+            this.splitContainer1.Size = new System.Drawing.Size(918, 425);
             this.splitContainer1.SplitterDistance = 186;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -280,7 +277,7 @@ namespace MtxVecDemo
             this.richTextBoxLog.Location = new System.Drawing.Point(0, 226);
             this.richTextBoxLog.Name = "richTextBoxLog";
             this.richTextBoxLog.ReadOnly = true;
-            this.richTextBoxLog.Size = new System.Drawing.Size(529, 59);
+            this.richTextBoxLog.Size = new System.Drawing.Size(728, 199);
             this.richTextBoxLog.TabIndex = 1;
             this.richTextBoxLog.Text = "";
             this.richTextBoxLog.WordWrap = false;
@@ -298,7 +295,7 @@ namespace MtxVecDemo
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSystem.Location = new System.Drawing.Point(0, 0);
             this.panelSystem.Name = "panelSystem";
-            this.panelSystem.Size = new System.Drawing.Size(529, 226);
+            this.panelSystem.Size = new System.Drawing.Size(728, 226);
             this.panelSystem.TabIndex = 0;
             // 
             // textBoxRelations
@@ -324,6 +321,7 @@ namespace MtxVecDemo
             this.mtxGridViewc.AllowUserToDeleteRows = false;
             this.mtxGridViewc.AllowUserToResizeColumns = false;
             this.mtxGridViewc.AllowUserToResizeRows = false;
+            this.mtxGridViewc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             this.mtxGridViewc.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.mtxGridViewc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -338,11 +336,13 @@ namespace MtxVecDemo
             this.mtxGridViewc.Location = new System.Drawing.Point(341, 34);
             this.mtxGridViewc.MultiSelect = false;
             this.mtxGridViewc.Name = "mtxGridViewc";
+            this.mtxGridViewc.numberFormat = "0.0000";
             this.mtxGridViewc.ObjectInfoText = "";
             this.mtxGridViewc.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.mtxGridViewc.Size = new System.Drawing.Size(102, 156);
             this.mtxGridViewc.TabIndex = 5;
+            this.mtxGridViewc.VirtualMode = true;
             // 
             // label4
             // 
@@ -359,6 +359,7 @@ namespace MtxVecDemo
             this.mtxGridViewb.AllowUserToDeleteRows = false;
             this.mtxGridViewb.AllowUserToResizeColumns = false;
             this.mtxGridViewb.AllowUserToResizeRows = false;
+            this.mtxGridViewb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             this.mtxGridViewb.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.mtxGridViewb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -373,11 +374,13 @@ namespace MtxVecDemo
             this.mtxGridViewb.Location = new System.Drawing.Point(220, 34);
             this.mtxGridViewb.MultiSelect = false;
             this.mtxGridViewb.Name = "mtxGridViewb";
+            this.mtxGridViewb.numberFormat = "0.0000";
             this.mtxGridViewb.ObjectInfoText = "";
             this.mtxGridViewb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.mtxGridViewb.Size = new System.Drawing.Size(102, 156);
             this.mtxGridViewb.TabIndex = 3;
+            this.mtxGridViewb.VirtualMode = true;
             // 
             // label3
             // 
@@ -394,6 +397,7 @@ namespace MtxVecDemo
             this.mtxGridViewA.AllowUserToDeleteRows = false;
             this.mtxGridViewA.AllowUserToResizeColumns = false;
             this.mtxGridViewA.AllowUserToResizeRows = false;
+            this.mtxGridViewA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             this.mtxGridViewA.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.mtxGridViewA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -408,11 +412,13 @@ namespace MtxVecDemo
             this.mtxGridViewA.Location = new System.Drawing.Point(6, 34);
             this.mtxGridViewA.MultiSelect = false;
             this.mtxGridViewA.Name = "mtxGridViewA";
+            this.mtxGridViewA.numberFormat = "0.0000";
             this.mtxGridViewA.ObjectInfoText = "";
             this.mtxGridViewA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.mtxGridViewA.Size = new System.Drawing.Size(196, 156);
             this.mtxGridViewA.TabIndex = 1;
+            this.mtxGridViewA.VirtualMode = true;
             // 
             // label2
             // 
@@ -425,13 +431,14 @@ namespace MtxVecDemo
             // 
             // LPDemo
             // 
-            this.ClientSize = new System.Drawing.Size(719, 445);
+            this.ClientSize = new System.Drawing.Size(918, 585);
             this.Name = "LPDemo";
             this.Load += new System.EventHandler(this.LPDemo_Load);
             this.panel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

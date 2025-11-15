@@ -79,7 +79,9 @@
             // 
             this.signalList[0].ChannelCount = 1;
             this.signalList[0].Complex = false;
-            this.signalList[0].Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalList[0].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.signalList[0].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalList[0].FloatPrecisionLock = false;
             this.signalList[0].IsDouble = true;
@@ -89,7 +91,9 @@
             // 
             this.signalList[1].ChannelCount = 1;
             this.signalList[1].Complex = false;
-            this.signalList[1].Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalList[1].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.signalList[1].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalList[1].FloatPrecisionLock = false;
             this.signalList[1].IsDouble = true;
@@ -379,9 +383,9 @@
             this.panel1.Controls.Add(this.driverNameListBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 351);
+            this.panel1.Location = new System.Drawing.Point(0, 391);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 217);
+            this.panel1.Size = new System.Drawing.Size(1128, 217);
             this.panel1.TabIndex = 5;
             // 
             // label5
@@ -508,7 +512,7 @@
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 185);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(897, 3);
+            this.splitter1.Size = new System.Drawing.Size(1128, 3);
             this.splitter1.TabIndex = 7;
             this.splitter1.TabStop = false;
             // 
@@ -516,7 +520,9 @@
             // 
             this.signalRead.ChannelCount = 1;
             this.signalRead.Complex = false;
-            this.signalRead.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalRead.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.signalRead.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalRead.FloatPrecisionLock = false;
             this.signalRead.FramesPerSecond = 0.083333333333333329D;
@@ -563,7 +569,9 @@
             this.signalWrite1.AuthorInfo = "Unknown";
             this.signalWrite1.ChannelCount = 1;
             this.signalWrite1.Complex = false;
-            this.signalWrite1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalWrite1.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.signalWrite1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalWrite1.FloatPrecisionLock = false;
             this.signalWrite1.ImFormat = null;
@@ -577,7 +585,9 @@
             // 
             this.signalMux.ChannelCount = 1;
             this.signalMux.Complex = false;
-            this.signalMux.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalMux.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.signalMux.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalMux.FloatPrecisionLock = false;
             this.signalMux.InputList = this.signalAsio1;
@@ -938,9 +948,9 @@
             // 
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.bottomChart.Axes.Left.Labels.ValueFormat = "#,##0.####";
-            this.bottomChart.Axes.Left.Maximum = 1583.5D;
+            this.bottomChart.Axes.Left.Maximum = 298.9D;
             this.bottomChart.Axes.Left.MaximumOffset = 1;
-            this.bottomChart.Axes.Left.Minimum = 677.5D;
+            this.bottomChart.Axes.Left.Minimum = -11.900000000000002D;
             this.bottomChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -1389,7 +1399,7 @@
             signalTeeItem1.Series = this.mtxFastLine2;
             signalTeeItem1.SeriesName = "mtxFastLine2";
             this.bottomChart.Signals.Add(signalTeeItem1);
-            this.bottomChart.Size = new System.Drawing.Size(897, 166);
+            this.bottomChart.Size = new System.Drawing.Size(1128, 206);
             // 
             // 
             // 
@@ -1936,9 +1946,9 @@
             // 
             this.topChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.topChart.Axes.Left.Labels.ValueFormat = "#,##0.####";
-            this.topChart.Axes.Left.Maximum = 256.2D;
+            this.topChart.Axes.Left.Maximum = 657.6D;
             this.topChart.Axes.Left.MaximumOffset = 1;
-            this.topChart.Axes.Left.Minimum = -22.200000000000003D;
+            this.topChart.Axes.Left.Minimum = 122.4D;
             this.topChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -2388,7 +2398,7 @@
             signalTeeItem2.Series = this.mtxFastLine1;
             signalTeeItem2.SeriesName = "mtxFastLine1";
             this.topChart.Signals.Add(signalTeeItem2);
-            this.topChart.Size = new System.Drawing.Size(897, 185);
+            this.topChart.Size = new System.Drawing.Size(1128, 185);
             // 
             // 
             // 
@@ -2600,7 +2610,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 568);
+            this.ClientSize = new System.Drawing.Size(1128, 608);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.bottomChart);
             this.Controls.Add(this.panel1);

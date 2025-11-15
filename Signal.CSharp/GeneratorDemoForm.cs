@@ -148,7 +148,7 @@ namespace DSPDemo
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(712, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(1047, 96);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "richTextBox1";
             // 
@@ -160,9 +160,9 @@ namespace DSPDemo
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 540);
+            this.panel1.Location = new System.Drawing.Point(0, 616);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 33);
+            this.panel1.Size = new System.Drawing.Size(1047, 33);
             this.panel1.TabIndex = 1;
             // 
             // SignalChartButton
@@ -218,7 +218,7 @@ namespace DSPDemo
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(712, 444);
+            this.panel2.Size = new System.Drawing.Size(1047, 520);
             this.panel2.TabIndex = 2;
             // 
             // SignalChart1
@@ -972,7 +972,7 @@ namespace DSPDemo
             margins1.Top = 100;
             this.SignalChart1.Printer.Margins = margins1;
             this.SignalChart1.Series.Add(this.SignalSeries);
-            this.SignalChart1.Size = new System.Drawing.Size(712, 225);
+            this.SignalChart1.Size = new System.Drawing.Size(1047, 301);
             // 
             // 
             // 
@@ -1311,7 +1311,7 @@ namespace DSPDemo
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 216);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(712, 3);
+            this.splitter1.Size = new System.Drawing.Size(1047, 3);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
@@ -2071,7 +2071,7 @@ namespace DSPDemo
             this.SpectrumChart1.Printer.Margins = margins2;
             this.SpectrumChart1.Series.Add(this.Series1);
             this.SpectrumChart1.Series.Add(this.MarkSeries1);
-            this.SpectrumChart1.Size = new System.Drawing.Size(712, 216);
+            this.SpectrumChart1.Size = new System.Drawing.Size(1047, 216);
             this.SpectrumChart1.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
             // 
             // 
@@ -2566,7 +2566,7 @@ namespace DSPDemo
             // 
             this.SpectrumAnalyzer1.ArOrder = 100;
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
+            this.SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SpectrumAnalyzer1.FloatPrecisionLock = false;
@@ -2600,14 +2600,16 @@ namespace DSPDemo
             // 
             this.SignalGenerator1.ChannelCount = 1;
             this.SignalGenerator1.Complex = false;
-            this.SignalGenerator1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.SignalGenerator1.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.SignalGenerator1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalGenerator1.FloatPrecisionLock = false;
             this.SignalGenerator1.IsDouble = true;
             this.SignalGenerator1.Length = 12;
             this.SignalGenerator1.SamplingFrequency = 128D;
             this.SignalGenerator1.Sounds.TemplateIndex = 1;
-            this.SignalGenerator1.Sounds.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("FAAAAERlZmF1bHQNClR3byBTaW5lcw0KmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAADgAAAAAAAAAkQAAAAAAAAAAAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAADABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAEAAA4AAAAAAAAAJEAAAAAAAAAAAAAAAAAAAPA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAAAOAAAAAAAAADRAAAAAAAAAAAAAAAAAAADwPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQERAAAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="));
+            this.SignalGenerator1.Sounds.TemplatesSerialization = resources.GetString("resource.TemplatesSerialization");
             this.SignalGenerator1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SignalGenerator1_OnParameterUpdate);
             // 
             // SignalGeneratorDialog1
@@ -2624,7 +2626,9 @@ namespace DSPDemo
             this.SignalWrite1.AuthorInfo = "Unknown";
             this.SignalWrite1.ChannelCount = 1;
             this.SignalWrite1.Complex = false;
-            this.SignalWrite1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.SignalWrite1.DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             this.SignalWrite1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalWrite1.FloatPrecisionLock = false;
             this.SignalWrite1.ImFormat = null;
@@ -2670,7 +2674,7 @@ namespace DSPDemo
             // GeneratorDemoForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(712, 573);
+            this.ClientSize = new System.Drawing.Size(1047, 649);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);

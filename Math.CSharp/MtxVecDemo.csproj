@@ -40,7 +40,15 @@
 	</Target>
 
 	<ItemGroup>
-	  <PackageReference Include="Dew.Math.TeePro" Version="6.3.6" />
+	  <None Remove="MtxVec.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="MtxVec.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Dew.Math.TeePro" Version="6.3.7" />
 	</ItemGroup>
 
 </Project>

@@ -88,7 +88,7 @@ namespace DSPDemo
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 79);
+            this.panel1.Size = new System.Drawing.Size(830, 79);
             this.panel1.TabIndex = 0;
             // 
             // labelCurrent
@@ -106,9 +106,9 @@ namespace DSPDemo
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 367);
+            this.panel2.Location = new System.Drawing.Point(0, 440);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 30);
+            this.panel2.Size = new System.Drawing.Size(830, 30);
             this.panel2.TabIndex = 1;
             // 
             // treeView1
@@ -116,7 +116,7 @@ namespace DSPDemo
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Location = new System.Drawing.Point(0, 79);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(168, 288);
+            this.treeView1.Size = new System.Drawing.Size(168, 361);
             this.treeView1.TabIndex = 2;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -129,7 +129,7 @@ namespace DSPDemo
             this.tabControl1.Location = new System.Drawing.Point(168, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(560, 288);
+            this.tabControl1.Size = new System.Drawing.Size(662, 361);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -137,7 +137,7 @@ namespace DSPDemo
             // 
             this.tabPageExample.Location = new System.Drawing.Point(4, 4);
             this.tabPageExample.Name = "tabPageExample";
-            this.tabPageExample.Size = new System.Drawing.Size(552, 262);
+            this.tabPageExample.Size = new System.Drawing.Size(654, 335);
             this.tabPageExample.TabIndex = 0;
             this.tabPageExample.Text = "Example";
             // 
@@ -165,7 +165,7 @@ namespace DSPDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(728, 397);
+            this.ClientSize = new System.Drawing.Size(830, 470);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panel2);

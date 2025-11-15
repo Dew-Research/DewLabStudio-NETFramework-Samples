@@ -92,7 +92,7 @@ namespace DSPDemo
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 48);
+            this.panel1.Size = new System.Drawing.Size(844, 48);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -104,7 +104,7 @@ namespace DSPDemo
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
             this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 32);
+            this.label1.Size = new System.Drawing.Size(828, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to DSP Master v6";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,14 +116,14 @@ namespace DSPDemo
             this.richTextBox1.Location = new System.Drawing.Point(0, 48);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(584, 397);
+            this.richTextBox1.Size = new System.Drawing.Size(844, 472);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
             // IntroForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(584, 445);
+            this.ClientSize = new System.Drawing.Size(844, 520);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel1);
             this.Name = "IntroForm";

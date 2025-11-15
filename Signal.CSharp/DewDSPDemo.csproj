@@ -37,7 +37,7 @@
 	</Target>
 
 	<ItemGroup>
-	  <PackageReference Include="Dew.Signal.Tee" Version="6.3.6" />
+	  <PackageReference Include="Dew.Signal.Tee" Version="6.3.7" />
 	</ItemGroup>
 
 </Project>

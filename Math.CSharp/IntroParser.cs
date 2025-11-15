@@ -91,13 +91,13 @@ namespace MtxVecDemo
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(292, 266);
+            this.richTextBox1.Size = new System.Drawing.Size(852, 599);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // IntroParser
             // 
-            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.ClientSize = new System.Drawing.Size(852, 599);
             this.Controls.Add(this.richTextBox1);
             this.Name = "IntroParser";
             this.Load += new System.EventHandler(this.IntroParser_Load);

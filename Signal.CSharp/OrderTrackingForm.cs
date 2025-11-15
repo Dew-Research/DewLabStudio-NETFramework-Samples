@@ -113,7 +113,7 @@ namespace DSPDemo
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(696, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(803, 96);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "richTextBox1";
             // 
@@ -125,9 +125,9 @@ namespace DSPDemo
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 467);
+            this.panel1.Location = new System.Drawing.Point(0, 515);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(696, 34);
+            this.panel1.Size = new System.Drawing.Size(803, 34);
             this.panel1.TabIndex = 1;
             // 
             // ChartButton
@@ -176,48 +176,51 @@ namespace DSPDemo
             // 
             // SignalRead1
             // 
-            this.SignalRead1.BandwidthL = 0D;
-            this.SignalRead1.BlockAssign = false;
+            this.SignalRead1.ChannelCount = 1;
             this.SignalRead1.Complex = false;
+            this.SignalRead1.DataSerialization = resources.GetString("SignalRead1.DataSerialization");
             this.SignalRead1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalRead1.FloatPrecisionLock = false;
             this.SignalRead1.FramesPerSecond = 0.0009765625D;
             this.SignalRead1.IsDouble = true;
-            this.SignalRead1.LastFrameCheck = Dew.Signal.TLastFrameCheck.lfcZeroPadded;
             this.SignalRead1.Length = 1024;
-            this.SignalRead1.Name = "";
+            this.SignalRead1.OverlappingSamples = 0;
             this.SignalRead1.PostBufferSamples = 0;
+            this.SignalRead1.RecordNumber = 0;
             this.SignalRead1.RecordPosition = ((long)(0));
             // 
             // SpectrumAnalyzer1
             // 
+            this.SpectrumAnalyzer1.ArOrder = 100;
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
-            this.SpectrumAnalyzer1.BlockAssign = false;
+            this.SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SpectrumAnalyzer1.FloatPrecisionLock = false;
+            this.SpectrumAnalyzer1.Harmonics = 10;
             this.SpectrumAnalyzer1.Input = this.SignalRead1;
             this.SpectrumAnalyzer1.IsDouble = true;
+            this.SpectrumAnalyzer1.Length = 64;
             this.SpectrumAnalyzer1.LogBase = 0D;
             this.SpectrumAnalyzer1.LogScale = 0D;
-            this.SpectrumAnalyzer1.Name = "";
-            this.SpectrumAnalyzer1.Output = null;
+            this.SpectrumAnalyzer1.MainlobeWidth = 8;
+            this.SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
             this.SpectrumAnalyzer1.Peaks.Interpolation.Method = Dew.Signal.TInterpolationMethod.imNone;
             this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
+            this.SpectrumAnalyzer1.Peaks.LargestCount = 1;
             this.SpectrumAnalyzer1.Peaks.LargestRatio = 1E+15D;
-            this.SpectrumAnalyzer1.Peaks.NormalizedAmplt.NormAmplitude = 1D;
+            this.SpectrumAnalyzer1.Peaks.NormalizedAmplt.PeakNumber = 1;
             this.SpectrumAnalyzer1.Peaks.NormalizedFreq.Active = true;
-            this.SpectrumAnalyzer1.Peaks.NormalizedFreq.DefaultFS = 0D;
-            this.SpectrumAnalyzer1.Peaks.NormalizedFreq.DefaultHzRes = 0D;
-            this.SpectrumAnalyzer1.Peaks.NormalizedFreq.NormFrequency = 1D;
+            this.SpectrumAnalyzer1.Peaks.NormalizedFreq.PeakNumber = 1;
             this.SpectrumAnalyzer1.Peaks.NormalizedFreq.Tracing = Dew.Signal.TNormTracing.otFirstPeak;
             this.SpectrumAnalyzer1.Report.UseTab = false;
+            this.SpectrumAnalyzer1.Rotation = 0;
             this.SpectrumAnalyzer1.SamplingFrequency = 0D;
-            this.SpectrumAnalyzer1.SpectrumScale = 0D;
             this.SpectrumAnalyzer1.Stats.Averaged = 0;
             this.SpectrumAnalyzer1.Stats.Averages = 30;
+            this.SpectrumAnalyzer1.Stats.ExpDecay = 5;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
+            this.SpectrumAnalyzer1.ZeroPadding = 1;
             // 
             // SpectrumChart1
             // 
@@ -977,7 +980,7 @@ namespace DSPDemo
             this.SpectrumChart1.Printer.Margins = margins1;
             this.SpectrumChart1.Series.Add(this.Series1);
             this.SpectrumChart1.Series.Add(this.Series2);
-            this.SpectrumChart1.Size = new System.Drawing.Size(696, 371);
+            this.SpectrumChart1.Size = new System.Drawing.Size(803, 419);
             this.SpectrumChart1.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
             // 
             // 
@@ -1297,6 +1300,7 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.OriginalCursor = System.Windows.Forms.Cursors.Default;
             this.Series1.Title = "fastLine1";
             this.Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -1435,6 +1439,7 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series2.Marks.Transparent = true;
             this.Series2.Marks.Visible = true;
             this.Series2.OriginalCursor = System.Windows.Forms.Cursors.Default;
@@ -1468,10 +1473,8 @@ namespace DSPDemo
             // 
             // SpectrumAnalyzerDialog
             // 
-            this.SpectrumAnalyzerDialog.BlockAssign = false;
             this.SpectrumAnalyzerDialog.Docking = false;
             this.SpectrumAnalyzerDialog.FormCaption = null;
-            this.SpectrumAnalyzerDialog.Name = null;
             this.SpectrumAnalyzerDialog.RegistryPath = "\\Software\\Dew Research\\MtxVec";
             this.SpectrumAnalyzerDialog.ShowLive = false;
             this.SpectrumAnalyzerDialog.Source = this.SpectrumAnalyzer1;
@@ -1490,7 +1493,7 @@ namespace DSPDemo
             // OrderTrackingForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(696, 501);
+            this.ClientSize = new System.Drawing.Size(803, 549);
             this.Controls.Add(this.SpectrumChart1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);

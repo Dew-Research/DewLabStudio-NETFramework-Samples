@@ -120,16 +120,16 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.buttonDetect);
             this.panel2.Controls.Add(this.textBoxFunction);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Size = new System.Drawing.Size(526, 303);
+            this.panel2.Size = new System.Drawing.Size(811, 431);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 415);
-            this.panel3.Size = new System.Drawing.Size(526, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 543);
+            this.panel3.Size = new System.Drawing.Size(811, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(526, 112);
+            this.richTextBox1.Size = new System.Drawing.Size(811, 112);
             // 
             // dataSet1
             // 
@@ -215,11 +215,11 @@ namespace MtxVecDemo
             // 
             // textBoxFunction
             // 
-            this.textBoxFunction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxFunction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFunction.Location = new System.Drawing.Point(66, 18);
             this.textBoxFunction.Name = "textBoxFunction";
-            this.textBoxFunction.Size = new System.Drawing.Size(448, 20);
+            this.textBoxFunction.Size = new System.Drawing.Size(733, 20);
             this.textBoxFunction.TabIndex = 5;
             this.textBoxFunction.Text = "100*Sqr(b-Sqr(a)) + Sqr(1-a)";
             this.textBoxFunction.TextChanged += new System.EventHandler(this.textBoxFunction_TextChanged);
@@ -249,14 +249,14 @@ namespace MtxVecDemo
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox2.Location = new System.Drawing.Point(15, 223);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(271, 74);
+            this.richTextBox2.Size = new System.Drawing.Size(556, 202);
             this.richTextBox2.TabIndex = 8;
             this.richTextBox2.Text = "";
             // 
@@ -268,7 +268,7 @@ namespace MtxVecDemo
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(305, 73);
+            this.groupBox1.Location = new System.Drawing.Point(590, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(209, 144);
             this.groupBox1.TabIndex = 9;
@@ -342,37 +342,37 @@ namespace MtxVecDemo
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 97);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(271, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 120);
             this.dataGridView1.TabIndex = 10;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(305, 253);
+            this.dataGridView2.Location = new System.Drawing.Point(590, 253);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(209, 44);
+            this.dataGridView2.Size = new System.Drawing.Size(209, 172);
             this.dataGridView2.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(302, 226);
+            this.label4.Location = new System.Drawing.Point(587, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 13);
             this.label4.TabIndex = 12;
@@ -389,7 +389,7 @@ namespace MtxVecDemo
             // 
             // Optim_Bounded
             // 
-            this.ClientSize = new System.Drawing.Size(526, 463);
+            this.ClientSize = new System.Drawing.Size(811, 591);
             this.Name = "Optim_Bounded";
             this.Load += new System.EventHandler(this.Optim_Bounded_Load);
             this.panel2.ResumeLayout(false);

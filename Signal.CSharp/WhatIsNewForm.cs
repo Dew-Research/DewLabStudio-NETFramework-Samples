@@ -281,12 +281,12 @@ namespace DSPDemo
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.richTextBox1.Size = new System.Drawing.Size(384, 317);
+            this.richTextBox1.Size = new System.Drawing.Size(614, 439);
             // 
             // WhatIsNewForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(384, 317);
+            this.ClientSize = new System.Drawing.Size(614, 439);
             this.Name = "WhatIsNewForm";
             this.Load += new System.EventHandler(this.WhatIsNewForm_Load);
             this.ResumeLayout(false);

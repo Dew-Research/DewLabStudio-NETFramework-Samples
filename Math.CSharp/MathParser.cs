@@ -93,24 +93,24 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.panelEditor);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Size = new System.Drawing.Size(570, 393);
+            this.panel2.Size = new System.Drawing.Size(1018, 432);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 505);
-            this.panel3.Size = new System.Drawing.Size(570, 42);
+            this.panel3.Location = new System.Drawing.Point(0, 544);
+            this.panel3.Size = new System.Drawing.Size(1018, 42);
             this.panel3.Visible = false;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(570, 112);
+            this.richTextBox1.Size = new System.Drawing.Size(1018, 112);
             // 
             // panelEditor
             // 
             this.panelEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEditor.Location = new System.Drawing.Point(0, 29);
             this.panelEditor.Name = "panelEditor";
-            this.panelEditor.Size = new System.Drawing.Size(570, 287);
+            this.panelEditor.Size = new System.Drawing.Size(1018, 326);
             this.panelEditor.TabIndex = 21;
             // 
             // panel4
@@ -120,7 +120,7 @@ namespace MtxVecDemo
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(570, 29);
+            this.panel4.Size = new System.Drawing.Size(1018, 29);
             this.panel4.TabIndex = 22;
             // 
             // comboBox1
@@ -157,9 +157,9 @@ namespace MtxVecDemo
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.listBoxResults);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 316);
+            this.panel5.Location = new System.Drawing.Point(0, 355);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(570, 77);
+            this.panel5.Size = new System.Drawing.Size(1018, 77);
             this.panel5.TabIndex = 23;
             // 
             // buttonEvaluate
@@ -214,7 +214,7 @@ namespace MtxVecDemo
             // 
             // MathParser
             // 
-            this.ClientSize = new System.Drawing.Size(570, 547);
+            this.ClientSize = new System.Drawing.Size(1018, 586);
             this.Name = "MathParser";
             this.Load += new System.EventHandler(this.MathParser_Load);
             this.panel2.ResumeLayout(false);

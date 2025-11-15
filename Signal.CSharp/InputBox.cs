@@ -64,50 +64,52 @@ namespace DSPDemo
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 16);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "label1";
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(8, 24);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(232, 20);
-			this.textBox1.TabIndex = 1;
-			this.textBox1.Text = "textBox1";
-			// 
-			// button1
-			// 
-			this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.button1.Location = new System.Drawing.Point(160, 56);
-			this.button1.Name = "button1";
-			this.button1.TabIndex = 2;
-			this.button1.Text = "OK";
-			// 
-			// InputBox
-			// 
-			this.AcceptButton = this.button1;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(248, 85);
-			this.ControlBox = false;
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.label1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.MaximizeBox = false;
-			this.Name = "InputBox";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "InputBox";
-			this.ResumeLayout(false);
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(8, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(232, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "textBox1";
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(160, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "OK";
+            // 
+            // InputBox
+            // 
+            this.AcceptButton = this.button1;
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(257, 88);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "InputBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "InputBox";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion

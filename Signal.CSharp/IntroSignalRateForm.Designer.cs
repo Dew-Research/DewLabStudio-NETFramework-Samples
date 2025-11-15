@@ -23,7 +23,18 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Size = new System.Drawing.Size(691, 485);
+            // 
+            // IntroSignalRateForm
+            // 
+            this.ClientSize = new System.Drawing.Size(691, 485);
+            this.Name = "IntroSignalRateForm";
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion

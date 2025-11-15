@@ -81,7 +81,7 @@ namespace MtxVecDemo
             this.Memo1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Memo1.Location = new System.Drawing.Point(12, 8);
             this.Memo1.Name = "Memo1";
-            this.Memo1.Size = new System.Drawing.Size(884, 131);
+            this.Memo1.Size = new System.Drawing.Size(942, 131);
             this.Memo1.TabIndex = 0;
             this.Memo1.Text = "Memo1";
             // 
@@ -841,7 +841,7 @@ namespace MtxVecDemo
             margins1.Top = 100;
             this.Chart.Printer.Margins = margins1;
             this.Chart.Series.Add(this.barSeries);
-            this.Chart.Size = new System.Drawing.Size(884, 384);
+            this.Chart.Size = new System.Drawing.Size(942, 384);
             // 
             // 
             // 
@@ -1295,7 +1295,7 @@ namespace MtxVecDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 605);
+            this.ClientSize = new System.Drawing.Size(962, 605);
             this.Controls.Add(this.Memo1);
             this.Controls.Add(this.MaskThreadButton);
             this.Controls.Add(this.Chart);

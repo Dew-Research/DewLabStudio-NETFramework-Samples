@@ -156,18 +156,18 @@
     <value>1016, 17</value>
   </metadata>
   <metadata name="signalWrite1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
+    <value>1155, 17</value>
   </metadata>
   <metadata name="signalMux.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>136, 54</value>
+    <value>17, 54</value>
   </metadata>
   <metadata name="signalAsio1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>439, 17</value>
   </metadata>
   <metadata name="axisScaleTool2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 54</value>
+    <value>126, 54</value>
   </metadata>
   <metadata name="axisScaleTool1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>374, 54</value>
+    <value>255, 54</value>
   </metadata>
 </root>

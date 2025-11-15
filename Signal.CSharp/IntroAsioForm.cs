@@ -73,9 +73,13 @@ namespace DSPDemo
 		{
             this.SuspendLayout();
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Size = new System.Drawing.Size(448, 333);
+            // 
             // IntroAsioForm
             // 
-            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.ClientSize = new System.Drawing.Size(448, 333);
             this.Name = "IntroAsioForm";
             this.Load += new System.EventHandler(this.IntroAsioForm_Load);
             this.ResumeLayout(false);

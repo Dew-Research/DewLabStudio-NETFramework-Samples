@@ -57,7 +57,18 @@ namespace DSPDemo
 		/// </summary>
 		private void InitializeComponent()
 		{
-			components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Size = new System.Drawing.Size(594, 472);
+            // 
+            // IntroApplicationForm
+            // 
+            this.ClientSize = new System.Drawing.Size(594, 472);
+            this.Name = "IntroApplicationForm";
+            this.ResumeLayout(false);
+
 		}
 		#endregion
 	}

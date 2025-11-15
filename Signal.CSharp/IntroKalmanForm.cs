@@ -53,9 +53,13 @@ namespace DSPDemo
 		{
             this.SuspendLayout();
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Size = new System.Drawing.Size(605, 402);
+            // 
             // IntroKalmanForm
             // 
-            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.ClientSize = new System.Drawing.Size(605, 402);
             this.Name = "IntroKalmanForm";
             this.Load += new System.EventHandler(this.IntroPeakSpectralForm_Load);
             this.ResumeLayout(false);
