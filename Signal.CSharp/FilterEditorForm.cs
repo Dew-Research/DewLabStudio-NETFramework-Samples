@@ -2467,10 +2467,9 @@ namespace DSPDemo
             tVec1.Caption = "";
             tVec1.Complex = false;
             tVec1.ConditionCheck = true;
-            tVec1.First = -0.015958647739024934D;
-            tVec1.Last = -0.015958647739024934D;
             tVec1.Length = 17;
             tVec1.Tag = 0;
+            tVec1.ValuesSerialization = resources.GetString("tVec1.ValuesSerialization");
             this.SignalFilter1.Taps = tVec1;
             this.SignalFilter1.UpDelay = 0;
             this.SignalFilter1.UpSample = 1;
