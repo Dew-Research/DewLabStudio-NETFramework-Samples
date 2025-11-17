@@ -72,32 +72,6 @@
             this.signalList.EditIndex = -1;
             this.signalList.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalList.FloatPrecisionLock = false;
-            // List serializer begin
-            // 
-            // 
-            // 
-            this.signalList[0].ChannelCount = 1;
-            this.signalList[0].Complex = false;
-            this.signalList[0].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalList[0].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalList[0].FloatPrecisionLock = false;
-            this.signalList[0].IsDouble = true;
-            this.signalList[0].Length = 12;
-            // 
-            // 
-            // 
-            this.signalList[1].ChannelCount = 1;
-            this.signalList[1].Complex = false;
-            this.signalList[1].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalList[1].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalList[1].FloatPrecisionLock = false;
-            this.signalList[1].IsDouble = true;
-            this.signalList[1].Length = 12;
-            // List serializer end
             this.signalList.PropagateTemplate = false;
             // 
             // mtxFastLine2
@@ -374,36 +348,6 @@
             this.signalDemuxList.FloatPrecisionLock = false;
             this.signalDemuxList.Input = this.signalRead;
             this.signalDemuxList.Inputs = null;
-            // List serializer begin
-            // 
-            // 
-            // 
-            this.signalDemuxList[0].Channel = 0;
-            this.signalDemuxList[0].ChannelCount = 1;
-            this.signalDemuxList[0].Complex = false;
-            this.signalDemuxList[0].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalDemuxList[0].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalDemuxList[0].FloatPrecisionLock = false;
-            this.signalDemuxList[0].Input = null;
-            this.signalDemuxList[0].IsDouble = true;
-            this.signalDemuxList[0].Length = 12;
-            // 
-            // 
-            // 
-            this.signalDemuxList[1].Channel = 0;
-            this.signalDemuxList[1].ChannelCount = 1;
-            this.signalDemuxList[1].Complex = false;
-            this.signalDemuxList[1].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalDemuxList[1].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalDemuxList[1].FloatPrecisionLock = false;
-            this.signalDemuxList[1].Input = null;
-            this.signalDemuxList[1].IsDouble = true;
-            this.signalDemuxList[1].Length = 12;
-            // List serializer end
             this.signalDemuxList.PropagateTemplate = false;
             // 
             // signalRead
@@ -427,34 +371,6 @@
             this.signalRateConverterList.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalRateConverterList.FloatPrecisionLock = false;
             this.signalRateConverterList.Inputs = this.signalDemuxList;
-            // List serializer begin
-            // 
-            // 
-            // 
-            this.signalRateConverterList[0].ChannelCount = 1;
-            this.signalRateConverterList[0].Complex = false;
-            this.signalRateConverterList[0].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalRateConverterList[0].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalRateConverterList[0].FloatPrecisionLock = false;
-            this.signalRateConverterList[0].Input = null;
-            this.signalRateConverterList[0].IsDouble = true;
-            this.signalRateConverterList[0].Length = 12;
-            // 
-            // 
-            // 
-            this.signalRateConverterList[1].ChannelCount = 1;
-            this.signalRateConverterList[1].Complex = false;
-            this.signalRateConverterList[1].DataSerialization = "AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            this.signalRateConverterList[1].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.signalRateConverterList[1].FloatPrecisionLock = false;
-            this.signalRateConverterList[1].Input = null;
-            this.signalRateConverterList[1].IsDouble = true;
-            this.signalRateConverterList[1].Length = 12;
-            // List serializer end
             this.signalRateConverterList.PropagateTemplate = false;
             this.signalRateConverterList.OnBeforeUpdateEvent += new Dew.Math.TNotifyEvent(this.signalRateConverterList_OnBeforeUpdate);
             // 
@@ -627,8 +543,6 @@
             this.signalAsio1.FloatPrecisionLock = false;
             this.signalAsio1.InputPrecision = Dew.Math.TPrecision.prDouble;
             this.signalAsio1.Inputs = this.signalRateConverterList;
-            // List serializer begin
-            // List serializer end
             this.signalAsio1.OutputPrecision = Dew.Math.TPrecision.prSmallInt;
             this.signalAsio1.PropagateTemplate = false;
             this.signalAsio1.SamplingFrequency = 48000D;
@@ -965,9 +879,9 @@
             // 
             // 
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Left.Maximum = 940.5D;
+            this.bottomChart.Axes.Left.Maximum = 1107.3D;
             this.bottomChart.Axes.Left.MaximumOffset = 1;
-            this.bottomChart.Axes.Left.Minimum = 358.5D;
+            this.bottomChart.Axes.Left.Minimum = 479.7D;
             this.bottomChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -1945,9 +1859,9 @@
             // 
             // 
             this.topChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Left.Maximum = 1052.4D;
+            this.topChart.Axes.Left.Maximum = 844.2D;
             this.topChart.Axes.Left.MaximumOffset = 1;
-            this.topChart.Axes.Left.Minimum = 723.6D;
+            this.topChart.Axes.Left.Minimum = 109.8D;
             this.topChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
