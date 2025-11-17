@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DewDSPDemo", "Signal.CSharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatsMasterDemo", "Stat.CSharp\StatsMasterDemo.csproj", "{3CC083FD-E2AD-FE89-BB22-08193D14DC1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtxVecDemo", "..\GIT-DewLabStudio-NETCore\Math.CSharp\MtxVecDemo.csproj", "{8FF11ABD-44D4-D79F-C724-B25A309735F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtxVecDemo", "Math.CSharp\MtxVecDemo.csproj", "{591FA6AF-33C0-BEA6-1248-965F1CC6216E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{3CC083FD-E2AD-FE89-BB22-08193D14DC1A}.Debug|x64.Build.0 = Debug|Any CPU
 		{3CC083FD-E2AD-FE89-BB22-08193D14DC1A}.Release|x64.ActiveCfg = Release|Any CPU
 		{3CC083FD-E2AD-FE89-BB22-08193D14DC1A}.Release|x64.Build.0 = Release|Any CPU
-		{8FF11ABD-44D4-D79F-C724-B25A309735F7}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8FF11ABD-44D4-D79F-C724-B25A309735F7}.Debug|x64.Build.0 = Debug|Any CPU
-		{8FF11ABD-44D4-D79F-C724-B25A309735F7}.Release|x64.ActiveCfg = Release|Any CPU
-		{8FF11ABD-44D4-D79F-C724-B25A309735F7}.Release|x64.Build.0 = Release|Any CPU
+		{591FA6AF-33C0-BEA6-1248-965F1CC6216E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{591FA6AF-33C0-BEA6-1248-965F1CC6216E}.Debug|x64.Build.0 = Debug|Any CPU
+		{591FA6AF-33C0-BEA6-1248-965F1CC6216E}.Release|x64.ActiveCfg = Release|Any CPU
+		{591FA6AF-33C0-BEA6-1248-965F1CC6216E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
