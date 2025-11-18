@@ -10,6 +10,7 @@
 	  
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>App.ico</ApplicationIcon>
+	<RootNamespace>StatsMasterDemo</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -35,6 +36,10 @@
 	  <ProjectReference Include="..\..\Dew NET90\Dew.Math\Dew.Math.csproj" />
 	  <ProjectReference Include="..\..\Dew NET90\Dew.Stats.Tee\Dew.Stats.Tee.csproj" />
 	  <ProjectReference Include="..\..\Dew NET90\Dew.Stats\Dew.Stats.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\" />
 	</ItemGroup>
 
 </Project>
