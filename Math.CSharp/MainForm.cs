@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Data;
 using Dew.Math.Units;
 using Dew.Math;
+using Dew.Math.Tee;
 
 namespace MtxVecDemo
 {
@@ -29,6 +30,7 @@ namespace MtxVecDemo
 
 		public MainForm()
 		{
+            MtxVecTee.RegisterSeries();
 			//
 			// Required for Windows Form Designer support
 			//

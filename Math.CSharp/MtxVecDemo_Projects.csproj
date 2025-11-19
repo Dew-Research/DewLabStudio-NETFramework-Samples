@@ -10,7 +10,6 @@
 	  
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>MtxVec.ico</ApplicationIcon>
-    <StartupObject>MtxVecDemo.MainForm</StartupObject>
 	<RootNamespace>MtxVecDemo</RootNamespace>
   </PropertyGroup>
 

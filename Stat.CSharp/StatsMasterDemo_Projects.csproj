@@ -38,8 +38,4 @@
 	  <ProjectReference Include="..\..\Dew NET90\Dew.Stats\Dew.Stats.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Properties\" />
-	</ItemGroup>
-
 </Project>
